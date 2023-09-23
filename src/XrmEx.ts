@@ -402,7 +402,7 @@ namespace XrmEx {
       } else if ("data" in context) this._formContext = context;
       else
         throw new Error(
-          `TheiaFx.Form.setFormContext: The executionContext or formContext was not passed to the function.`
+          `XrmEx.Form.setFormContext: The executionContext or formContext was not passed to the function.`
         );
     }
     /**Sets a reference to the current execution context*/
@@ -415,7 +415,7 @@ namespace XrmEx {
       } else if ("data" in context) this._formContext = context;
       else
         throw new Error(
-          `TheiaFx.Form.setExecutionContext: The executionContext or formContext was not passed to the function.`
+          `XrmEx.Form.setExecutionContext: The executionContext or formContext was not passed to the function.`
         );
     }
     /**Returns true if form is from type create*/
@@ -457,7 +457,7 @@ namespace XrmEx {
           uniqueId
         );
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
     /**
@@ -469,7 +469,7 @@ namespace XrmEx {
       try {
         return Form.formContext.ui.clearFormNotification(uniqueId);
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
     /**
@@ -491,7 +491,7 @@ namespace XrmEx {
           Form.formContext.data.entity.addOnSave(handler);
         });
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
     /**
@@ -516,7 +516,7 @@ namespace XrmEx {
           Form.formContext.data.entity.addOnPostSave(handler);
         });
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
     /**
@@ -539,7 +539,7 @@ namespace XrmEx {
           Form.formContext.data.addOnLoad(handler);
         });
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
     /**
@@ -571,7 +571,7 @@ namespace XrmEx {
           });
         }
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
   }
@@ -675,7 +675,7 @@ namespace XrmEx {
         );
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
 
@@ -688,7 +688,7 @@ namespace XrmEx {
         this.controls.forEach((control) => control.setVisible(visible));
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
 
@@ -701,7 +701,7 @@ namespace XrmEx {
         this.controls.forEach((control) => control.setDisabled(disabled));
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
 
@@ -716,7 +716,7 @@ namespace XrmEx {
         this.Attribute.setRequiredLevel(requirementLevel);
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
 
@@ -729,7 +729,7 @@ namespace XrmEx {
         this.Attribute.setRequiredLevel(required ? "required" : "none");
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
 
@@ -739,7 +739,7 @@ namespace XrmEx {
         this.Attribute.fireOnChange();
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
 
@@ -768,7 +768,7 @@ namespace XrmEx {
         }
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
 
@@ -797,7 +797,7 @@ namespace XrmEx {
         });
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
     /**
@@ -813,7 +813,7 @@ namespace XrmEx {
         });
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
   }
@@ -1059,7 +1059,7 @@ namespace XrmEx {
           append && this.Value ? this.Value.concat(lookupValue) : [lookupValue];
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
     /**
@@ -1089,7 +1089,7 @@ namespace XrmEx {
         );
         return record;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
     /**
@@ -1111,7 +1111,7 @@ namespace XrmEx {
         this._customFilters.push(_addCustomFilter);
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
 
       function _addCustomFilter() {
@@ -1159,7 +1159,7 @@ namespace XrmEx {
         });
         this._customFilters.push(_addCustomFilter);
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
       function _addCustomFilter() {
         _addCustomFilter.controls.forEach((control) => {
@@ -1181,7 +1181,7 @@ namespace XrmEx {
         );
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
   }
@@ -1262,7 +1262,7 @@ namespace XrmEx {
         }
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
     /**
@@ -1282,7 +1282,7 @@ namespace XrmEx {
         }
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
     /**
@@ -1293,7 +1293,7 @@ namespace XrmEx {
         this.control.clearOptions();
         return this;
       } catch (error: any) {
-        throw new Error(`TheiaFx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
   }

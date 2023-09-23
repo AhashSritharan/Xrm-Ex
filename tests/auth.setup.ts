@@ -3,7 +3,6 @@ import * as process from 'process';
 
 setup('authenticate', async ({ playwright, request }) => {
     let env: CRMConfig = JSON.parse(process.env.ENV_VAR_JSON);
-    console.log('Using Environment:', '\x1b[32m' + env.CRM_URL + '\x1b[0m');
     const userAuthFile = 'playwright/.auth/user.json';
     const browser = await playwright.chromium.launch();
 
