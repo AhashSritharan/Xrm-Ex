@@ -3,19 +3,15 @@
   "version": "0.0.0-development",
   "description": "Xrm-Ex is a TypeScript framework that simplifies the usage of Dynamics 365 Client API. It provides intuitive wrappers for formContext and Xrm Object, helping developers reduce the amount of code, increase maintainability, and decrease errors. Ideal for developers looking to leverage the power of Dynamics 365 Client API within the TypeScript ecosystem.",
   "keywords": [
-    "TypeScript",
-    "Dynamics 365",
+    "Microsoft",
+    "Dynamics",
     "Client API",
     "Xrm-Ex",
-    "formContext",
-    "Xrm Object",
-    "Microsoft Dynamics",
+    "XrmEx",
+    "Xrm",
     "CRM",
     "library",
-    "framework",
-    "TypeScript library",
-    "CRM development",
-    "Dynamics 365 development"
+    "framework"
   ],
   "repository": {
     "type": "git",
