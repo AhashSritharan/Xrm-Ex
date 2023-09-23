@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[XrmEx.ts:1304](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L1304)
+[XrmEx.ts:1304](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1304)
 
 ## Properties
 
@@ -58,7 +58,7 @@
 
 #### Defined in
 
-[XrmEx.ts:1301](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L1301)
+[XrmEx.ts:1301](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1301)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1302](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L1302)
+[XrmEx.ts:1302](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1302)
 
 ___
 
@@ -82,7 +82,7 @@ Xrm.Controls.Section.controls
 
 #### Defined in
 
-[XrmEx.ts:1320](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L1320)
+[XrmEx.ts:1320](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1320)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1303](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L1303)
+[XrmEx.ts:1303](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1303)
 
 ## Accessors
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1307](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L1307)
+[XrmEx.ts:1307](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1307)
 
 ## Methods
 
@@ -124,7 +124,7 @@ Xrm.Controls.Section.getLabel
 
 #### Defined in
 
-[XrmEx.ts:1327](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L1327)
+[XrmEx.ts:1327](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1327)
 
 ___
 
@@ -142,7 +142,7 @@ Xrm.Controls.Section.getName
 
 #### Defined in
 
-[XrmEx.ts:1314](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L1314)
+[XrmEx.ts:1314](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1314)
 
 ___
 
@@ -160,7 +160,7 @@ Xrm.Controls.Section.getParent
 
 #### Defined in
 
-[XrmEx.ts:1317](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L1317)
+[XrmEx.ts:1317](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1317)
 
 ___
 
@@ -178,7 +178,7 @@ Xrm.Controls.Section.getVisible
 
 #### Defined in
 
-[XrmEx.ts:1324](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L1324)
+[XrmEx.ts:1324](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1324)
 
 ___
 
@@ -202,7 +202,7 @@ Xrm.Controls.Section.setLabel
 
 #### Defined in
 
-[XrmEx.ts:1330](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L1330)
+[XrmEx.ts:1330](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1330)
 
 ___
 
@@ -226,4 +226,4 @@ Xrm.Controls.Section.setVisible
 
 #### Defined in
 
-[XrmEx.ts:1321](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L1321)
+[XrmEx.ts:1321](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1321)

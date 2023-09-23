@@ -10,40 +10,63 @@ Welcome to XrmEx, a powerful TypeScript framework designed for Dynamics 365 Clie
 
 With XrmEx, you'll find a set of intuitive and robust TypeScript wrappers that bring the power of Dynamics 365 Client API into the TypeScript ecosystem in a developer-friendly way. This library is designed to boost your productivity, allowing you to focus on what matters most: creating amazing applications.
 
+## Installation
+XrmEx can be easily installed via npm:
+```shell
+npm install xrm-ex
+```
+
 ## Getting Started
 To get started with XrmEx, you'll first need to reference the library in your TypeScript project and create an early bound fields Class.
 Create a variable which is going to hold the instance of your fields Class.
 Assign the executionContext OnLoad to XrmEx.Form.formContext and create a new instance of your fields class and you're good to go:
 
-```typescript
-/// <reference path="XrmEx.ts" />
-let Form = XrmEx.Form;
+```js
+/// <reference path="node_modules/xrm-ex/src/XrmEx.d.ts" />
 class Fields {
-    Firstname = new XrmEx.Field("firstname"),
-    Lastname = new XrmEx.Field("lastname")
-};
-var fields: Fields;
-export async function OnLoad(executionContext:Xrm.Events.EventContext){
-fields = new Fields();
-XrmEx.Form.formContext = executionContext;
+    Firstname = new XrmEx.TextField("firstname");
+    Customer = new XrmEx.LookupField("parentcustomerid");
+    DoNotEmail = new XrmEx.BooleanField("donotemail");
+    Birthday = new XrmEx.DateField("birthdate");
+    PreferredContactMethod = new XrmEx.OptionsetField(
+        "preferredcontactmethodcode",
+        {
+            Any: 1,
+            Email: 2,
+            Phone: 3,
+            Fax: 4,
+            Mail: 5,
+        }
+    );
 }
-```
-You can then use the library to interact with the Dynamics 365 Client API. Here's a simple example:
-```typescript
-export async function OnLoad(executionContext:Xrm.Events.EventContext){
-fields = new Fields();
-XrmEx.Form.formContext = executionContext;
-
-if(Form.IsCreate) return;
-
-fields.Firstname.Value = "Joe";
-fields.Lastname.setVisible(false).setDisabled(false).setRequired(true);
+class Tabs {
+    General = new XrmEx.Tab("tab1", {
+        Section1: new XrmEx.Section("section1"),
+        Section2: new XrmEx.Section("section2"),
+    });
+    Details = new XrmEx.Tab("tab2", {
+        Section1: new XrmEx.Section("section1"),
+        Section2: new XrmEx.Section("section2"),
+    });
 }
-```
-## Installation
-XrmEx can be easily installed via npm:
-```shell
-npm install --save xrm-ex
+class Grids {
+    ContactSubgrid = new XrmEx.GridControl("Test");
+}
+/**@type {Fields()}*/ var fields;
+/**@type {Tabs()}*/ var tabs;
+/**@type {Grids()}*/ var grids;
+/**
+ * @param {Xrm.Events.EventContext} executionContext 
+ */
+export async function OnLoad(executionContext) {
+    fields = new Fields();
+    XrmEx.Form.formContext = executionContext;
+
+    if (Form.IsCreate) return;
+
+    fields.Firstname.Value = "Joe";
+    fields.Lastname.setVisible(false).setDisabled(false).setRequired(true);
+}
 ```
 
 ## Documentation
