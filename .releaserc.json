@@ -33,24 +33,8 @@
         "failTitle": false,
         "assets": [
           {
-            "path": "build/dist/XrmEx.d.ts",
-            "label": "XrmEx.d.ts"
-          },
-          {
-            "path": "build/dist/XrmEx.js",
-            "label": "XrmEx.js"
-          },
-          {
-            "path": "build/package.json",
-            "label": "package.json"
-          },
-          {
-            "path": "build/.eslintrc.json",
-            "label": "Rename this file to: .eslintrc.json"
-          },
-          {
-            "path": "build/dist/README.md",
-            "label": "README.md"
+            "path": "release/xrm-ex.zip",
+            "label": "xrm-ex.zip"
           }
         ]
       }
