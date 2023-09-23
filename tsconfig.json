@@ -13,7 +13,7 @@
     "target": "es2022",
     "moduleResolution": "Node",
     "rootDir": "./",
-    "outDir": "build/dist",
+    "outDir": "build",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,

@@ -44,7 +44,7 @@ Represents a form in Dynamics 365.
 
 #### Defined in
 
-[XrmEx.ts:384](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L384)
+[XrmEx.ts:384](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L384)
 
 ## Properties
 
@@ -54,7 +54,7 @@ Represents a form in Dynamics 365.
 
 #### Defined in
 
-[XrmEx.ts:383](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L383)
+[XrmEx.ts:383](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L383)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:382](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L382)
+[XrmEx.ts:382](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L382)
 
 ## Accessors
 
@@ -80,7 +80,7 @@ Returns true if form is from type create
 
 #### Defined in
 
-[XrmEx.ts:422](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L422)
+[XrmEx.ts:422](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L422)
 
 ___
 
@@ -96,7 +96,7 @@ Returns true if form is not from type create
 
 #### Defined in
 
-[XrmEx.ts:430](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L430)
+[XrmEx.ts:430](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L430)
 
 ___
 
@@ -112,7 +112,7 @@ Returns true if form is not from type update
 
 #### Defined in
 
-[XrmEx.ts:434](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L434)
+[XrmEx.ts:434](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L434)
 
 ___
 
@@ -128,7 +128,7 @@ Returns true if form is from type update
 
 #### Defined in
 
-[XrmEx.ts:426](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L426)
+[XrmEx.ts:426](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L426)
 
 ___
 
@@ -144,7 +144,7 @@ Gets a lookup value that references the record.
 
 #### Defined in
 
-[XrmEx.ts:394](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L394)
+[XrmEx.ts:394](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L394)
 
 ___
 
@@ -160,7 +160,7 @@ Gets a reference to the current executio context
 
 #### Defined in
 
-[XrmEx.ts:390](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L390)
+[XrmEx.ts:390](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L390)
 
 • `Static` `set` **executionContext**(`context`): `void`
 
@@ -178,7 +178,7 @@ Sets a reference to the current execution context
 
 #### Defined in
 
-[XrmEx.ts:409](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L409)
+[XrmEx.ts:409](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L409)
 
 ___
 
@@ -194,7 +194,7 @@ Gets a reference to the current form context
 
 #### Defined in
 
-[XrmEx.ts:386](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L386)
+[XrmEx.ts:386](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L386)
 
 • `Static` `set` **formContext**(`context`): `void`
 
@@ -212,7 +212,7 @@ Sets a reference to the current form context
 
 #### Defined in
 
-[XrmEx.ts:398](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L398)
+[XrmEx.ts:398](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L398)
 
 ## Methods
 
@@ -239,7 +239,7 @@ true if it succeeds, otherwise false.
 
 #### Defined in
 
-[XrmEx.ts:448](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L448)
+[XrmEx.ts:448](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L448)
 
 ___
 
@@ -263,7 +263,7 @@ Adds a handler to be called when the attribute's value is changed.
 
 #### Defined in
 
-[XrmEx.ts:549](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L549)
+[XrmEx.ts:549](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L549)
 
 ___
 
@@ -285,7 +285,7 @@ Adds a function to be called when form data is loaded.
 
 #### Defined in
 
-[XrmEx.ts:526](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L526)
+[XrmEx.ts:526](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L526)
 
 ___
 
@@ -315,7 +315,7 @@ Added in 9.2
 
 #### Defined in
 
-[XrmEx.ts:503](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L503)
+[XrmEx.ts:503](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L503)
 
 ___
 
@@ -337,7 +337,7 @@ Adds a handler to be called when the record is saved.
 
 #### Defined in
 
-[XrmEx.ts:478](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L478)
+[XrmEx.ts:478](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L478)
 
 ___
 
@@ -361,4 +361,4 @@ True if it succeeds, otherwise false.
 
 #### Defined in
 
-[XrmEx.ts:468](https://github.com/AhashSritharan/Xrm-Ex/blob/301a447/src/XrmEx.ts#L468)
+[XrmEx.ts:468](https://github.com/AhashSritharan/Xrm-Ex/blob/b300141/src/XrmEx.ts#L468)
