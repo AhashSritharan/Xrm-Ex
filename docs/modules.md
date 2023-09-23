@@ -30,7 +30,7 @@ Represents a reference to an entity.
 
 #### Defined in
 
-[XrmEx.ts:31](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L31)
+[XrmEx.ts:31](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L31)
 
 ___
 
@@ -50,4 +50,4 @@ Represents a parameter for a request.
 
 #### Defined in
 
-[XrmEx.ts:9](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L9)
+[XrmEx.ts:9](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L9)

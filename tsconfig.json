@@ -2,8 +2,7 @@
   "include": [
     "./src/**/*.ts",
     "./tests/**/*.ts",
-    ".eslintrc.cjs",
-    "playwright.config.ts"
+    ".eslintrc.cjs"
   ],
   "compilerOptions": {
     "lib": [

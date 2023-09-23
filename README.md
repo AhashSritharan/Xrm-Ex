@@ -43,7 +43,7 @@ fields.Lastname.setVisible(false).setDisabled(false).setRequired(true);
 ## Installation
 XrmEx can be easily installed via npm:
 ```shell
-npm install --save xrmex
+npm install --save xrm-ex
 ```
 
 ## Documentation

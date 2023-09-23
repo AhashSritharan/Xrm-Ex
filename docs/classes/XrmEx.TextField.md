@@ -78,7 +78,7 @@ Used to execute methods related to a single Attribute
 
 #### Defined in
 
-[XrmEx.ts:825](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L825)
+[XrmEx.ts:825](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L825)
 
 ## Properties
 
@@ -92,7 +92,7 @@ Used to execute methods related to a single Attribute
 
 #### Defined in
 
-[XrmEx.ts:584](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L584)
+[XrmEx.ts:584](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L584)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:824](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L824)
+[XrmEx.ts:824](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L824)
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:582](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L582)
+[XrmEx.ts:582](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L582)
 
 ## Accessors
 
@@ -138,7 +138,7 @@ Field.Attribute
 
 #### Defined in
 
-[XrmEx.ts:834](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L834)
+[XrmEx.ts:834](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L834)
 
 ___
 
@@ -160,7 +160,7 @@ Field.Value
 
 #### Defined in
 
-[XrmEx.ts:842](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L842)
+[XrmEx.ts:842](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L842)
 
 • `set` **Value**(`value`): `void`
 
@@ -180,7 +180,7 @@ Field.Value
 
 #### Defined in
 
-[XrmEx.ts:845](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L845)
+[XrmEx.ts:845](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L845)
 
 ___
 
@@ -202,7 +202,7 @@ Field.controls
 
 #### Defined in
 
-[XrmEx.ts:839](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L839)
+[XrmEx.ts:839](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L839)
 
 ## Methods
 
@@ -231,7 +231,7 @@ Displays an error or recommendation notification for a control, and lets you spe
 
 #### Defined in
 
-[XrmEx.ts:778](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L778)
+[XrmEx.ts:778](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L778)
 
 ___
 
@@ -261,7 +261,7 @@ Xrm.Attributes.StringAttribute.addOnChange
 
 #### Defined in
 
-[XrmEx.ts:750](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L750)
+[XrmEx.ts:750](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L750)
 
 ___
 
@@ -285,7 +285,7 @@ Xrm.Attributes.StringAttribute.fireOnChange
 
 #### Defined in
 
-[XrmEx.ts:737](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L737)
+[XrmEx.ts:737](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L737)
 
 ___
 
@@ -307,7 +307,7 @@ Xrm.Attributes.StringAttribute.getAttributeType
 
 #### Defined in
 
-[XrmEx.ts:600](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L600)
+[XrmEx.ts:600](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L600)
 
 ___
 
@@ -329,7 +329,7 @@ Xrm.Attributes.StringAttribute.getFormat
 
 #### Defined in
 
-[XrmEx.ts:831](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L831)
+[XrmEx.ts:831](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L831)
 
 ___
 
@@ -351,7 +351,7 @@ Xrm.Attributes.StringAttribute.getIsDirty
 
 #### Defined in
 
-[XrmEx.ts:606](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L606)
+[XrmEx.ts:606](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L606)
 
 ___
 
@@ -369,7 +369,7 @@ Xrm.Attributes.StringAttribute.getMaxLength
 
 #### Defined in
 
-[XrmEx.ts:828](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L828)
+[XrmEx.ts:828](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L828)
 
 ___
 
@@ -391,7 +391,7 @@ Xrm.Attributes.StringAttribute.getName
 
 #### Defined in
 
-[XrmEx.ts:609](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L609)
+[XrmEx.ts:609](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L609)
 
 ___
 
@@ -413,7 +413,7 @@ Xrm.Attributes.StringAttribute.getParent
 
 #### Defined in
 
-[XrmEx.ts:612](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L612)
+[XrmEx.ts:612](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L612)
 
 ___
 
@@ -435,7 +435,7 @@ Xrm.Attributes.StringAttribute.getRequiredLevel
 
 #### Defined in
 
-[XrmEx.ts:615](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L615)
+[XrmEx.ts:615](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L615)
 
 ___
 
@@ -457,7 +457,7 @@ Xrm.Attributes.StringAttribute.getSubmitMode
 
 #### Defined in
 
-[XrmEx.ts:618](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L618)
+[XrmEx.ts:618](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L618)
 
 ___
 
@@ -479,7 +479,7 @@ Xrm.Attributes.StringAttribute.getUserPrivilege
 
 #### Defined in
 
-[XrmEx.ts:621](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L621)
+[XrmEx.ts:621](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L621)
 
 ___
 
@@ -501,7 +501,7 @@ Xrm.Attributes.StringAttribute.getValue
 
 #### Defined in
 
-[XrmEx.ts:630](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L630)
+[XrmEx.ts:630](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L630)
 
 ___
 
@@ -533,7 +533,7 @@ true if it succeeds, false if it fails.
 
 #### Defined in
 
-[XrmEx.ts:809](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L809)
+[XrmEx.ts:809](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L809)
 
 ___
 
@@ -561,7 +561,7 @@ Xrm.Attributes.StringAttribute.removeOnChange
 
 #### Defined in
 
-[XrmEx.ts:624](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L624)
+[XrmEx.ts:624](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L624)
 
 ___
 
@@ -587,7 +587,7 @@ Sets the state of the control to either enabled, or disabled.
 
 #### Defined in
 
-[XrmEx.ts:699](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L699)
+[XrmEx.ts:699](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L699)
 
 ___
 
@@ -616,7 +616,7 @@ Xrm.Attributes.StringAttribute.setIsValid
 
 #### Defined in
 
-[XrmEx.ts:633](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L633)
+[XrmEx.ts:633](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L633)
 
 ___
 
@@ -650,7 +650,7 @@ true if it succeeds, false if it fails.
 
 #### Defined in
 
-[XrmEx.ts:669](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L669)
+[XrmEx.ts:669](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L669)
 
 ___
 
@@ -676,7 +676,7 @@ Sets the required level.
 
 #### Defined in
 
-[XrmEx.ts:727](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L727)
+[XrmEx.ts:727](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L727)
 
 ___
 
@@ -706,7 +706,7 @@ Xrm.Attributes.StringAttribute.setRequiredLevel
 
 #### Defined in
 
-[XrmEx.ts:712](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L712)
+[XrmEx.ts:712](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L712)
 
 ___
 
@@ -734,7 +734,7 @@ Xrm.Attributes.StringAttribute.setSubmitMode
 
 #### Defined in
 
-[XrmEx.ts:627](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L627)
+[XrmEx.ts:627](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L627)
 
 ___
 
@@ -762,7 +762,7 @@ Xrm.Attributes.StringAttribute.setValue
 
 #### Defined in
 
-[XrmEx.ts:597](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L597)
+[XrmEx.ts:597](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L597)
 
 ___
 
@@ -788,4 +788,4 @@ Sets the visibility state.
 
 #### Defined in
 
-[XrmEx.ts:686](https://github.com/AhashSritharan/XrmEx/blob/4fe2b76/src/XrmEx.ts#L686)
+[XrmEx.ts:686](https://github.com/AhashSritharan/Xrm-Ex/blob/63388f2/src/XrmEx.ts#L686)
