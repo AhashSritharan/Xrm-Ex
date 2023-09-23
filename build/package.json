@@ -33,7 +33,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "npm run clean && npm run type:dts && npm run build:main && npm run format && npm run docs && npm run copy && npm run zip",
+    "build": "npm run clean && npm run type:dts && npm run build:main && npm run format && npm run docs && npm run copy && npm run postbuild && npm run zip",
     "build:main": "tsc --build",
     "clean": "rimraf build/dist coverage nyc_output",
     "docs": "npx typedoc --plugin typedoc-plugin-markdown --out docs src/XrmEx.ts",
