@@ -4,7 +4,7 @@ import { CRMConfig } from './auth.setup';
 
 test.beforeEach(async ({ page }) => {
   test.setTimeout(60000);
-  await page.addInitScript({ path: 'build/dist/src/XrmEx.js' });
+  await page.addInitScript({ path: 'build/src/XrmEx.js' });
   var env: CRMConfig = JSON.parse(process.env.ENV_VAR_JSON);
   await page.goto(env.CONTACT_RECORD_URL);
   await page.getByLabel('First Name').waitFor({ state: 'visible' });
