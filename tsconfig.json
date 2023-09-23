@@ -1,0 +1,26 @@
+{
+  "include": [
+    "./src/**/*.ts",
+    "./tests/**/*.ts",
+    ".eslintrc.cjs",
+    "playwright.config.ts"
+  ],
+  "compilerOptions": {
+    "lib": [
+      "es2022",
+      "DOM"
+    ],
+    "module": "esnext",
+    "target": "es2022",
+    "moduleResolution": "Node",
+    "rootDir": "./",
+    "outDir": "build/dist",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "resolveJsonModule": true,
+    "inlineSourceMap": true,
+    "inlineSources": true
+  }
+}

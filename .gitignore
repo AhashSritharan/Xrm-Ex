@@ -1,0 +1,9 @@
+node_modules/
+.nyc_output/
+coverage/
+.DS_Store
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/playwright/.auth/user.json
+/playwright.env.json
