@@ -30,7 +30,8 @@
     "npm": "9.5.0"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/ahashsritharan"
   },
   "scripts": {
     "build": "npm run clean && npm run type:dts && npm run build:main && npm run format && npm run docs",
