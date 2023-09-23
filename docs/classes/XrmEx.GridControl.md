@@ -60,7 +60,7 @@
 
 #### Defined in
 
-[XrmEx.ts:1392](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1392)
+[XrmEx.ts:1392](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1392)
 
 ## Properties
 
@@ -70,7 +70,7 @@
 
 #### Defined in
 
-[XrmEx.ts:1390](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1390)
+[XrmEx.ts:1390](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1390)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1391](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1391)
+[XrmEx.ts:1391](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1391)
 
 ## Accessors
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1402](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1402)
+[XrmEx.ts:1402](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1402)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1395](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1395)
+[XrmEx.ts:1395](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1395)
 
 ## Methods
 
@@ -132,7 +132,7 @@ Xrm.Controls.GridControl.addOnLoad
 
 #### Defined in
 
-[XrmEx.ts:1405](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1405)
+[XrmEx.ts:1405](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1405)
 
 ___
 
@@ -150,7 +150,7 @@ Xrm.Controls.GridControl.getContextType
 
 #### Defined in
 
-[XrmEx.ts:1408](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1408)
+[XrmEx.ts:1408](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1408)
 
 ___
 
@@ -168,7 +168,7 @@ Xrm.Controls.GridControl.getControlType
 
 #### Defined in
 
-[XrmEx.ts:1441](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1441)
+[XrmEx.ts:1441](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1441)
 
 ___
 
@@ -186,7 +186,7 @@ Xrm.Controls.GridControl.getEntityName
 
 #### Defined in
 
-[XrmEx.ts:1411](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1411)
+[XrmEx.ts:1411](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1411)
 
 ___
 
@@ -204,7 +204,7 @@ Xrm.Controls.GridControl.getFetchXml
 
 #### Defined in
 
-[XrmEx.ts:1414](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1414)
+[XrmEx.ts:1414](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1414)
 
 ___
 
@@ -222,7 +222,7 @@ Xrm.Controls.GridControl.getGrid
 
 #### Defined in
 
-[XrmEx.ts:1417](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1417)
+[XrmEx.ts:1417](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1417)
 
 ___
 
@@ -240,7 +240,7 @@ Xrm.Controls.GridControl.getLabel
 
 #### Defined in
 
-[XrmEx.ts:1450](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1450)
+[XrmEx.ts:1450](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1450)
 
 ___
 
@@ -258,7 +258,7 @@ Xrm.Controls.GridControl.getName
 
 #### Defined in
 
-[XrmEx.ts:1444](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1444)
+[XrmEx.ts:1444](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1444)
 
 ___
 
@@ -276,7 +276,7 @@ Xrm.Controls.GridControl.getParent
 
 #### Defined in
 
-[XrmEx.ts:1447](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1447)
+[XrmEx.ts:1447](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1447)
 
 ___
 
@@ -294,7 +294,7 @@ Xrm.Controls.GridControl.getRelationship
 
 #### Defined in
 
-[XrmEx.ts:1420](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1420)
+[XrmEx.ts:1420](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1420)
 
 ___
 
@@ -318,7 +318,7 @@ Xrm.Controls.GridControl.getUrl
 
 #### Defined in
 
-[XrmEx.ts:1423](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1423)
+[XrmEx.ts:1423](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1423)
 
 ___
 
@@ -336,7 +336,7 @@ Xrm.Controls.GridControl.getViewSelector
 
 #### Defined in
 
-[XrmEx.ts:1426](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1426)
+[XrmEx.ts:1426](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1426)
 
 ___
 
@@ -354,7 +354,7 @@ Xrm.Controls.GridControl.getVisible
 
 #### Defined in
 
-[XrmEx.ts:1456](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1456)
+[XrmEx.ts:1456](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1456)
 
 ___
 
@@ -372,7 +372,7 @@ Xrm.Controls.GridControl.openRelatedGrid
 
 #### Defined in
 
-[XrmEx.ts:1429](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1429)
+[XrmEx.ts:1429](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1429)
 
 ___
 
@@ -390,7 +390,7 @@ Xrm.Controls.GridControl.refresh
 
 #### Defined in
 
-[XrmEx.ts:1432](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1432)
+[XrmEx.ts:1432](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1432)
 
 ___
 
@@ -408,7 +408,7 @@ Xrm.Controls.GridControl.refreshRibbon
 
 #### Defined in
 
-[XrmEx.ts:1435](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1435)
+[XrmEx.ts:1435](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1435)
 
 ___
 
@@ -432,7 +432,7 @@ Xrm.Controls.GridControl.removeOnLoad
 
 #### Defined in
 
-[XrmEx.ts:1438](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1438)
+[XrmEx.ts:1438](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1438)
 
 ___
 
@@ -456,7 +456,7 @@ Xrm.Controls.GridControl.setLabel
 
 #### Defined in
 
-[XrmEx.ts:1453](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1453)
+[XrmEx.ts:1453](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1453)
 
 ___
 
@@ -480,4 +480,4 @@ Xrm.Controls.GridControl.setVisible
 
 #### Defined in
 
-[XrmEx.ts:1459](https://github.com/AhashSritharan/Xrm-Ex/blob/2a657a6/src/XrmEx.ts#L1459)
+[XrmEx.ts:1459](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1459)

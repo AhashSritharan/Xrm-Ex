@@ -65,7 +65,7 @@ export async function OnLoad(executionContext) {
     if (Form.IsCreate) return;
 
     fields.Firstname.Value = "Joe";
-    fields.Lastname.setVisible(false).setDisabled(false).setRequired(true);
+    fields.Firstname.setVisible(false).setDisabled(false).setRequired(true);
 }
 ```
 
