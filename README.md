@@ -4,7 +4,6 @@
 ![NPM](https://img.shields.io/npm/v/xrm-ex)
 ![GitHub Workflow Status](https://github.com/AhashSritharan/Xrm-Ex/actions/workflows/XrmEx.yml/badge.svg?branch%253Dmain)
 
-
 Welcome to XrmEx, a powerful TypeScript framework designed for Dynamics 365 Client API. This library is intended to ease the usage of the formContext and the Xrm Object, reducing the amount of code you have to write, thus enhancing maintainability and minimizing errors.
 
 With XrmEx, you'll find a set of intuitive and robust TypeScript wrappers that bring the power of Dynamics 365 Client API into the TypeScript ecosystem in a developer-friendly way. This library is designed to boost your productivity, allowing you to focus on what matters most: creating amazing applications.
