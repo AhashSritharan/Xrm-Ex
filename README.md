@@ -27,18 +27,22 @@ XrmEx offers a comprehensive suite of wrappers that seamlessly integrate the Dyn
   - [4. Data Retrieval and Setting](#4-data-retrieval-and-setting)
     - [Without XrmEx:](#without-xrmex-3)
     - [With XrmEx:](#with-xrmex-3)
+  - [5. Alert Dialogs in Dynamics 365](#5-alert-dialogs-in-dynamics-365)
+    - [Without XrmEx:](#without-xrmex-4)
+    - [With XrmEx:](#with-xrmex-4)
   - [Advanced Features](#advanced-features)
     - [1. Lookup Filters](#1-lookup-filters)
-      - [Without XrmEx:](#without-xrmex-4)
-      - [With XrmEx:](#with-xrmex-4)
+      - [Without XrmEx:](#without-xrmex-5)
+      - [With XrmEx:](#with-xrmex-5)
     - [2. Advanced Lookup Filter](#2-advanced-lookup-filter)
       - [Special with XrmEx: Supports entire FetchXml including Link-Entity!](#special-with-xrmex-supports-entire-fetchxml-including-link-entity)
     - [3. Execute Bound Action](#3-execute-bound-action)
-      - [Without XrmEx:](#without-xrmex-5)
-      - [With XrmEx:](#with-xrmex-5)
-    - [4. Retrieve EnvironmentVariableValue](#4-retrieve-environmentvariablevalue)
       - [Without XrmEx:](#without-xrmex-6)
       - [With XrmEx:](#with-xrmex-6)
+    - [4. Retrieve EnvironmentVariableValue](#4-retrieve-environmentvariablevalue)
+      - [Without XrmEx:](#without-xrmex-7)
+      - [With XrmEx:](#with-xrmex-7)
+
 
 ## Installation
 XrmEx can be easily installed via npm:
@@ -233,6 +237,24 @@ if (fields.Owner.Value && !fields.Lastname.Value) {
 }
 ```
 XrmEx abstracts away the complexities of data retrieval, making it more straightforward and readable.
+
+5\. Alert Dialogs in Dynamics 365
+-----------------------------
+
+### Without XrmEx:
+
+```js
+await Xrm.Navigation.openAlertDialog({ text: `Error in ${XrmEx.getMethodName()}\n` + error.message, title: "Error" }, { height: 120, width: 260 });
+```
+
+This method requires manual sizing and is more verbose, making it less efficient for dynamic content.
+
+### With XrmEx:
+```js
+await XrmEx.openAlertDialog("Error", `Error in ${XrmEx.getMethodName()}\n` + error.message);
+```
+
+The XrmEx approach **automatically sizes the dialog based on content** to avoid scrolling, offering a simplified and concise method.
 
 Advanced Features
 -----------------
