@@ -60,11 +60,9 @@ Use the following Starter Template for your JavaScript:
 ```js
 /// <reference path="node_modules/xrm-ex/src/XrmEx.d.ts" />
 var YourNamespace = YourNamespace || {};
-YourNamespace.ContactFunctions = {
-    /**@type {Fields()}*/ fields: null,
-    /**@type {Tabs()}*/ tabs: null,
-    /**@type {Grids()}*/ grids: null,
-    Fields: class Fields {
+YourNamespace.Contact = YourNamespace.Contact || {};
+(function (Self) { //Only properties assigned to the Self object will be exposed to the global scope
+    class Fields {
         Firstname = new XrmEx.TextField("firstname");
         Customer = new XrmEx.LookupField("parentcustomerid");
         DoNotEmail = new XrmEx.BooleanField("donotemail");
@@ -79,8 +77,8 @@ YourNamespace.ContactFunctions = {
                 Mail: 5,
             }
         );
-    },
-    Tabs: class Tabs {
+    }
+    class Tabs {
         General = new XrmEx.Tab("tab1", {
             Section1: new XrmEx.Section("section1"),
             Section2: new XrmEx.Section("section2"),
@@ -89,27 +87,32 @@ YourNamespace.ContactFunctions = {
             Section1: new XrmEx.Section("section1"),
             Section2: new XrmEx.Section("section2"),
         });
-    },
-    Grids: class Grids {
+    }
+    class Grids {
         ContactSubgrid = new XrmEx.GridControl("Test");
-    },
+    }
+    /**@type {Fields()}*/ var fields;
+    /**@type {Tabs()}*/ var tabs;
+    /**@type {Grids()}*/ var grids;
+
     /**
      * @param {Xrm.FormContext | Xrm.Events.EventContext} executionContext 
      */
-    OnLoad: async function OnLoad(executionContext) {
-        await this.Init(executionContext); //Ensures XrmEx is only accessed after the OnLoad Event
+    Self.OnLoad = async function OnLoad(executionContext) {
+        await Init(executionContext); //Ensures XrmEx is only accessed after the OnLoad Event
         try {
             fields.Firstname.Value = "Joe";
-            fields.Firstname.setVisible(false).setDisabled(false).setRequired(true);
+            fields.Firstname.setVisible(true).setDisabled(true).setRequired(false);
+            await XrmEx.openAlertDialog("Success", "Xrm works.");
         } catch (error) {
             console.error(error);
             await XrmEx.openAlertDialog("Error", `Error in ${XrmEx.getMethodName()}\n` + error.message);
         }
-    },
+    };
     /**
      * @param {Xrm.FormContext | Xrm.Events.EventContext} executionContext 
      */
-    Init: async function Init(executionContext) {
+    async function Init(executionContext) {
         if (!XrmEx) {
             let errorMessage = "XrmEx is not loaded. Please make sure you have XrmEx.js loaded in your form.";
             console.error(errorMessage);
@@ -117,11 +120,12 @@ YourNamespace.ContactFunctions = {
             return;
         }
         XrmEx.Form.formContext = executionContext;
-        fields = new this.Fields();
-        tabs = new this.Tabs();
-        grids = new this.Grids();
+        fields = new Fields();
+        tabs = new Tabs();
+        grids = new Grids();
     }
-};
+
+})(YourNamespace.Contact);
 ```
 ## Documentation
 For a comprehensive guide to using XrmEx, please check out the full [documentation](https://github.com/AhashSritharan/Xrm-Ex/blob/main/docs/modules/XrmEx.md).
@@ -264,9 +268,9 @@ Advanced Features
 #### Without XrmEx:
 
 ```js
-let filterFunction = function filterFunction(executionContext: Xrm.Events.EventContext) {
+let filterFunction = function filterFunction(executionContext) {
     let formContext = executionContext.getFormContext();
-    let customer: Xrm.Attributes.LookupAttribute = formContext.getAttribute("parentcustomerid");
+    let customer = formContext.getAttribute("parentcustomerid");
     customer.controls.forEach((c) => {
         c.addCustomFilter(
             `<filter>
@@ -275,7 +279,7 @@ let filterFunction = function filterFunction(executionContext: Xrm.Events.EventC
         );
     });
 };
-let customer: Xrm.Attributes.LookupAttribute = formContext.getAttribute("parentcustomerid");
+let customer = formContext.getAttribute("parentcustomerid");
 customer.controls.forEach((c) => c.addPreSearch(filterFunction));
 customer.controls.forEach((c) => c.removePreSearch(filterFunction));
 ```
