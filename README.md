@@ -1,9 +1,9 @@
-# Xrm-Ex: Dynamics 365 Xrm Extensions
-
 ![NPM](https://img.shields.io/npm/l/xrm-ex)
 ![NPM](https://img.shields.io/npm/v/xrm-ex)
 ![GitHub Workflow Status](https://github.com/AhashSritharan/Xrm-Ex/actions/workflows/XrmEx.yml/badge.svg?branch%253Dmain)
 ![GitHub Workflow Status](https://github.com/AhashSritharan/Xrm-Ex/actions/workflows/playwright.yml/badge.svg?branch%253Dmain)
+
+# Xrm-Ex: Dynamics 365 Xrm Extensions
 
 A robust framework tailored for Dynamics 365 Client API. While crafted with TypeScript principles in mind, it's essential to understand that XrmEx is primarily designed for **JavaScript** usage. Our primary goal is to simplify the interaction with the formContext and the Xrm Object. By doing so, we aim to reduce the code you pen down, ensuring your codebase remains maintainable and less prone to errors.
 
