@@ -1,8 +1,12 @@
 import { test as setup } from '@playwright/test';
+import fs from 'fs';
 import * as process from 'process';
 
 setup('authenticate', async ({ playwright, request }) => {
-    let env: CRMConfig = JSON.parse(process.env.ENV_VAR_JSON);
+    let env: CRMConfig = process.env.ENV_VAR_JSON
+        ? JSON.parse(process.env.ENV_VAR_JSON)
+        : await loadJson();
+
     const userAuthFile = 'playwright/.auth/user.json';
     const browser = await playwright.chromium.launch();
 
@@ -15,7 +19,7 @@ setup('authenticate', async ({ playwright, request }) => {
         await page.getByRole('button', { name: 'Next' }).click();
         await page.getByPlaceholder('Password').type(env.USER_PASSWORD);
         await page.getByRole('button', { name: 'Sign in' }).click();
-        await page.getByRole('button', { name: 'Yes' }).click();
+        await page.getByRole('button', { name: 'No' }).click();
     }
     await page.context().storageState({ path: userAuthFile });
     await context.close();
@@ -25,4 +29,11 @@ export interface CRMConfig {
     USER_NAME: string;
     USER_PASSWORD: string;
     CONTACT_RECORD_URL: string;
+}
+export async function loadJson() {
+    try {
+        return await import('../playwright.env.json');
+    } catch (error) {
+        console.error('Could not load JSON', error);
+    }
 }
