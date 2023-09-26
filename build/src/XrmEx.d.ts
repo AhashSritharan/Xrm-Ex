@@ -50,8 +50,10 @@ declare namespace XrmEx {
     export function removeGlobalNotification(uniqueId: string): Promise<string>;
     /**
      * Retrieves the value of an environment variable by using its schema name as key.
+     * If the environment variable has both a default value and a current value, this function will retrieve the current value.
      * @param {string} environmentVariableSchemaName - The schema name of the environment variable to retrieve.
      * @returns {Promise<string>} - A promise that resolves with the value of the environment variable.
+     * @async
      */
     export function getEnvironmentVariableValue(environmentVariableSchemaName: string): Promise<string>;
     /**
