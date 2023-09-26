@@ -51,8 +51,11 @@ npm install xrm-ex
 ```
 
 ## Getting Started
-
+### Set up Project
 https://github.com/AhashSritharan/Xrm-Ex/assets/63707488/750cd578-e174-43b0-8783-149599db3da5
+
+### Deployment
+https://github.com/AhashSritharan/Xrm-Ex/assets/63707488/34e2642d-0d73-4964-a5c5-6c035a474773
 
 To get started with XrmEx, use the Template below. Add XrmEx.js from your node_modules to your Dynamics 365 form as a library. Execute the method `YourNamespace.ContactFunctions.OnLoad` in your form and pass the executionContext to that function.
 Happy coding!
