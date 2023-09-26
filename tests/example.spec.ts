@@ -1,13 +1,18 @@
 import { expect, Page, test } from '@playwright/test';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 import { CRMConfig } from './auth.setup';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 test.beforeEach(async ({ page }) => {
   test.setTimeout(60000);
   await page.addInitScript({ path: 'build/src/XrmEx.js' });
   let env: CRMConfig = process.env.ENV_VAR_JSON
     ? JSON.parse(process.env.ENV_VAR_JSON)
-    : await loadJson();
+    : loadJson();
   await page.goto(env.CONTACT_RECORD_URL);
   await page.getByLabel('First Name').waitFor({ state: 'visible' });
   await getModel(page);
@@ -96,9 +101,10 @@ async function getModel(page: Page) {
     return model;
   });
 }
-async function loadJson() {
+function loadJson() {
   try {
-    return await import('../playwright.env.json');
+    const buffer = fs.readFileSync(path.join(__dirname, '../playwright.env.json'), { encoding: 'utf-8' });
+    return JSON.parse(buffer);
   } catch (error) {
     console.error('Could not load JSON', error);
   }

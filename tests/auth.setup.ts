@@ -1,11 +1,15 @@
 import { test as setup } from '@playwright/test';
 import fs from 'fs';
+import path from 'path';
 import * as process from 'process';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 setup('authenticate', async ({ playwright, request }) => {
     let env: CRMConfig = process.env.ENV_VAR_JSON
         ? JSON.parse(process.env.ENV_VAR_JSON)
-        : await loadJson();
+        : loadJson();
 
     const userAuthFile = 'playwright/.auth/user.json';
     const browser = await playwright.chromium.launch();
@@ -30,9 +34,10 @@ export interface CRMConfig {
     USER_PASSWORD: string;
     CONTACT_RECORD_URL: string;
 }
-export async function loadJson() {
+function loadJson() {
     try {
-        return await import('../playwright.env.json');
+        const buffer = fs.readFileSync(path.join(__dirname, '../playwright.env.json'), { encoding: 'utf-8' });
+        return JSON.parse(buffer);
     } catch (error) {
         console.error('Could not load JSON', error);
     }
