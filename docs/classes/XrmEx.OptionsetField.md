@@ -101,7 +101,7 @@ Used to execute methods related to a single Attribute
 
 #### Defined in
 
-[XrmEx.ts:1198](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1198)
+[XrmEx.ts:1200](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1200)
 
 ## Properties
 
@@ -115,7 +115,7 @@ Used to execute methods related to a single Attribute
 
 #### Defined in
 
-[XrmEx.ts:584](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L584)
+[XrmEx.ts:586](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L586)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1197](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1197)
+[XrmEx.ts:1199](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1199)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1195](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1195)
+[XrmEx.ts:1197](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1197)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1196](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1196)
+[XrmEx.ts:1198](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1198)
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:582](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L582)
+[XrmEx.ts:584](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L584)
 
 ## Accessors
 
@@ -181,7 +181,7 @@ Field.Attribute
 
 #### Defined in
 
-[XrmEx.ts:1224](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1224)
+[XrmEx.ts:1226](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1226)
 
 ___
 
@@ -203,7 +203,7 @@ Field.Value
 
 #### Defined in
 
-[XrmEx.ts:1237](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1237)
+[XrmEx.ts:1239](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1239)
 
 • `set` **Value**(`value`): `void`
 
@@ -223,7 +223,7 @@ Field.Value
 
 #### Defined in
 
-[XrmEx.ts:1240](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1240)
+[XrmEx.ts:1242](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1242)
 
 ___
 
@@ -237,7 +237,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1232](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1232)
+[XrmEx.ts:1234](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1234)
 
 ___
 
@@ -259,7 +259,7 @@ Field.controls
 
 #### Defined in
 
-[XrmEx.ts:1229](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1229)
+[XrmEx.ts:1231](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1231)
 
 ## Methods
 
@@ -288,7 +288,7 @@ Displays an error or recommendation notification for a control, and lets you spe
 
 #### Defined in
 
-[XrmEx.ts:778](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L778)
+[XrmEx.ts:780](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L780)
 
 ___
 
@@ -318,7 +318,7 @@ Xrm.Attributes.OptionSetAttribute.addOnChange
 
 #### Defined in
 
-[XrmEx.ts:750](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L750)
+[XrmEx.ts:752](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L752)
 
 ___
 
@@ -346,7 +346,7 @@ This method does not check that the values within the options you add are valid.
 
 #### Defined in
 
-[XrmEx.ts:1253](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1253)
+[XrmEx.ts:1255](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1255)
 
 ___
 
@@ -362,7 +362,7 @@ Clears all options.
 
 #### Defined in
 
-[XrmEx.ts:1291](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1291)
+[XrmEx.ts:1293](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1293)
 
 ___
 
@@ -386,7 +386,7 @@ Xrm.Attributes.OptionSetAttribute.fireOnChange
 
 #### Defined in
 
-[XrmEx.ts:737](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L737)
+[XrmEx.ts:739](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L739)
 
 ___
 
@@ -408,7 +408,7 @@ Xrm.Attributes.OptionSetAttribute.getAttributeType
 
 #### Defined in
 
-[XrmEx.ts:600](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L600)
+[XrmEx.ts:602](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L602)
 
 ___
 
@@ -430,7 +430,7 @@ Xrm.Attributes.OptionSetAttribute.getFormat
 
 #### Defined in
 
-[XrmEx.ts:1202](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1202)
+[XrmEx.ts:1204](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1204)
 
 ___
 
@@ -448,7 +448,7 @@ Xrm.Attributes.OptionSetAttribute.getInitialValue
 
 #### Defined in
 
-[XrmEx.ts:1221](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1221)
+[XrmEx.ts:1223](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1223)
 
 ___
 
@@ -470,7 +470,7 @@ Xrm.Attributes.OptionSetAttribute.getIsDirty
 
 #### Defined in
 
-[XrmEx.ts:606](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L606)
+[XrmEx.ts:608](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L608)
 
 ___
 
@@ -492,7 +492,7 @@ Xrm.Attributes.OptionSetAttribute.getName
 
 #### Defined in
 
-[XrmEx.ts:609](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L609)
+[XrmEx.ts:611](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L611)
 
 ___
 
@@ -516,7 +516,7 @@ Xrm.Attributes.OptionSetAttribute.getOption
 
 #### Defined in
 
-[XrmEx.ts:1205](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1205)
+[XrmEx.ts:1207](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1207)
 
 ___
 
@@ -534,7 +534,7 @@ Xrm.Attributes.OptionSetAttribute.getOptions
 
 #### Defined in
 
-[XrmEx.ts:1212](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1212)
+[XrmEx.ts:1214](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1214)
 
 ___
 
@@ -556,7 +556,7 @@ Xrm.Attributes.OptionSetAttribute.getParent
 
 #### Defined in
 
-[XrmEx.ts:612](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L612)
+[XrmEx.ts:614](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L614)
 
 ___
 
@@ -578,7 +578,7 @@ Xrm.Attributes.OptionSetAttribute.getRequiredLevel
 
 #### Defined in
 
-[XrmEx.ts:615](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L615)
+[XrmEx.ts:617](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L617)
 
 ___
 
@@ -596,7 +596,7 @@ Xrm.Attributes.OptionSetAttribute.getSelectedOption
 
 #### Defined in
 
-[XrmEx.ts:1215](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1215)
+[XrmEx.ts:1217](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1217)
 
 ___
 
@@ -618,7 +618,7 @@ Xrm.Attributes.OptionSetAttribute.getSubmitMode
 
 #### Defined in
 
-[XrmEx.ts:618](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L618)
+[XrmEx.ts:620](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L620)
 
 ___
 
@@ -636,7 +636,7 @@ Xrm.Attributes.OptionSetAttribute.getText
 
 #### Defined in
 
-[XrmEx.ts:1218](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1218)
+[XrmEx.ts:1220](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1220)
 
 ___
 
@@ -658,7 +658,7 @@ Xrm.Attributes.OptionSetAttribute.getUserPrivilege
 
 #### Defined in
 
-[XrmEx.ts:621](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L621)
+[XrmEx.ts:623](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L623)
 
 ___
 
@@ -680,7 +680,7 @@ Xrm.Attributes.OptionSetAttribute.getValue
 
 #### Defined in
 
-[XrmEx.ts:630](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L630)
+[XrmEx.ts:632](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L632)
 
 ___
 
@@ -712,7 +712,7 @@ true if it succeeds, false if it fails.
 
 #### Defined in
 
-[XrmEx.ts:809](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L809)
+[XrmEx.ts:811](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L811)
 
 ___
 
@@ -740,7 +740,7 @@ Xrm.Attributes.OptionSetAttribute.removeOnChange
 
 #### Defined in
 
-[XrmEx.ts:624](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L624)
+[XrmEx.ts:626](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L626)
 
 ___
 
@@ -762,7 +762,7 @@ Removes the option matching the value.
 
 #### Defined in
 
-[XrmEx.ts:1273](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1273)
+[XrmEx.ts:1275](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1275)
 
 ___
 
@@ -788,7 +788,7 @@ Sets the state of the control to either enabled, or disabled.
 
 #### Defined in
 
-[XrmEx.ts:699](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L699)
+[XrmEx.ts:701](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L701)
 
 ___
 
@@ -817,7 +817,7 @@ Xrm.Attributes.OptionSetAttribute.setIsValid
 
 #### Defined in
 
-[XrmEx.ts:633](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L633)
+[XrmEx.ts:635](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L635)
 
 ___
 
@@ -851,7 +851,7 @@ true if it succeeds, false if it fails.
 
 #### Defined in
 
-[XrmEx.ts:669](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L669)
+[XrmEx.ts:671](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L671)
 
 ___
 
@@ -877,7 +877,7 @@ Sets the required level.
 
 #### Defined in
 
-[XrmEx.ts:727](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L727)
+[XrmEx.ts:729](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L729)
 
 ___
 
@@ -907,7 +907,7 @@ Xrm.Attributes.OptionSetAttribute.setRequiredLevel
 
 #### Defined in
 
-[XrmEx.ts:712](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L712)
+[XrmEx.ts:714](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L714)
 
 ___
 
@@ -935,7 +935,7 @@ Xrm.Attributes.OptionSetAttribute.setSubmitMode
 
 #### Defined in
 
-[XrmEx.ts:627](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L627)
+[XrmEx.ts:629](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L629)
 
 ___
 
@@ -963,7 +963,7 @@ Xrm.Attributes.OptionSetAttribute.setValue
 
 #### Defined in
 
-[XrmEx.ts:597](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L597)
+[XrmEx.ts:599](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L599)
 
 ___
 
@@ -989,4 +989,4 @@ Sets the visibility state.
 
 #### Defined in
 
-[XrmEx.ts:686](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L686)
+[XrmEx.ts:688](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L688)

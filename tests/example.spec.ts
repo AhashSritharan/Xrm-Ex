@@ -1,35 +1,37 @@
-import { expect, Page, test } from '@playwright/test';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { expect, Page, test } from "@playwright/test";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
-import { CRMConfig } from './auth.setup';
+import { CRMConfig } from "./auth.setup";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 test.beforeEach(async ({ page }) => {
   test.setTimeout(60000);
-  await page.addInitScript({ path: 'build/src/XrmEx.js' });
+  await page.addInitScript({ path: "build/src/XrmEx.js" });
   let env: CRMConfig = process.env.ENV_VAR_JSON
     ? JSON.parse(process.env.ENV_VAR_JSON)
     : loadJson();
   await page.goto(env.CONTACT_RECORD_URL);
-  await page.getByLabel('First Name').waitFor({ state: 'visible' });
+  await page.getByLabel("First Name").waitFor({ state: "visible" });
   await getModel(page);
 });
-test.describe('Test Field Class', () => {
-  test('Get and Set Value', async ({ page }) => {
+test.describe("Test Field Class", () => {
+  test("Get and Set Value", async ({ page }) => {
     var response = await page.evaluate(() => {
-      model.fields.Firstname.Value = 'John';
+      model.fields.Firstname.Value = "John";
       return model.fields.Firstname.Value;
     });
-    expect(response).toBe('John');//Test
+    expect(response).toBe("John"); //Test
   });
-  test('Hide and Show Field', async ({ page }) => {
+  test("Hide and Show Field", async ({ page }) => {
     var response = await page.evaluate(() => {
       model.fields.Firstname.setVisible(false);
       let isVisible: boolean;
-      model.fields.Firstname.controls.forEach(c => isVisible = c.getVisible())
+      model.fields.Firstname.controls.forEach(
+        (c) => (isVisible = c.getVisible())
+      );
       return isVisible;
     });
     expect(response).toBe(false);
@@ -37,14 +39,18 @@ test.describe('Test Field Class', () => {
     var response2 = await page.evaluate(() => {
       model.fields.Firstname.setVisible(true);
       let isVisible: boolean;
-      model.fields.Firstname.controls.forEach(c => isVisible = c.getVisible())
+      model.fields.Firstname.controls.forEach(
+        (c) => (isVisible = c.getVisible())
+      );
       return isVisible;
     });
     expect(response2).toBe(true);
   });
 });
 
-type PromiseType<T extends Promise<any>> = T extends Promise<infer U> ? U : never;
+type PromiseType<T extends Promise<any>> = T extends Promise<infer U>
+  ? U
+  : never;
 declare global {
   interface Window {
     model: PromiseType<ReturnType<typeof getModel>>;
@@ -53,7 +59,7 @@ declare global {
 var model: PromiseType<ReturnType<typeof getModel>>;
 async function getModel(page: Page) {
   return await page.evaluate(() => {
-    XrmEx.Form.formContext = window.XrmEx.Form.executionContext;
+    XrmEx.Form.formContext = window.XrmEx.Form.formContext;
     class Fields {
       Firstname = new XrmEx.TextField("firstname");
       Lastname = new XrmEx.TextField("lastname");
@@ -103,9 +109,12 @@ async function getModel(page: Page) {
 }
 function loadJson() {
   try {
-    const buffer = fs.readFileSync(path.join(__dirname, '../playwright.env.json'), { encoding: 'utf-8' });
+    const buffer = fs.readFileSync(
+      path.join(__dirname, "../playwright.env.json"),
+      { encoding: "utf-8" }
+    );
     return JSON.parse(buffer);
   } catch (error) {
-    console.error('Could not load JSON', error);
+    console.error("Could not load JSON", error);
   }
 }

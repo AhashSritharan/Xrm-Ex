@@ -66,7 +66,7 @@
 
 #### Defined in
 
-[XrmEx.ts:1341](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1341)
+[XrmEx.ts:1343](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1343)
 
 ## Properties
 
@@ -76,7 +76,7 @@
 
 #### Defined in
 
-[XrmEx.ts:1338](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1338)
+[XrmEx.ts:1340](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1340)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1340](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1340)
+[XrmEx.ts:1342](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1342)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1339](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1339)
+[XrmEx.ts:1341](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1341)
 
 ___
 
@@ -110,7 +110,7 @@ Xrm.Controls.Tab.sections
 
 #### Defined in
 
-[XrmEx.ts:1348](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1348)
+[XrmEx.ts:1350](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1350)
 
 ## Accessors
 
@@ -124,7 +124,7 @@ Xrm.Controls.Tab.sections
 
 #### Defined in
 
-[XrmEx.ts:1350](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1350)
+[XrmEx.ts:1352](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1352)
 
 ## Methods
 
@@ -148,7 +148,7 @@ Xrm.Controls.Tab.addTabStateChange
 
 #### Defined in
 
-[XrmEx.ts:1355](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1355)
+[XrmEx.ts:1357](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1357)
 
 ___
 
@@ -166,7 +166,7 @@ Xrm.Controls.Tab.getDisplayState
 
 #### Defined in
 
-[XrmEx.ts:1358](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1358)
+[XrmEx.ts:1360](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1360)
 
 ___
 
@@ -184,7 +184,7 @@ Xrm.Controls.Tab.getLabel
 
 #### Defined in
 
-[XrmEx.ts:1379](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1379)
+[XrmEx.ts:1381](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1381)
 
 ___
 
@@ -202,7 +202,7 @@ Xrm.Controls.Tab.getName
 
 #### Defined in
 
-[XrmEx.ts:1361](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1361)
+[XrmEx.ts:1363](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1363)
 
 ___
 
@@ -220,7 +220,7 @@ Xrm.Controls.Tab.getParent
 
 #### Defined in
 
-[XrmEx.ts:1364](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1364)
+[XrmEx.ts:1366](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1366)
 
 ___
 
@@ -238,7 +238,7 @@ Xrm.Controls.Tab.getVisible
 
 #### Defined in
 
-[XrmEx.ts:1376](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1376)
+[XrmEx.ts:1378](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1378)
 
 ___
 
@@ -262,7 +262,7 @@ Xrm.Controls.Tab.removeTabStateChange
 
 #### Defined in
 
-[XrmEx.ts:1367](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1367)
+[XrmEx.ts:1369](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1369)
 
 ___
 
@@ -286,7 +286,7 @@ Xrm.Controls.Tab.setDisplayState
 
 #### Defined in
 
-[XrmEx.ts:1370](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1370)
+[XrmEx.ts:1372](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1372)
 
 ___
 
@@ -304,7 +304,7 @@ Xrm.Controls.Tab.setFocus
 
 #### Defined in
 
-[XrmEx.ts:1385](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1385)
+[XrmEx.ts:1387](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1387)
 
 ___
 
@@ -328,7 +328,7 @@ Xrm.Controls.Tab.setLabel
 
 #### Defined in
 
-[XrmEx.ts:1382](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1382)
+[XrmEx.ts:1384](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1384)
 
 ___
 
@@ -352,4 +352,4 @@ Xrm.Controls.Tab.setVisible
 
 #### Defined in
 
-[XrmEx.ts:1373](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L1373)
+[XrmEx.ts:1375](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1375)

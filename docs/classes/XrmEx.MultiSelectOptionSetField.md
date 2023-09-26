@@ -96,7 +96,7 @@ Used to execute methods related to a single Attribute
 
 #### Defined in
 
-[XrmEx.ts:945](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L945)
+[XrmEx.ts:947](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L947)
 
 ## Properties
 
@@ -110,7 +110,7 @@ Used to execute methods related to a single Attribute
 
 #### Defined in
 
-[XrmEx.ts:584](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L584)
+[XrmEx.ts:586](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L586)
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:944](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L944)
+[XrmEx.ts:946](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L946)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:943](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L943)
+[XrmEx.ts:945](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L945)
 
 ___
 
@@ -148,7 +148,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:582](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L582)
+[XrmEx.ts:584](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L584)
 
 ## Accessors
 
@@ -166,7 +166,7 @@ Field.Attribute
 
 #### Defined in
 
-[XrmEx.ts:971](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L971)
+[XrmEx.ts:973](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L973)
 
 ___
 
@@ -188,7 +188,7 @@ Field.Value
 
 #### Defined in
 
-[XrmEx.ts:979](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L979)
+[XrmEx.ts:981](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L981)
 
 • `set` **Value**(`value`): `void`
 
@@ -208,7 +208,7 @@ Field.Value
 
 #### Defined in
 
-[XrmEx.ts:982](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L982)
+[XrmEx.ts:984](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L984)
 
 ___
 
@@ -230,7 +230,7 @@ Field.controls
 
 #### Defined in
 
-[XrmEx.ts:976](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L976)
+[XrmEx.ts:978](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L978)
 
 ## Methods
 
@@ -259,7 +259,7 @@ Displays an error or recommendation notification for a control, and lets you spe
 
 #### Defined in
 
-[XrmEx.ts:778](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L778)
+[XrmEx.ts:780](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L780)
 
 ___
 
@@ -289,7 +289,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.addOnChange
 
 #### Defined in
 
-[XrmEx.ts:750](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L750)
+[XrmEx.ts:752](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L752)
 
 ___
 
@@ -313,7 +313,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.fireOnChange
 
 #### Defined in
 
-[XrmEx.ts:737](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L737)
+[XrmEx.ts:739](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L739)
 
 ___
 
@@ -335,7 +335,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getAttributeType
 
 #### Defined in
 
-[XrmEx.ts:600](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L600)
+[XrmEx.ts:602](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L602)
 
 ___
 
@@ -357,7 +357,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getFormat
 
 #### Defined in
 
-[XrmEx.ts:949](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L949)
+[XrmEx.ts:951](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L951)
 
 ___
 
@@ -375,7 +375,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getInitialValue
 
 #### Defined in
 
-[XrmEx.ts:968](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L968)
+[XrmEx.ts:970](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L970)
 
 ___
 
@@ -397,7 +397,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getIsDirty
 
 #### Defined in
 
-[XrmEx.ts:606](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L606)
+[XrmEx.ts:608](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L608)
 
 ___
 
@@ -419,7 +419,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getName
 
 #### Defined in
 
-[XrmEx.ts:609](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L609)
+[XrmEx.ts:611](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L611)
 
 ___
 
@@ -443,7 +443,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getOption
 
 #### Defined in
 
-[XrmEx.ts:952](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L952)
+[XrmEx.ts:954](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L954)
 
 ___
 
@@ -461,7 +461,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getOptions
 
 #### Defined in
 
-[XrmEx.ts:959](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L959)
+[XrmEx.ts:961](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L961)
 
 ___
 
@@ -483,7 +483,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getParent
 
 #### Defined in
 
-[XrmEx.ts:612](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L612)
+[XrmEx.ts:614](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L614)
 
 ___
 
@@ -505,7 +505,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getRequiredLevel
 
 #### Defined in
 
-[XrmEx.ts:615](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L615)
+[XrmEx.ts:617](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L617)
 
 ___
 
@@ -523,7 +523,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getSelectedOption
 
 #### Defined in
 
-[XrmEx.ts:962](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L962)
+[XrmEx.ts:964](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L964)
 
 ___
 
@@ -545,7 +545,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getSubmitMode
 
 #### Defined in
 
-[XrmEx.ts:618](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L618)
+[XrmEx.ts:620](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L620)
 
 ___
 
@@ -563,7 +563,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getText
 
 #### Defined in
 
-[XrmEx.ts:965](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L965)
+[XrmEx.ts:967](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L967)
 
 ___
 
@@ -585,7 +585,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getUserPrivilege
 
 #### Defined in
 
-[XrmEx.ts:621](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L621)
+[XrmEx.ts:623](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L623)
 
 ___
 
@@ -607,7 +607,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getValue
 
 #### Defined in
 
-[XrmEx.ts:630](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L630)
+[XrmEx.ts:632](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L632)
 
 ___
 
@@ -639,7 +639,7 @@ true if it succeeds, false if it fails.
 
 #### Defined in
 
-[XrmEx.ts:809](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L809)
+[XrmEx.ts:811](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L811)
 
 ___
 
@@ -667,7 +667,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.removeOnChange
 
 #### Defined in
 
-[XrmEx.ts:624](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L624)
+[XrmEx.ts:626](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L626)
 
 ___
 
@@ -693,7 +693,7 @@ Sets the state of the control to either enabled, or disabled.
 
 #### Defined in
 
-[XrmEx.ts:699](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L699)
+[XrmEx.ts:701](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L701)
 
 ___
 
@@ -722,7 +722,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.setIsValid
 
 #### Defined in
 
-[XrmEx.ts:633](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L633)
+[XrmEx.ts:635](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L635)
 
 ___
 
@@ -756,7 +756,7 @@ true if it succeeds, false if it fails.
 
 #### Defined in
 
-[XrmEx.ts:669](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L669)
+[XrmEx.ts:671](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L671)
 
 ___
 
@@ -782,7 +782,7 @@ Sets the required level.
 
 #### Defined in
 
-[XrmEx.ts:727](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L727)
+[XrmEx.ts:729](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L729)
 
 ___
 
@@ -812,7 +812,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.setRequiredLevel
 
 #### Defined in
 
-[XrmEx.ts:712](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L712)
+[XrmEx.ts:714](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L714)
 
 ___
 
@@ -840,7 +840,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.setSubmitMode
 
 #### Defined in
 
-[XrmEx.ts:627](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L627)
+[XrmEx.ts:629](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L629)
 
 ___
 
@@ -868,7 +868,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.setValue
 
 #### Defined in
 
-[XrmEx.ts:597](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L597)
+[XrmEx.ts:599](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L599)
 
 ___
 
@@ -894,4 +894,4 @@ Sets the visibility state.
 
 #### Defined in
 
-[XrmEx.ts:686](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L686)
+[XrmEx.ts:688](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L688)

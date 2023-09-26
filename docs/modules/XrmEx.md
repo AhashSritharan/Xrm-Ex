@@ -56,7 +56,7 @@ Displays a notification for an app with the given message and level, and lets yo
 
 #### Defined in
 
-[XrmEx.ts:70](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L70)
+[XrmEx.ts:70](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L70)
 
 ___
 
@@ -82,7 +82,7 @@ Checks if the given request parameter is of a supported type and has a valid val
 
 #### Defined in
 
-[XrmEx.ts:175](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L175)
+[XrmEx.ts:177](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L177)
 
 ___
 
@@ -112,7 +112,7 @@ Executes an Action.
 
 #### Defined in
 
-[XrmEx.ts:230](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L230)
+[XrmEx.ts:232](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L232)
 
 ___
 
@@ -142,7 +142,7 @@ Executes a Function.
 
 #### Defined in
 
-[XrmEx.ts:272](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L272)
+[XrmEx.ts:274](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L274)
 
 ___
 
@@ -151,6 +151,9 @@ ___
 ▸ **getEnvironmentVariableValue**(`environmentVariableSchemaName`): `Promise`<`string`\>
 
 Retrieves the value of an environment variable by using its schema name as key.
+If the environment variable has both a default value and a current value, this function will retrieve the current value.
+
+**`Async`**
 
 #### Parameters
 
@@ -166,7 +169,7 @@ Retrieves the value of an environment variable by using its schema name as key.
 
 #### Defined in
 
-[XrmEx.ts:113](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L113)
+[XrmEx.ts:115](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L115)
 
 ___
 
@@ -184,7 +187,7 @@ Returns the name of the calling function.
 
 #### Defined in
 
-[XrmEx.ts:48](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L48)
+[XrmEx.ts:48](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L48)
 
 ___
 
@@ -208,7 +211,7 @@ Makes a GUID lowercase and removes brackets.
 
 #### Defined in
 
-[XrmEx.ts:311](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L311)
+[XrmEx.ts:313](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L313)
 
 ___
 
@@ -233,7 +236,7 @@ Opens a dialog with dynamic height and width based on text content.
 
 #### Defined in
 
-[XrmEx.ts:322](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L322)
+[XrmEx.ts:324](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L324)
 
 ___
 
@@ -257,7 +260,7 @@ Clears a notification in the app with the given unique ID.
 
 #### Defined in
 
-[XrmEx.ts:99](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L99)
+[XrmEx.ts:99](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L99)
 
 ___
 
@@ -283,4 +286,4 @@ Throws an error with the given error message.
 
 #### Defined in
 
-[XrmEx.ts:41](https://github.com/AhashSritharan/Xrm-Ex/blob/d65bc4b/src/XrmEx.ts#L41)
+[XrmEx.ts:41](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L41)
