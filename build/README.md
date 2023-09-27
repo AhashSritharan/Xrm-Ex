@@ -12,6 +12,8 @@ XrmEx offers a comprehensive suite of wrappers that seamlessly integrate the Dyn
 - [Xrm-Ex: Dynamics 365 Xrm Extensions](#xrm-ex-dynamics-365-xrm-extensions)
   - [Installation](#installation)
   - [Getting Started](#getting-started)
+    - [Set up Project](#set-up-project)
+    - [Deployment](#deployment)
   - [Documentation](#documentation)
   - [Contribution Guidelines](#contribution-guidelines)
 - [Why Use the XrmEx Library?](#why-use-the-xrmex-library)
@@ -134,7 +136,7 @@ YourNamespace.Contact = YourNamespace.Contact || {};
 })(YourNamespace.Contact);
 ```
 ## Documentation
-For a comprehensive guide to using XrmEx, please check out the full [documentation](https://github.com/AhashSritharan/Xrm-Ex/blob/main/docs/modules/XrmEx.md).
+For a comprehensive guide to using XrmEx, please check out the full [documentation](https://github.com/AhashSritharan/Xrm-Ex/blob/main/docs/modules/XrmEx.html).
 
 ## Contribution Guidelines
 
