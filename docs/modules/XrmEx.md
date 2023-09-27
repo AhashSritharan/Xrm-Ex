@@ -1,4 +1,4 @@
-[xrm-ex](../README.md) / [Exports](../modules.md) / XrmEx
+[xrm-ex](https://github.com/AhashSritharan/README.md) / [Exports](https://github.com/AhashSritharan/modules.md) / XrmEx
 
 # Namespace: XrmEx
 
@@ -6,31 +6,31 @@
 
 ### Classes
 
-- [BooleanField](../classes/XrmEx.BooleanField.md)
-- [DateField](../classes/XrmEx.DateField.md)
-- [Field](../classes/XrmEx.Field.md)
-- [Form](../classes/XrmEx.Form.md)
-- [GridControl](../classes/XrmEx.GridControl.md)
-- [LookupField](../classes/XrmEx.LookupField.md)
-- [MultiSelectOptionSetField](../classes/XrmEx.MultiSelectOptionSetField.md)
-- [NumberField](../classes/XrmEx.NumberField.md)
-- [OptionsetField](../classes/XrmEx.OptionsetField.md)
-- [Section](../classes/XrmEx.Section.md)
-- [Tab](../classes/XrmEx.Tab.md)
-- [TextField](../classes/XrmEx.TextField.md)
+- [BooleanField](https://github.com/AhashSritharan/classes/XrmEx.BooleanField.md)
+- [DateField](https://github.com/AhashSritharan/classes/XrmEx.DateField.md)
+- [Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
+- [Form](https://github.com/AhashSritharan/classes/XrmEx.Form.md)
+- [GridControl](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md)
+- [LookupField](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
+- [MultiSelectOptionSetField](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)
+- [NumberField](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
+- [OptionsetField](https://github.com/AhashSritharan/classes/XrmEx.OptionsetField.md)
+- [Section](https://github.com/AhashSritharan/classes/XrmEx.Section.md)
+- [Tab](https://github.com/AhashSritharan/classes/XrmEx.Tab.md)
+- [TextField](https://github.com/AhashSritharan/classes/XrmEx.TextField.md)
 
 ### Functions
 
-- [addGlobalNotification](XrmEx.md#addglobalnotification)
-- [checkRequestParameterType](XrmEx.md#checkrequestparametertype)
-- [executeAction](XrmEx.md#executeaction)
-- [executeFunction](XrmEx.md#executefunction)
-- [getEnvironmentVariableValue](XrmEx.md#getenvironmentvariablevalue)
-- [getMethodName](XrmEx.md#getmethodname)
-- [normalizeGuid](XrmEx.md#normalizeguid)
-- [openAlertDialog](XrmEx.md#openalertdialog)
-- [removeGlobalNotification](XrmEx.md#removeglobalnotification)
-- [throwError](XrmEx.md#throwerror)
+- [addGlobalNotification](https://github.com/AhashSritharan/modules/XrmEx.md#addglobalnotification)
+- [checkRequestParameterType](https://github.com/AhashSritharan/modules/XrmEx.md#checkrequestparametertype)
+- [executeAction](https://github.com/AhashSritharan/modules/XrmEx.md#executeaction)
+- [executeFunction](https://github.com/AhashSritharan/modules/XrmEx.md#executefunction)
+- [getEnvironmentVariableValue](https://github.com/AhashSritharan/modules/XrmEx.md#getenvironmentvariablevalue)
+- [getMethodName](https://github.com/AhashSritharan/modules/XrmEx.md#getmethodname)
+- [normalizeGuid](https://github.com/AhashSritharan/modules/XrmEx.md#normalizeguid)
+- [openAlertDialog](https://github.com/AhashSritharan/modules/XrmEx.md#openalertdialog)
+- [removeGlobalNotification](https://github.com/AhashSritharan/modules/XrmEx.md#removeglobalnotification)
+- [throwError](https://github.com/AhashSritharan/modules/XrmEx.md#throwerror)
 
 ## Functions
 
@@ -56,7 +56,7 @@ Displays a notification for an app with the given message and level, and lets yo
 
 #### Defined in
 
-[XrmEx.ts:70](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L70)
+[XrmEx.ts:70](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L70)
 
 ___
 
@@ -74,7 +74,7 @@ Checks if the given request parameter is of a supported type and has a valid val
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `requestParameter` | [`RequestParameter`](../modules.md#requestparameter) | The request parameter to check. |
+| `requestParameter` | [`RequestParameter`](https://github.com/AhashSritharan/modules.md#requestparameter) | The request parameter to check. |
 
 #### Returns
 
@@ -82,7 +82,7 @@ Checks if the given request parameter is of a supported type and has a valid val
 
 #### Defined in
 
-[XrmEx.ts:177](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L177)
+[XrmEx.ts:177](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L177)
 
 ___
 
@@ -101,8 +101,8 @@ Executes an Action.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `actionName` | `string` | The unique name of the action. |
-| `requestParameters` | [`RequestParameter`](../modules.md#requestparameter)[] | An array of objects with the parameter name, type and value. |
-| `boundEntity?` | [`EntityReference`](../modules.md#entityreference) | An optional EntityReference of the bound entity. |
+| `requestParameters` | [`RequestParameter`](https://github.com/AhashSritharan/modules.md#requestparameter)[] | An array of objects with the parameter name, type and value. |
+| `boundEntity?` | [`EntityReference`](https://github.com/AhashSritharan/modules.md#entityreference) | An optional EntityReference of the bound entity. |
 
 #### Returns
 
@@ -112,7 +112,7 @@ Executes an Action.
 
 #### Defined in
 
-[XrmEx.ts:232](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L232)
+[XrmEx.ts:232](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L232)
 
 ___
 
@@ -131,8 +131,8 @@ Executes a Function.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `functionName` | `string` | The unique name of the function. |
-| `requestParameters` | [`RequestParameter`](../modules.md#requestparameter)[] | An array of objects with the parameter name, type and value. |
-| `boundEntity?` | [`EntityReference`](../modules.md#entityreference) | An optional EntityReference of the bound entity. |
+| `requestParameters` | [`RequestParameter`](https://github.com/AhashSritharan/modules.md#requestparameter)[] | An array of objects with the parameter name, type and value. |
+| `boundEntity?` | [`EntityReference`](https://github.com/AhashSritharan/modules.md#entityreference) | An optional EntityReference of the bound entity. |
 
 #### Returns
 
@@ -142,7 +142,7 @@ Executes a Function.
 
 #### Defined in
 
-[XrmEx.ts:274](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L274)
+[XrmEx.ts:274](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L274)
 
 ___
 
@@ -169,7 +169,7 @@ If the environment variable has both a default value and a current value, this f
 
 #### Defined in
 
-[XrmEx.ts:115](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L115)
+[XrmEx.ts:115](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L115)
 
 ___
 
@@ -187,7 +187,7 @@ Returns the name of the calling function.
 
 #### Defined in
 
-[XrmEx.ts:48](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L48)
+[XrmEx.ts:48](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L48)
 
 ___
 
@@ -211,7 +211,7 @@ Makes a GUID lowercase and removes brackets.
 
 #### Defined in
 
-[XrmEx.ts:313](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L313)
+[XrmEx.ts:313](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L313)
 
 ___
 
@@ -236,7 +236,7 @@ Opens a dialog with dynamic height and width based on text content.
 
 #### Defined in
 
-[XrmEx.ts:324](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L324)
+[XrmEx.ts:324](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L324)
 
 ___
 
@@ -260,7 +260,7 @@ Clears a notification in the app with the given unique ID.
 
 #### Defined in
 
-[XrmEx.ts:99](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L99)
+[XrmEx.ts:99](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L99)
 
 ___
 
@@ -286,4 +286,4 @@ Throws an error with the given error message.
 
 #### Defined in
 
-[XrmEx.ts:41](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L41)
+[XrmEx.ts:41](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L41)

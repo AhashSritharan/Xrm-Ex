@@ -1,4 +1,4 @@
-xrm-ex / [Exports](modules.md)
+xrm-ex / [Exports](https://github.com/AhashSritharan/modules.md)
 
 ![NPM](https://img.shields.io/npm/l/xrm-ex)
 ![NPM](https://img.shields.io/npm/v/xrm-ex)

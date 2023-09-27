@@ -36,7 +36,7 @@
     "build": "npm run clean && npm run type:dts && npm run build:main && npm run format && npm run docs && npm run copy && npm run postbuild && npm run zip",
     "build:main": "tsc --build",
     "clean": "rimraf build/src coverage nyc_output",
-    "docs": "npx typedoc --plugin typedoc-plugin-markdown --out docs src/XrmEx.ts",
+    "docs": "npx typedoc --plugin typedoc-plugin-markdown --publicPath https://github.com/AhashSritharan/ --out docs src/XrmEx.ts",
     "copy": "npm run copyReadme",
     "copyReadme": "node -e \"require('fs').cpSync('./README.md', './build/README.md');\"",
     "postbuild": "rimraf build/tests",

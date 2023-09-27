@@ -1,14 +1,14 @@
-[xrm-ex](../README.md) / [Exports](../modules.md) / [XrmEx](../modules/XrmEx.md) / LookupField
+[xrm-ex](https://github.com/AhashSritharan/README.md) / [Exports](https://github.com/AhashSritharan/modules.md) / [XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md) / LookupField
 
 # Class: LookupField
 
-[XrmEx](../modules/XrmEx.md).LookupField
+[XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md).LookupField
 
 Used to execute methods related to a single Attribute
 
 ## Hierarchy
 
-- [`Field`](XrmEx.Field.md)
+- [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
   ↳ **`LookupField`**
 
@@ -20,54 +20,54 @@ Used to execute methods related to a single Attribute
 
 ### Constructors
 
-- [constructor](XrmEx.LookupField.md#constructor)
+- [constructor](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#constructor)
 
 ### Properties
 
-- [Name](XrmEx.LookupField.md#name)
-- [\_attribute](XrmEx.LookupField.md#_attribute)
-- [\_customFilters](XrmEx.LookupField.md#_customfilters)
-- [allFields](XrmEx.LookupField.md#allfields)
+- [Name](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#name)
+- [\_attribute](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#_attribute)
+- [\_customFilters](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#_customfilters)
+- [allFields](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#allfields)
 
 ### Accessors
 
-- [Attribute](XrmEx.LookupField.md#attribute)
-- [EntityType](XrmEx.LookupField.md#entitytype)
-- [FormattedValue](XrmEx.LookupField.md#formattedvalue)
-- [Id](XrmEx.LookupField.md#id)
-- [Value](XrmEx.LookupField.md#value)
-- [controls](XrmEx.LookupField.md#controls)
+- [Attribute](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#attribute)
+- [EntityType](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#entitytype)
+- [FormattedValue](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#formattedvalue)
+- [Id](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#id)
+- [Value](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#value)
+- [controls](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#controls)
 
 ### Methods
 
-- [addNotification](XrmEx.LookupField.md#addnotification)
-- [addOnChange](XrmEx.LookupField.md#addonchange)
-- [addPreFilterToLookup](XrmEx.LookupField.md#addprefiltertolookup)
-- [addPreFilterToLookupAdvanced](XrmEx.LookupField.md#addprefiltertolookupadvanced)
-- [clearPreFilterFromLookup](XrmEx.LookupField.md#clearprefilterfromlookup)
-- [fireOnChange](XrmEx.LookupField.md#fireonchange)
-- [getAttributeType](XrmEx.LookupField.md#getattributetype)
-- [getFormat](XrmEx.LookupField.md#getformat)
-- [getIsDirty](XrmEx.LookupField.md#getisdirty)
-- [getIsPartyList](XrmEx.LookupField.md#getispartylist)
-- [getName](XrmEx.LookupField.md#getname)
-- [getParent](XrmEx.LookupField.md#getparent)
-- [getRequiredLevel](XrmEx.LookupField.md#getrequiredlevel)
-- [getSubmitMode](XrmEx.LookupField.md#getsubmitmode)
-- [getUserPrivilege](XrmEx.LookupField.md#getuserprivilege)
-- [getValue](XrmEx.LookupField.md#getvalue)
-- [removeNotification](XrmEx.LookupField.md#removenotification)
-- [removeOnChange](XrmEx.LookupField.md#removeonchange)
-- [retrieve](XrmEx.LookupField.md#retrieve)
-- [setDisabled](XrmEx.LookupField.md#setdisabled)
-- [setIsValid](XrmEx.LookupField.md#setisvalid)
-- [setLookupValue](XrmEx.LookupField.md#setlookupvalue)
-- [setNotification](XrmEx.LookupField.md#setnotification)
-- [setRequired](XrmEx.LookupField.md#setrequired)
-- [setRequiredLevel](XrmEx.LookupField.md#setrequiredlevel)
-- [setSubmitMode](XrmEx.LookupField.md#setsubmitmode)
-- [setValue](XrmEx.LookupField.md#setvalue)
-- [setVisible](XrmEx.LookupField.md#setvisible)
+- [addNotification](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#addnotification)
+- [addOnChange](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#addonchange)
+- [addPreFilterToLookup](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#addprefiltertolookup)
+- [addPreFilterToLookupAdvanced](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#addprefiltertolookupadvanced)
+- [clearPreFilterFromLookup](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#clearprefilterfromlookup)
+- [fireOnChange](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#fireonchange)
+- [getAttributeType](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#getattributetype)
+- [getFormat](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#getformat)
+- [getIsDirty](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#getisdirty)
+- [getIsPartyList](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#getispartylist)
+- [getName](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#getname)
+- [getParent](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#getparent)
+- [getRequiredLevel](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#getrequiredlevel)
+- [getSubmitMode](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#getsubmitmode)
+- [getUserPrivilege](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#getuserprivilege)
+- [getValue](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#getvalue)
+- [removeNotification](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#removenotification)
+- [removeOnChange](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#removeonchange)
+- [retrieve](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#retrieve)
+- [setDisabled](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#setdisabled)
+- [setIsValid](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#setisvalid)
+- [setLookupValue](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#setlookupvalue)
+- [setNotification](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#setnotification)
+- [setRequired](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#setrequired)
+- [setRequiredLevel](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#setrequiredlevel)
+- [setSubmitMode](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#setsubmitmode)
+- [setValue](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#setvalue)
+- [setVisible](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md#setvisible)
 
 ## Constructors
 
@@ -83,11 +83,11 @@ Used to execute methods related to a single Attribute
 
 #### Overrides
 
-[Field](XrmEx.Field.md).[constructor](XrmEx.Field.md#constructor)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[constructor](https://github.com/AhashSritharan/classes/XrmEx.Field.md#constructor)
 
 #### Defined in
 
-[XrmEx.ts:1001](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1001)
+[XrmEx.ts:1001](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1001)
 
 ## Properties
 
@@ -97,11 +97,11 @@ Used to execute methods related to a single Attribute
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[Name](XrmEx.Field.md#name)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[Name](https://github.com/AhashSritharan/classes/XrmEx.Field.md#name)
 
 #### Defined in
 
-[XrmEx.ts:586](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L586)
+[XrmEx.ts:586](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L586)
 
 ___
 
@@ -111,11 +111,11 @@ ___
 
 #### Overrides
 
-[Field](XrmEx.Field.md).[_attribute](XrmEx.Field.md#_attribute)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[_attribute](https://github.com/AhashSritharan/classes/XrmEx.Field.md#_attribute)
 
 #### Defined in
 
-[XrmEx.ts:999](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L999)
+[XrmEx.ts:999](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L999)
 
 ___
 
@@ -125,21 +125,21 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1000](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1000)
+[XrmEx.ts:1000](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1000)
 
 ___
 
 ### allFields
 
-▪ `Static` **allFields**: [`Field`](XrmEx.Field.md)[] = `[]`
+▪ `Static` **allFields**: [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)[] = `[]`
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[allFields](XrmEx.Field.md#allfields)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[allFields](https://github.com/AhashSritharan/classes/XrmEx.Field.md#allfields)
 
 #### Defined in
 
-[XrmEx.ts:584](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L584)
+[XrmEx.ts:584](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L584)
 
 ## Accessors
 
@@ -157,7 +157,7 @@ Field.Attribute
 
 #### Defined in
 
-[XrmEx.ts:1007](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1007)
+[XrmEx.ts:1007](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1007)
 
 ___
 
@@ -173,7 +173,7 @@ Gets the entityType of the first lookup value
 
 #### Defined in
 
-[XrmEx.ts:1022](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1022)
+[XrmEx.ts:1022](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1022)
 
 ___
 
@@ -189,7 +189,7 @@ Gets the formatted value of the first lookup value
 
 #### Defined in
 
-[XrmEx.ts:1028](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1028)
+[XrmEx.ts:1028](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1028)
 
 ___
 
@@ -205,7 +205,7 @@ Gets the id of the first lookup value
 
 #### Defined in
 
-[XrmEx.ts:1016](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1016)
+[XrmEx.ts:1016](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1016)
 
 ___
 
@@ -227,7 +227,7 @@ Field.Value
 
 #### Defined in
 
-[XrmEx.ts:1031](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1031)
+[XrmEx.ts:1031](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1031)
 
 • `set` **Value**(`value`): `void`
 
@@ -247,7 +247,7 @@ Field.Value
 
 #### Defined in
 
-[XrmEx.ts:1034](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1034)
+[XrmEx.ts:1034](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1034)
 
 ___
 
@@ -269,13 +269,13 @@ Field.controls
 
 #### Defined in
 
-[XrmEx.ts:1012](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1012)
+[XrmEx.ts:1012](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1012)
 
 ## Methods
 
 ### addNotification
 
-▸ **addNotification**(`message`, `notificationLevel`, `uniqueId`, `actions?`): [`LookupField`](XrmEx.LookupField.md)
+▸ **addNotification**(`message`, `notificationLevel`, `uniqueId`, `actions?`): [`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 Displays an error or recommendation notification for a control, and lets you specify actions to execute based on the notification.
 
@@ -290,21 +290,21 @@ Displays an error or recommendation notification for a control, and lets you spe
 
 #### Returns
 
-[`LookupField`](XrmEx.LookupField.md)
+[`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[addNotification](XrmEx.Field.md#addnotification)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[addNotification](https://github.com/AhashSritharan/classes/XrmEx.Field.md#addnotification)
 
 #### Defined in
 
-[XrmEx.ts:780](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L780)
+[XrmEx.ts:780](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L780)
 
 ___
 
 ### addOnChange
 
-▸ **addOnChange**(`handlers`): [`LookupField`](XrmEx.LookupField.md)
+▸ **addOnChange**(`handlers`): [`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 Adds a handler or an array of handlers to be called when the attribute's value is changed.
 
@@ -316,7 +316,7 @@ Adds a handler or an array of handlers to be called when the attribute's value i
 
 #### Returns
 
-[`LookupField`](XrmEx.LookupField.md)
+[`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 #### Implementation of
 
@@ -324,17 +324,17 @@ Xrm.Attributes.LookupAttribute.addOnChange
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[addOnChange](XrmEx.Field.md#addonchange)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[addOnChange](https://github.com/AhashSritharan/classes/XrmEx.Field.md#addonchange)
 
 #### Defined in
 
-[XrmEx.ts:752](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L752)
+[XrmEx.ts:752](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L752)
 
 ___
 
 ### addPreFilterToLookup
 
-▸ **addPreFilterToLookup**(`filterXml`, `entityLogicalName?`): [`LookupField`](XrmEx.LookupField.md)
+▸ **addPreFilterToLookup**(`filterXml`, `entityLogicalName?`): [`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 Adds an additional custom filter to the lookup, with the "AND" filter operator.
 
@@ -360,11 +360,11 @@ Example filter: <filter type="and">
 
 #### Returns
 
-[`LookupField`](XrmEx.LookupField.md)
+[`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 #### Defined in
 
-[XrmEx.ts:1107](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1107)
+[XrmEx.ts:1107](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1107)
 
 ___
 
@@ -405,35 +405,35 @@ Example fetchXml: <fetch>
 
 #### Defined in
 
-[XrmEx.ts:1140](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1140)
+[XrmEx.ts:1140](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1140)
 
 ___
 
 ### clearPreFilterFromLookup
 
-▸ **clearPreFilterFromLookup**(): [`LookupField`](XrmEx.LookupField.md)
+▸ **clearPreFilterFromLookup**(): [`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 Removes all filters set on the current lookup attribute by using addPreFilterToLookup or addPreFilterToLookupAdvanced
 
 #### Returns
 
-[`LookupField`](XrmEx.LookupField.md)
+[`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 #### Defined in
 
-[XrmEx.ts:1175](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1175)
+[XrmEx.ts:1175](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1175)
 
 ___
 
 ### fireOnChange
 
-▸ **fireOnChange**(): [`LookupField`](XrmEx.LookupField.md)
+▸ **fireOnChange**(): [`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 Fire all "on change" event handlers.
 
 #### Returns
 
-[`LookupField`](XrmEx.LookupField.md)
+[`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 #### Implementation of
 
@@ -441,11 +441,11 @@ Xrm.Attributes.LookupAttribute.fireOnChange
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[fireOnChange](XrmEx.Field.md#fireonchange)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[fireOnChange](https://github.com/AhashSritharan/classes/XrmEx.Field.md#fireonchange)
 
 #### Defined in
 
-[XrmEx.ts:739](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L739)
+[XrmEx.ts:739](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L739)
 
 ___
 
@@ -463,11 +463,11 @@ Xrm.Attributes.LookupAttribute.getAttributeType
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getAttributeType](XrmEx.Field.md#getattributetype)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getAttributeType](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getattributetype)
 
 #### Defined in
 
-[XrmEx.ts:602](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L602)
+[XrmEx.ts:602](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L602)
 
 ___
 
@@ -485,11 +485,11 @@ Xrm.Attributes.LookupAttribute.getFormat
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getFormat](XrmEx.Field.md#getformat)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getFormat](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getformat)
 
 #### Defined in
 
-[XrmEx.ts:605](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L605)
+[XrmEx.ts:605](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L605)
 
 ___
 
@@ -507,11 +507,11 @@ Xrm.Attributes.LookupAttribute.getIsDirty
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getIsDirty](XrmEx.Field.md#getisdirty)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getIsDirty](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getisdirty)
 
 #### Defined in
 
-[XrmEx.ts:608](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L608)
+[XrmEx.ts:608](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L608)
 
 ___
 
@@ -529,7 +529,7 @@ Xrm.Attributes.LookupAttribute.getIsPartyList
 
 #### Defined in
 
-[XrmEx.ts:1004](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1004)
+[XrmEx.ts:1004](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1004)
 
 ___
 
@@ -547,11 +547,11 @@ Xrm.Attributes.LookupAttribute.getName
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getName](XrmEx.Field.md#getname)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getName](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getname)
 
 #### Defined in
 
-[XrmEx.ts:611](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L611)
+[XrmEx.ts:611](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L611)
 
 ___
 
@@ -569,11 +569,11 @@ Xrm.Attributes.LookupAttribute.getParent
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getParent](XrmEx.Field.md#getparent)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getParent](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getparent)
 
 #### Defined in
 
-[XrmEx.ts:614](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L614)
+[XrmEx.ts:614](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L614)
 
 ___
 
@@ -591,11 +591,11 @@ Xrm.Attributes.LookupAttribute.getRequiredLevel
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getRequiredLevel](XrmEx.Field.md#getrequiredlevel)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getRequiredLevel](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getrequiredlevel)
 
 #### Defined in
 
-[XrmEx.ts:617](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L617)
+[XrmEx.ts:617](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L617)
 
 ___
 
@@ -613,11 +613,11 @@ Xrm.Attributes.LookupAttribute.getSubmitMode
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getSubmitMode](XrmEx.Field.md#getsubmitmode)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getSubmitMode](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getsubmitmode)
 
 #### Defined in
 
-[XrmEx.ts:620](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L620)
+[XrmEx.ts:620](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L620)
 
 ___
 
@@ -635,11 +635,11 @@ Xrm.Attributes.LookupAttribute.getUserPrivilege
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getUserPrivilege](XrmEx.Field.md#getuserprivilege)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getUserPrivilege](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getuserprivilege)
 
 #### Defined in
 
-[XrmEx.ts:623](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L623)
+[XrmEx.ts:623](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L623)
 
 ___
 
@@ -657,17 +657,17 @@ Xrm.Attributes.LookupAttribute.getValue
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getValue](XrmEx.Field.md#getvalue)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getValue](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getvalue)
 
 #### Defined in
 
-[XrmEx.ts:632](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L632)
+[XrmEx.ts:632](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L632)
 
 ___
 
 ### removeNotification
 
-▸ **removeNotification**(`uniqueId`): [`LookupField`](XrmEx.LookupField.md)
+▸ **removeNotification**(`uniqueId`): [`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 Clears the notification identified by uniqueId.
 
@@ -683,17 +683,17 @@ If the uniqueId parameter is not used, the current notification shown will be re
 
 #### Returns
 
-[`LookupField`](XrmEx.LookupField.md)
+[`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 true if it succeeds, false if it fails.
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[removeNotification](XrmEx.Field.md#removenotification)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[removeNotification](https://github.com/AhashSritharan/classes/XrmEx.Field.md#removenotification)
 
 #### Defined in
 
-[XrmEx.ts:811](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L811)
+[XrmEx.ts:811](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L811)
 
 ___
 
@@ -717,11 +717,11 @@ Xrm.Attributes.LookupAttribute.removeOnChange
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[removeOnChange](XrmEx.Field.md#removeonchange)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[removeOnChange](https://github.com/AhashSritharan/classes/XrmEx.Field.md#removeonchange)
 
 #### Defined in
 
-[XrmEx.ts:626](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L626)
+[XrmEx.ts:626](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L626)
 
 ___
 
@@ -756,13 +756,13 @@ On success, returns a promise containing a JSON object with the retrieved attrib
 
 #### Defined in
 
-[XrmEx.ts:1084](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1084)
+[XrmEx.ts:1084](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1084)
 
 ___
 
 ### setDisabled
 
-▸ **setDisabled**(`disabled`): [`LookupField`](XrmEx.LookupField.md)
+▸ **setDisabled**(`disabled`): [`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 Sets the state of the control to either enabled, or disabled.
 
@@ -774,15 +774,15 @@ Sets the state of the control to either enabled, or disabled.
 
 #### Returns
 
-[`LookupField`](XrmEx.LookupField.md)
+[`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setDisabled](XrmEx.Field.md#setdisabled)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setDisabled](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setdisabled)
 
 #### Defined in
 
-[XrmEx.ts:701](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L701)
+[XrmEx.ts:701](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L701)
 
 ___
 
@@ -807,17 +807,17 @@ Xrm.Attributes.LookupAttribute.setIsValid
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setIsValid](XrmEx.Field.md#setisvalid)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setIsValid](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setisvalid)
 
 #### Defined in
 
-[XrmEx.ts:635](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L635)
+[XrmEx.ts:635](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L635)
 
 ___
 
 ### setLookupValue
 
-▸ **setLookupValue**(`id`, `entityType`, `name`, `append?`): [`LookupField`](XrmEx.LookupField.md)
+▸ **setLookupValue**(`id`, `entityType`, `name`, `append?`): [`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 Sets the value of a lookup
 
@@ -832,17 +832,17 @@ Sets the value of a lookup
 
 #### Returns
 
-[`LookupField`](XrmEx.LookupField.md)
+[`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 #### Defined in
 
-[XrmEx.ts:1044](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1044)
+[XrmEx.ts:1044](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1044)
 
 ___
 
 ### setNotification
 
-▸ **setNotification**(`message`, `uniqueId`): [`LookupField`](XrmEx.LookupField.md)
+▸ **setNotification**(`message`, `uniqueId`): [`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 Sets a control-local notification message.
 
@@ -860,23 +860,23 @@ When this method is used on Microsoft Dynamics CRM for tablets a red "X" icon
 
 #### Returns
 
-[`LookupField`](XrmEx.LookupField.md)
+[`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 true if it succeeds, false if it fails.
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setNotification](XrmEx.Field.md#setnotification)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setNotification](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setnotification)
 
 #### Defined in
 
-[XrmEx.ts:671](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L671)
+[XrmEx.ts:671](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L671)
 
 ___
 
 ### setRequired
 
-▸ **setRequired**(`required`): [`LookupField`](XrmEx.LookupField.md)
+▸ **setRequired**(`required`): [`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 Sets the required level.
 
@@ -888,21 +888,21 @@ Sets the required level.
 
 #### Returns
 
-[`LookupField`](XrmEx.LookupField.md)
+[`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setRequired](XrmEx.Field.md#setrequired)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setRequired](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setrequired)
 
 #### Defined in
 
-[XrmEx.ts:729](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L729)
+[XrmEx.ts:729](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L729)
 
 ___
 
 ### setRequiredLevel
 
-▸ **setRequiredLevel**(`requirementLevel`): [`LookupField`](XrmEx.LookupField.md)
+▸ **setRequiredLevel**(`requirementLevel`): [`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 Sets the required level.
 
@@ -914,7 +914,7 @@ Sets the required level.
 
 #### Returns
 
-[`LookupField`](XrmEx.LookupField.md)
+[`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 #### Implementation of
 
@@ -922,11 +922,11 @@ Xrm.Attributes.LookupAttribute.setRequiredLevel
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setRequiredLevel](XrmEx.Field.md#setrequiredlevel)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setRequiredLevel](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setrequiredlevel)
 
 #### Defined in
 
-[XrmEx.ts:714](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L714)
+[XrmEx.ts:714](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L714)
 
 ___
 
@@ -950,11 +950,11 @@ Xrm.Attributes.LookupAttribute.setSubmitMode
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setSubmitMode](XrmEx.Field.md#setsubmitmode)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setSubmitMode](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setsubmitmode)
 
 #### Defined in
 
-[XrmEx.ts:629](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L629)
+[XrmEx.ts:629](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L629)
 
 ___
 
@@ -978,17 +978,17 @@ Xrm.Attributes.LookupAttribute.setValue
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setValue](XrmEx.Field.md#setvalue)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setValue](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setvalue)
 
 #### Defined in
 
-[XrmEx.ts:599](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L599)
+[XrmEx.ts:599](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L599)
 
 ___
 
 ### setVisible
 
-▸ **setVisible**(`visible`): [`LookupField`](XrmEx.LookupField.md)
+▸ **setVisible**(`visible`): [`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 Sets the visibility state.
 
@@ -1000,12 +1000,12 @@ Sets the visibility state.
 
 #### Returns
 
-[`LookupField`](XrmEx.LookupField.md)
+[`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setVisible](XrmEx.Field.md#setvisible)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setVisible](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setvisible)
 
 #### Defined in
 
-[XrmEx.ts:688](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L688)
+[XrmEx.ts:688](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L688)

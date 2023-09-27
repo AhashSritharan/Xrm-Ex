@@ -1,14 +1,14 @@
-[xrm-ex](../README.md) / [Exports](../modules.md) / [XrmEx](../modules/XrmEx.md) / NumberField
+[xrm-ex](https://github.com/AhashSritharan/README.md) / [Exports](https://github.com/AhashSritharan/modules.md) / [XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md) / NumberField
 
 # Class: NumberField
 
-[XrmEx](../modules/XrmEx.md).NumberField
+[XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md).NumberField
 
 Used to execute methods related to a single Attribute
 
 ## Hierarchy
 
-- [`Field`](XrmEx.Field.md)
+- [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
   ↳ **`NumberField`**
 
@@ -20,48 +20,48 @@ Used to execute methods related to a single Attribute
 
 ### Constructors
 
-- [constructor](XrmEx.NumberField.md#constructor)
+- [constructor](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#constructor)
 
 ### Properties
 
-- [Name](XrmEx.NumberField.md#name)
-- [\_attribute](XrmEx.NumberField.md#_attribute)
-- [allFields](XrmEx.NumberField.md#allfields)
+- [Name](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#name)
+- [\_attribute](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#_attribute)
+- [allFields](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#allfields)
 
 ### Accessors
 
-- [Attribute](XrmEx.NumberField.md#attribute)
-- [Value](XrmEx.NumberField.md#value)
-- [controls](XrmEx.NumberField.md#controls)
+- [Attribute](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#attribute)
+- [Value](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#value)
+- [controls](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#controls)
 
 ### Methods
 
-- [addNotification](XrmEx.NumberField.md#addnotification)
-- [addOnChange](XrmEx.NumberField.md#addonchange)
-- [fireOnChange](XrmEx.NumberField.md#fireonchange)
-- [getAttributeType](XrmEx.NumberField.md#getattributetype)
-- [getFormat](XrmEx.NumberField.md#getformat)
-- [getIsDirty](XrmEx.NumberField.md#getisdirty)
-- [getMax](XrmEx.NumberField.md#getmax)
-- [getMin](XrmEx.NumberField.md#getmin)
-- [getName](XrmEx.NumberField.md#getname)
-- [getParent](XrmEx.NumberField.md#getparent)
-- [getPrecision](XrmEx.NumberField.md#getprecision)
-- [getRequiredLevel](XrmEx.NumberField.md#getrequiredlevel)
-- [getSubmitMode](XrmEx.NumberField.md#getsubmitmode)
-- [getUserPrivilege](XrmEx.NumberField.md#getuserprivilege)
-- [getValue](XrmEx.NumberField.md#getvalue)
-- [removeNotification](XrmEx.NumberField.md#removenotification)
-- [removeOnChange](XrmEx.NumberField.md#removeonchange)
-- [setDisabled](XrmEx.NumberField.md#setdisabled)
-- [setIsValid](XrmEx.NumberField.md#setisvalid)
-- [setNotification](XrmEx.NumberField.md#setnotification)
-- [setPrecision](XrmEx.NumberField.md#setprecision)
-- [setRequired](XrmEx.NumberField.md#setrequired)
-- [setRequiredLevel](XrmEx.NumberField.md#setrequiredlevel)
-- [setSubmitMode](XrmEx.NumberField.md#setsubmitmode)
-- [setValue](XrmEx.NumberField.md#setvalue)
-- [setVisible](XrmEx.NumberField.md#setvisible)
+- [addNotification](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#addnotification)
+- [addOnChange](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#addonchange)
+- [fireOnChange](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#fireonchange)
+- [getAttributeType](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#getattributetype)
+- [getFormat](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#getformat)
+- [getIsDirty](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#getisdirty)
+- [getMax](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#getmax)
+- [getMin](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#getmin)
+- [getName](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#getname)
+- [getParent](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#getparent)
+- [getPrecision](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#getprecision)
+- [getRequiredLevel](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#getrequiredlevel)
+- [getSubmitMode](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#getsubmitmode)
+- [getUserPrivilege](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#getuserprivilege)
+- [getValue](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#getvalue)
+- [removeNotification](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#removenotification)
+- [removeOnChange](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#removeonchange)
+- [setDisabled](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#setdisabled)
+- [setIsValid](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#setisvalid)
+- [setNotification](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#setnotification)
+- [setPrecision](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#setprecision)
+- [setRequired](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#setrequired)
+- [setRequiredLevel](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#setrequiredlevel)
+- [setSubmitMode](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#setsubmitmode)
+- [setValue](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#setvalue)
+- [setVisible](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md#setvisible)
 
 ## Constructors
 
@@ -77,11 +77,11 @@ Used to execute methods related to a single Attribute
 
 #### Overrides
 
-[Field](XrmEx.Field.md).[constructor](XrmEx.Field.md#constructor)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[constructor](https://github.com/AhashSritharan/classes/XrmEx.Field.md#constructor)
 
 #### Defined in
 
-[XrmEx.ts:856](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L856)
+[XrmEx.ts:856](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L856)
 
 ## Properties
 
@@ -91,11 +91,11 @@ Used to execute methods related to a single Attribute
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[Name](XrmEx.Field.md#name)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[Name](https://github.com/AhashSritharan/classes/XrmEx.Field.md#name)
 
 #### Defined in
 
-[XrmEx.ts:586](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L586)
+[XrmEx.ts:586](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L586)
 
 ___
 
@@ -105,25 +105,25 @@ ___
 
 #### Overrides
 
-[Field](XrmEx.Field.md).[_attribute](XrmEx.Field.md#_attribute)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[_attribute](https://github.com/AhashSritharan/classes/XrmEx.Field.md#_attribute)
 
 #### Defined in
 
-[XrmEx.ts:855](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L855)
+[XrmEx.ts:855](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L855)
 
 ___
 
 ### allFields
 
-▪ `Static` **allFields**: [`Field`](XrmEx.Field.md)[] = `[]`
+▪ `Static` **allFields**: [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)[] = `[]`
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[allFields](XrmEx.Field.md#allfields)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[allFields](https://github.com/AhashSritharan/classes/XrmEx.Field.md#allfields)
 
 #### Defined in
 
-[XrmEx.ts:584](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L584)
+[XrmEx.ts:584](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L584)
 
 ## Accessors
 
@@ -141,7 +141,7 @@ Field.Attribute
 
 #### Defined in
 
-[XrmEx.ts:874](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L874)
+[XrmEx.ts:874](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L874)
 
 ___
 
@@ -163,7 +163,7 @@ Field.Value
 
 #### Defined in
 
-[XrmEx.ts:882](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L882)
+[XrmEx.ts:882](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L882)
 
 • `set` **Value**(`value`): `void`
 
@@ -183,7 +183,7 @@ Field.Value
 
 #### Defined in
 
-[XrmEx.ts:885](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L885)
+[XrmEx.ts:885](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L885)
 
 ___
 
@@ -205,13 +205,13 @@ Field.controls
 
 #### Defined in
 
-[XrmEx.ts:879](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L879)
+[XrmEx.ts:879](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L879)
 
 ## Methods
 
 ### addNotification
 
-▸ **addNotification**(`message`, `notificationLevel`, `uniqueId`, `actions?`): [`NumberField`](XrmEx.NumberField.md)
+▸ **addNotification**(`message`, `notificationLevel`, `uniqueId`, `actions?`): [`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 Displays an error or recommendation notification for a control, and lets you specify actions to execute based on the notification.
 
@@ -226,21 +226,21 @@ Displays an error or recommendation notification for a control, and lets you spe
 
 #### Returns
 
-[`NumberField`](XrmEx.NumberField.md)
+[`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[addNotification](XrmEx.Field.md#addnotification)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[addNotification](https://github.com/AhashSritharan/classes/XrmEx.Field.md#addnotification)
 
 #### Defined in
 
-[XrmEx.ts:780](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L780)
+[XrmEx.ts:780](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L780)
 
 ___
 
 ### addOnChange
 
-▸ **addOnChange**(`handlers`): [`NumberField`](XrmEx.NumberField.md)
+▸ **addOnChange**(`handlers`): [`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 Adds a handler or an array of handlers to be called when the attribute's value is changed.
 
@@ -252,7 +252,7 @@ Adds a handler or an array of handlers to be called when the attribute's value i
 
 #### Returns
 
-[`NumberField`](XrmEx.NumberField.md)
+[`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 #### Implementation of
 
@@ -260,23 +260,23 @@ Xrm.Attributes.NumberAttribute.addOnChange
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[addOnChange](XrmEx.Field.md#addonchange)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[addOnChange](https://github.com/AhashSritharan/classes/XrmEx.Field.md#addonchange)
 
 #### Defined in
 
-[XrmEx.ts:752](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L752)
+[XrmEx.ts:752](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L752)
 
 ___
 
 ### fireOnChange
 
-▸ **fireOnChange**(): [`NumberField`](XrmEx.NumberField.md)
+▸ **fireOnChange**(): [`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 Fire all "on change" event handlers.
 
 #### Returns
 
-[`NumberField`](XrmEx.NumberField.md)
+[`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 #### Implementation of
 
@@ -284,11 +284,11 @@ Xrm.Attributes.NumberAttribute.fireOnChange
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[fireOnChange](XrmEx.Field.md#fireonchange)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[fireOnChange](https://github.com/AhashSritharan/classes/XrmEx.Field.md#fireonchange)
 
 #### Defined in
 
-[XrmEx.ts:739](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L739)
+[XrmEx.ts:739](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L739)
 
 ___
 
@@ -306,11 +306,11 @@ Xrm.Attributes.NumberAttribute.getAttributeType
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getAttributeType](XrmEx.Field.md#getattributetype)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getAttributeType](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getattributetype)
 
 #### Defined in
 
-[XrmEx.ts:602](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L602)
+[XrmEx.ts:602](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L602)
 
 ___
 
@@ -328,11 +328,11 @@ Xrm.Attributes.NumberAttribute.getFormat
 
 #### Overrides
 
-[Field](XrmEx.Field.md).[getFormat](XrmEx.Field.md#getformat)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getFormat](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getformat)
 
 #### Defined in
 
-[XrmEx.ts:859](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L859)
+[XrmEx.ts:859](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L859)
 
 ___
 
@@ -350,11 +350,11 @@ Xrm.Attributes.NumberAttribute.getIsDirty
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getIsDirty](XrmEx.Field.md#getisdirty)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getIsDirty](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getisdirty)
 
 #### Defined in
 
-[XrmEx.ts:608](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L608)
+[XrmEx.ts:608](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L608)
 
 ___
 
@@ -372,7 +372,7 @@ Xrm.Attributes.NumberAttribute.getMax
 
 #### Defined in
 
-[XrmEx.ts:862](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L862)
+[XrmEx.ts:862](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L862)
 
 ___
 
@@ -390,7 +390,7 @@ Xrm.Attributes.NumberAttribute.getMin
 
 #### Defined in
 
-[XrmEx.ts:865](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L865)
+[XrmEx.ts:865](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L865)
 
 ___
 
@@ -408,11 +408,11 @@ Xrm.Attributes.NumberAttribute.getName
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getName](XrmEx.Field.md#getname)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getName](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getname)
 
 #### Defined in
 
-[XrmEx.ts:611](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L611)
+[XrmEx.ts:611](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L611)
 
 ___
 
@@ -430,11 +430,11 @@ Xrm.Attributes.NumberAttribute.getParent
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getParent](XrmEx.Field.md#getparent)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getParent](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getparent)
 
 #### Defined in
 
-[XrmEx.ts:614](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L614)
+[XrmEx.ts:614](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L614)
 
 ___
 
@@ -452,7 +452,7 @@ Xrm.Attributes.NumberAttribute.getPrecision
 
 #### Defined in
 
-[XrmEx.ts:868](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L868)
+[XrmEx.ts:868](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L868)
 
 ___
 
@@ -470,11 +470,11 @@ Xrm.Attributes.NumberAttribute.getRequiredLevel
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getRequiredLevel](XrmEx.Field.md#getrequiredlevel)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getRequiredLevel](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getrequiredlevel)
 
 #### Defined in
 
-[XrmEx.ts:617](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L617)
+[XrmEx.ts:617](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L617)
 
 ___
 
@@ -492,11 +492,11 @@ Xrm.Attributes.NumberAttribute.getSubmitMode
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getSubmitMode](XrmEx.Field.md#getsubmitmode)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getSubmitMode](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getsubmitmode)
 
 #### Defined in
 
-[XrmEx.ts:620](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L620)
+[XrmEx.ts:620](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L620)
 
 ___
 
@@ -514,11 +514,11 @@ Xrm.Attributes.NumberAttribute.getUserPrivilege
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getUserPrivilege](XrmEx.Field.md#getuserprivilege)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getUserPrivilege](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getuserprivilege)
 
 #### Defined in
 
-[XrmEx.ts:623](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L623)
+[XrmEx.ts:623](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L623)
 
 ___
 
@@ -536,17 +536,17 @@ Xrm.Attributes.NumberAttribute.getValue
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getValue](XrmEx.Field.md#getvalue)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getValue](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getvalue)
 
 #### Defined in
 
-[XrmEx.ts:632](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L632)
+[XrmEx.ts:632](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L632)
 
 ___
 
 ### removeNotification
 
-▸ **removeNotification**(`uniqueId`): [`NumberField`](XrmEx.NumberField.md)
+▸ **removeNotification**(`uniqueId`): [`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 Clears the notification identified by uniqueId.
 
@@ -562,17 +562,17 @@ If the uniqueId parameter is not used, the current notification shown will be re
 
 #### Returns
 
-[`NumberField`](XrmEx.NumberField.md)
+[`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 true if it succeeds, false if it fails.
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[removeNotification](XrmEx.Field.md#removenotification)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[removeNotification](https://github.com/AhashSritharan/classes/XrmEx.Field.md#removenotification)
 
 #### Defined in
 
-[XrmEx.ts:811](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L811)
+[XrmEx.ts:811](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L811)
 
 ___
 
@@ -596,17 +596,17 @@ Xrm.Attributes.NumberAttribute.removeOnChange
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[removeOnChange](XrmEx.Field.md#removeonchange)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[removeOnChange](https://github.com/AhashSritharan/classes/XrmEx.Field.md#removeonchange)
 
 #### Defined in
 
-[XrmEx.ts:626](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L626)
+[XrmEx.ts:626](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L626)
 
 ___
 
 ### setDisabled
 
-▸ **setDisabled**(`disabled`): [`NumberField`](XrmEx.NumberField.md)
+▸ **setDisabled**(`disabled`): [`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 Sets the state of the control to either enabled, or disabled.
 
@@ -618,15 +618,15 @@ Sets the state of the control to either enabled, or disabled.
 
 #### Returns
 
-[`NumberField`](XrmEx.NumberField.md)
+[`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setDisabled](XrmEx.Field.md#setdisabled)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setDisabled](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setdisabled)
 
 #### Defined in
 
-[XrmEx.ts:701](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L701)
+[XrmEx.ts:701](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L701)
 
 ___
 
@@ -651,17 +651,17 @@ Xrm.Attributes.NumberAttribute.setIsValid
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setIsValid](XrmEx.Field.md#setisvalid)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setIsValid](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setisvalid)
 
 #### Defined in
 
-[XrmEx.ts:635](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L635)
+[XrmEx.ts:635](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L635)
 
 ___
 
 ### setNotification
 
-▸ **setNotification**(`message`, `uniqueId`): [`NumberField`](XrmEx.NumberField.md)
+▸ **setNotification**(`message`, `uniqueId`): [`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 Sets a control-local notification message.
 
@@ -679,17 +679,17 @@ When this method is used on Microsoft Dynamics CRM for tablets a red "X" icon
 
 #### Returns
 
-[`NumberField`](XrmEx.NumberField.md)
+[`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 true if it succeeds, false if it fails.
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setNotification](XrmEx.Field.md#setnotification)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setNotification](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setnotification)
 
 #### Defined in
 
-[XrmEx.ts:671](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L671)
+[XrmEx.ts:671](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L671)
 
 ___
 
@@ -713,13 +713,13 @@ Xrm.Attributes.NumberAttribute.setPrecision
 
 #### Defined in
 
-[XrmEx.ts:871](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L871)
+[XrmEx.ts:871](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L871)
 
 ___
 
 ### setRequired
 
-▸ **setRequired**(`required`): [`NumberField`](XrmEx.NumberField.md)
+▸ **setRequired**(`required`): [`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 Sets the required level.
 
@@ -731,21 +731,21 @@ Sets the required level.
 
 #### Returns
 
-[`NumberField`](XrmEx.NumberField.md)
+[`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setRequired](XrmEx.Field.md#setrequired)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setRequired](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setrequired)
 
 #### Defined in
 
-[XrmEx.ts:729](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L729)
+[XrmEx.ts:729](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L729)
 
 ___
 
 ### setRequiredLevel
 
-▸ **setRequiredLevel**(`requirementLevel`): [`NumberField`](XrmEx.NumberField.md)
+▸ **setRequiredLevel**(`requirementLevel`): [`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 Sets the required level.
 
@@ -757,7 +757,7 @@ Sets the required level.
 
 #### Returns
 
-[`NumberField`](XrmEx.NumberField.md)
+[`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 #### Implementation of
 
@@ -765,11 +765,11 @@ Xrm.Attributes.NumberAttribute.setRequiredLevel
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setRequiredLevel](XrmEx.Field.md#setrequiredlevel)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setRequiredLevel](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setrequiredlevel)
 
 #### Defined in
 
-[XrmEx.ts:714](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L714)
+[XrmEx.ts:714](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L714)
 
 ___
 
@@ -793,11 +793,11 @@ Xrm.Attributes.NumberAttribute.setSubmitMode
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setSubmitMode](XrmEx.Field.md#setsubmitmode)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setSubmitMode](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setsubmitmode)
 
 #### Defined in
 
-[XrmEx.ts:629](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L629)
+[XrmEx.ts:629](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L629)
 
 ___
 
@@ -821,17 +821,17 @@ Xrm.Attributes.NumberAttribute.setValue
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setValue](XrmEx.Field.md#setvalue)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setValue](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setvalue)
 
 #### Defined in
 
-[XrmEx.ts:599](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L599)
+[XrmEx.ts:599](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L599)
 
 ___
 
 ### setVisible
 
-▸ **setVisible**(`visible`): [`NumberField`](XrmEx.NumberField.md)
+▸ **setVisible**(`visible`): [`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 Sets the visibility state.
 
@@ -843,12 +843,12 @@ Sets the visibility state.
 
 #### Returns
 
-[`NumberField`](XrmEx.NumberField.md)
+[`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setVisible](XrmEx.Field.md#setvisible)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setVisible](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setvisible)
 
 #### Defined in
 
-[XrmEx.ts:688](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L688)
+[XrmEx.ts:688](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L688)

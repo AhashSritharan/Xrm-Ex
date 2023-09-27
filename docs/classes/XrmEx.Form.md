@@ -1,8 +1,8 @@
-[xrm-ex](../README.md) / [Exports](../modules.md) / [XrmEx](../modules/XrmEx.md) / Form
+[xrm-ex](https://github.com/AhashSritharan/README.md) / [Exports](https://github.com/AhashSritharan/modules.md) / [XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md) / Form
 
 # Class: Form
 
-[XrmEx](../modules/XrmEx.md).Form
+[XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md).Form
 
 Represents a form in Dynamics 365.
 
@@ -10,31 +10,31 @@ Represents a form in Dynamics 365.
 
 ### Constructors
 
-- [constructor](XrmEx.Form.md#constructor)
+- [constructor](https://github.com/AhashSritharan/classes/XrmEx.Form.md#constructor)
 
 ### Properties
 
-- [\_executionContext](XrmEx.Form.md#_executioncontext)
-- [\_formContext](XrmEx.Form.md#_formcontext)
+- [\_executionContext](https://github.com/AhashSritharan/classes/XrmEx.Form.md#_executioncontext)
+- [\_formContext](https://github.com/AhashSritharan/classes/XrmEx.Form.md#_formcontext)
 
 ### Accessors
 
-- [IsCreate](XrmEx.Form.md#iscreate)
-- [IsNotCreate](XrmEx.Form.md#isnotcreate)
-- [IsNotUpdate](XrmEx.Form.md#isnotupdate)
-- [IsUpdate](XrmEx.Form.md#isupdate)
-- [entityReference](XrmEx.Form.md#entityreference)
-- [executionContext](XrmEx.Form.md#executioncontext)
-- [formContext](XrmEx.Form.md#formcontext)
+- [IsCreate](https://github.com/AhashSritharan/classes/XrmEx.Form.md#iscreate)
+- [IsNotCreate](https://github.com/AhashSritharan/classes/XrmEx.Form.md#isnotcreate)
+- [IsNotUpdate](https://github.com/AhashSritharan/classes/XrmEx.Form.md#isnotupdate)
+- [IsUpdate](https://github.com/AhashSritharan/classes/XrmEx.Form.md#isupdate)
+- [entityReference](https://github.com/AhashSritharan/classes/XrmEx.Form.md#entityreference)
+- [executionContext](https://github.com/AhashSritharan/classes/XrmEx.Form.md#executioncontext)
+- [formContext](https://github.com/AhashSritharan/classes/XrmEx.Form.md#formcontext)
 
 ### Methods
 
-- [addFormNotification](XrmEx.Form.md#addformnotification)
-- [addOnChangeEventHandler](XrmEx.Form.md#addonchangeeventhandler)
-- [addOnLoadEventHandler](XrmEx.Form.md#addonloadeventhandler)
-- [addOnPostSaveEventHandler](XrmEx.Form.md#addonpostsaveeventhandler)
-- [addOnSaveEventHandler](XrmEx.Form.md#addonsaveeventhandler)
-- [removeFormNotification](XrmEx.Form.md#removeformnotification)
+- [addFormNotification](https://github.com/AhashSritharan/classes/XrmEx.Form.md#addformnotification)
+- [addOnChangeEventHandler](https://github.com/AhashSritharan/classes/XrmEx.Form.md#addonchangeeventhandler)
+- [addOnLoadEventHandler](https://github.com/AhashSritharan/classes/XrmEx.Form.md#addonloadeventhandler)
+- [addOnPostSaveEventHandler](https://github.com/AhashSritharan/classes/XrmEx.Form.md#addonpostsaveeventhandler)
+- [addOnSaveEventHandler](https://github.com/AhashSritharan/classes/XrmEx.Form.md#addonsaveeventhandler)
+- [removeFormNotification](https://github.com/AhashSritharan/classes/XrmEx.Form.md#removeformnotification)
 
 ## Constructors
 
@@ -44,7 +44,7 @@ Represents a form in Dynamics 365.
 
 #### Defined in
 
-[XrmEx.ts:386](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L386)
+[XrmEx.ts:386](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L386)
 
 ## Properties
 
@@ -54,7 +54,7 @@ Represents a form in Dynamics 365.
 
 #### Defined in
 
-[XrmEx.ts:385](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L385)
+[XrmEx.ts:385](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L385)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:384](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L384)
+[XrmEx.ts:384](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L384)
 
 ## Accessors
 
@@ -80,7 +80,7 @@ Returns true if form is from type create
 
 #### Defined in
 
-[XrmEx.ts:424](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L424)
+[XrmEx.ts:424](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L424)
 
 ___
 
@@ -96,7 +96,7 @@ Returns true if form is not from type create
 
 #### Defined in
 
-[XrmEx.ts:432](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L432)
+[XrmEx.ts:432](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L432)
 
 ___
 
@@ -112,7 +112,7 @@ Returns true if form is not from type update
 
 #### Defined in
 
-[XrmEx.ts:436](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L436)
+[XrmEx.ts:436](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L436)
 
 ___
 
@@ -128,7 +128,7 @@ Returns true if form is from type update
 
 #### Defined in
 
-[XrmEx.ts:428](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L428)
+[XrmEx.ts:428](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L428)
 
 ___
 
@@ -144,7 +144,7 @@ Gets a lookup value that references the record.
 
 #### Defined in
 
-[XrmEx.ts:396](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L396)
+[XrmEx.ts:396](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L396)
 
 ___
 
@@ -160,7 +160,7 @@ Gets a reference to the current executio context
 
 #### Defined in
 
-[XrmEx.ts:392](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L392)
+[XrmEx.ts:392](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L392)
 
 • `Static` `set` **executionContext**(`context`): `void`
 
@@ -178,7 +178,7 @@ Sets a reference to the current execution context
 
 #### Defined in
 
-[XrmEx.ts:411](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L411)
+[XrmEx.ts:411](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L411)
 
 ___
 
@@ -194,7 +194,7 @@ Gets a reference to the current form context
 
 #### Defined in
 
-[XrmEx.ts:388](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L388)
+[XrmEx.ts:388](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L388)
 
 • `Static` `set` **formContext**(`context`): `void`
 
@@ -212,7 +212,7 @@ Sets a reference to the current form context
 
 #### Defined in
 
-[XrmEx.ts:400](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L400)
+[XrmEx.ts:400](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L400)
 
 ## Methods
 
@@ -239,7 +239,7 @@ true if it succeeds, otherwise false.
 
 #### Defined in
 
-[XrmEx.ts:450](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L450)
+[XrmEx.ts:450](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L450)
 
 ___
 
@@ -253,7 +253,7 @@ Adds a handler to be called when the attribute's value is changed.
 
 | Name | Type |
 | :------ | :------ |
-| `fields` | [`Field`](XrmEx.Field.md)[] |
+| `fields` | [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)[] |
 | `handlers` | `ContextSensitiveHandler` \| `ContextSensitiveHandler`[] |
 | `execute?` | `boolean` |
 
@@ -263,7 +263,7 @@ Adds a handler to be called when the attribute's value is changed.
 
 #### Defined in
 
-[XrmEx.ts:551](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L551)
+[XrmEx.ts:551](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L551)
 
 ___
 
@@ -285,7 +285,7 @@ Adds a function to be called when form data is loaded.
 
 #### Defined in
 
-[XrmEx.ts:528](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L528)
+[XrmEx.ts:528](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L528)
 
 ___
 
@@ -315,7 +315,7 @@ Added in 9.2
 
 #### Defined in
 
-[XrmEx.ts:505](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L505)
+[XrmEx.ts:505](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L505)
 
 ___
 
@@ -337,7 +337,7 @@ Adds a handler to be called when the record is saved.
 
 #### Defined in
 
-[XrmEx.ts:480](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L480)
+[XrmEx.ts:480](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L480)
 
 ___
 
@@ -361,4 +361,4 @@ True if it succeeds, otherwise false.
 
 #### Defined in
 
-[XrmEx.ts:470](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L470)
+[XrmEx.ts:470](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L470)

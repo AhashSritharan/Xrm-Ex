@@ -1,4 +1,4 @@
-[xrm-ex](README.md) / Exports
+[xrm-ex](https://github.com/AhashSritharan/README.md) / Exports
 
 # xrm-ex
 
@@ -6,12 +6,12 @@
 
 ### Namespaces
 
-- [XrmEx](modules/XrmEx.md)
+- [XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md)
 
 ### Type Aliases
 
-- [EntityReference](modules.md#entityreference)
-- [RequestParameter](modules.md#requestparameter)
+- [EntityReference](https://github.com/AhashSritharan/modules.md#entityreference)
+- [RequestParameter](https://github.com/AhashSritharan/modules.md#requestparameter)
 
 ## Type Aliases
 
@@ -30,7 +30,7 @@ Represents a reference to an entity.
 
 #### Defined in
 
-[XrmEx.ts:31](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L31)
+[XrmEx.ts:31](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L31)
 
 ___
 
@@ -50,4 +50,4 @@ Represents a parameter for a request.
 
 #### Defined in
 
-[XrmEx.ts:9](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L9)
+[XrmEx.ts:9](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L9)

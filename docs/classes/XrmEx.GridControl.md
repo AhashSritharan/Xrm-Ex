@@ -1,8 +1,8 @@
-[xrm-ex](../README.md) / [Exports](../modules.md) / [XrmEx](../modules/XrmEx.md) / GridControl
+[xrm-ex](https://github.com/AhashSritharan/README.md) / [Exports](https://github.com/AhashSritharan/modules.md) / [XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md) / GridControl
 
 # Class: GridControl
 
-[XrmEx](../modules/XrmEx.md).GridControl
+[XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md).GridControl
 
 ## Implements
 
@@ -12,39 +12,39 @@
 
 ### Constructors
 
-- [constructor](XrmEx.GridControl.md#constructor)
+- [constructor](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#constructor)
 
 ### Properties
 
-- [Name](XrmEx.GridControl.md#name)
-- [\_gridControl](XrmEx.GridControl.md#_gridcontrol)
+- [Name](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#name)
+- [\_gridControl](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#_gridcontrol)
 
 ### Accessors
 
-- [Grid](XrmEx.GridControl.md#grid)
-- [GridControl](XrmEx.GridControl.md#gridcontrol)
+- [Grid](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#grid)
+- [GridControl](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#gridcontrol)
 
 ### Methods
 
-- [addOnLoad](XrmEx.GridControl.md#addonload)
-- [getContextType](XrmEx.GridControl.md#getcontexttype)
-- [getControlType](XrmEx.GridControl.md#getcontroltype)
-- [getEntityName](XrmEx.GridControl.md#getentityname)
-- [getFetchXml](XrmEx.GridControl.md#getfetchxml)
-- [getGrid](XrmEx.GridControl.md#getgrid)
-- [getLabel](XrmEx.GridControl.md#getlabel)
-- [getName](XrmEx.GridControl.md#getname)
-- [getParent](XrmEx.GridControl.md#getparent)
-- [getRelationship](XrmEx.GridControl.md#getrelationship)
-- [getUrl](XrmEx.GridControl.md#geturl)
-- [getViewSelector](XrmEx.GridControl.md#getviewselector)
-- [getVisible](XrmEx.GridControl.md#getvisible)
-- [openRelatedGrid](XrmEx.GridControl.md#openrelatedgrid)
-- [refresh](XrmEx.GridControl.md#refresh)
-- [refreshRibbon](XrmEx.GridControl.md#refreshribbon)
-- [removeOnLoad](XrmEx.GridControl.md#removeonload)
-- [setLabel](XrmEx.GridControl.md#setlabel)
-- [setVisible](XrmEx.GridControl.md#setvisible)
+- [addOnLoad](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#addonload)
+- [getContextType](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#getcontexttype)
+- [getControlType](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#getcontroltype)
+- [getEntityName](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#getentityname)
+- [getFetchXml](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#getfetchxml)
+- [getGrid](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#getgrid)
+- [getLabel](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#getlabel)
+- [getName](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#getname)
+- [getParent](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#getparent)
+- [getRelationship](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#getrelationship)
+- [getUrl](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#geturl)
+- [getViewSelector](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#getviewselector)
+- [getVisible](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#getvisible)
+- [openRelatedGrid](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#openrelatedgrid)
+- [refresh](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#refresh)
+- [refreshRibbon](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#refreshribbon)
+- [removeOnLoad](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#removeonload)
+- [setLabel](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#setlabel)
+- [setVisible](https://github.com/AhashSritharan/classes/XrmEx.GridControl.md#setvisible)
 
 ## Constructors
 
@@ -60,7 +60,7 @@
 
 #### Defined in
 
-[XrmEx.ts:1394](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1394)
+[XrmEx.ts:1394](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1394)
 
 ## Properties
 
@@ -70,7 +70,7 @@
 
 #### Defined in
 
-[XrmEx.ts:1392](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1392)
+[XrmEx.ts:1392](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1392)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1393](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1393)
+[XrmEx.ts:1393](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1393)
 
 ## Accessors
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1404](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1404)
+[XrmEx.ts:1404](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1404)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1397](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1397)
+[XrmEx.ts:1397](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1397)
 
 ## Methods
 
@@ -132,7 +132,7 @@ Xrm.Controls.GridControl.addOnLoad
 
 #### Defined in
 
-[XrmEx.ts:1407](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1407)
+[XrmEx.ts:1407](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1407)
 
 ___
 
@@ -150,7 +150,7 @@ Xrm.Controls.GridControl.getContextType
 
 #### Defined in
 
-[XrmEx.ts:1410](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1410)
+[XrmEx.ts:1410](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1410)
 
 ___
 
@@ -168,7 +168,7 @@ Xrm.Controls.GridControl.getControlType
 
 #### Defined in
 
-[XrmEx.ts:1443](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1443)
+[XrmEx.ts:1443](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1443)
 
 ___
 
@@ -186,7 +186,7 @@ Xrm.Controls.GridControl.getEntityName
 
 #### Defined in
 
-[XrmEx.ts:1413](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1413)
+[XrmEx.ts:1413](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1413)
 
 ___
 
@@ -204,7 +204,7 @@ Xrm.Controls.GridControl.getFetchXml
 
 #### Defined in
 
-[XrmEx.ts:1416](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1416)
+[XrmEx.ts:1416](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1416)
 
 ___
 
@@ -222,7 +222,7 @@ Xrm.Controls.GridControl.getGrid
 
 #### Defined in
 
-[XrmEx.ts:1419](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1419)
+[XrmEx.ts:1419](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1419)
 
 ___
 
@@ -240,7 +240,7 @@ Xrm.Controls.GridControl.getLabel
 
 #### Defined in
 
-[XrmEx.ts:1452](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1452)
+[XrmEx.ts:1452](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1452)
 
 ___
 
@@ -258,7 +258,7 @@ Xrm.Controls.GridControl.getName
 
 #### Defined in
 
-[XrmEx.ts:1446](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1446)
+[XrmEx.ts:1446](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1446)
 
 ___
 
@@ -276,7 +276,7 @@ Xrm.Controls.GridControl.getParent
 
 #### Defined in
 
-[XrmEx.ts:1449](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1449)
+[XrmEx.ts:1449](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1449)
 
 ___
 
@@ -294,7 +294,7 @@ Xrm.Controls.GridControl.getRelationship
 
 #### Defined in
 
-[XrmEx.ts:1422](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1422)
+[XrmEx.ts:1422](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1422)
 
 ___
 
@@ -318,7 +318,7 @@ Xrm.Controls.GridControl.getUrl
 
 #### Defined in
 
-[XrmEx.ts:1425](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1425)
+[XrmEx.ts:1425](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1425)
 
 ___
 
@@ -336,7 +336,7 @@ Xrm.Controls.GridControl.getViewSelector
 
 #### Defined in
 
-[XrmEx.ts:1428](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1428)
+[XrmEx.ts:1428](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1428)
 
 ___
 
@@ -354,7 +354,7 @@ Xrm.Controls.GridControl.getVisible
 
 #### Defined in
 
-[XrmEx.ts:1458](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1458)
+[XrmEx.ts:1458](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1458)
 
 ___
 
@@ -372,7 +372,7 @@ Xrm.Controls.GridControl.openRelatedGrid
 
 #### Defined in
 
-[XrmEx.ts:1431](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1431)
+[XrmEx.ts:1431](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1431)
 
 ___
 
@@ -390,7 +390,7 @@ Xrm.Controls.GridControl.refresh
 
 #### Defined in
 
-[XrmEx.ts:1434](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1434)
+[XrmEx.ts:1434](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1434)
 
 ___
 
@@ -408,7 +408,7 @@ Xrm.Controls.GridControl.refreshRibbon
 
 #### Defined in
 
-[XrmEx.ts:1437](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1437)
+[XrmEx.ts:1437](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1437)
 
 ___
 
@@ -432,7 +432,7 @@ Xrm.Controls.GridControl.removeOnLoad
 
 #### Defined in
 
-[XrmEx.ts:1440](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1440)
+[XrmEx.ts:1440](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1440)
 
 ___
 
@@ -456,7 +456,7 @@ Xrm.Controls.GridControl.setLabel
 
 #### Defined in
 
-[XrmEx.ts:1455](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1455)
+[XrmEx.ts:1455](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1455)
 
 ___
 
@@ -480,4 +480,4 @@ Xrm.Controls.GridControl.setVisible
 
 #### Defined in
 
-[XrmEx.ts:1461](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1461)
+[XrmEx.ts:1461](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1461)

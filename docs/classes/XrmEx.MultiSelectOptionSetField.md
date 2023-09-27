@@ -1,8 +1,8 @@
-[xrm-ex](../README.md) / [Exports](../modules.md) / [XrmEx](../modules/XrmEx.md) / MultiSelectOptionSetField
+[xrm-ex](https://github.com/AhashSritharan/README.md) / [Exports](https://github.com/AhashSritharan/modules.md) / [XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md) / MultiSelectOptionSetField
 
 # Class: MultiSelectOptionSetField<Options\>
 
-[XrmEx](../modules/XrmEx.md).MultiSelectOptionSetField
+[XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md).MultiSelectOptionSetField
 
 Used to execute methods related to a single Attribute
 
@@ -14,7 +14,7 @@ Used to execute methods related to a single Attribute
 
 ## Hierarchy
 
-- [`Field`](XrmEx.Field.md)
+- [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
   ↳ **`MultiSelectOptionSetField`**
 
@@ -26,50 +26,50 @@ Used to execute methods related to a single Attribute
 
 ### Constructors
 
-- [constructor](XrmEx.MultiSelectOptionSetField.md#constructor)
+- [constructor](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#constructor)
 
 ### Properties
 
-- [Name](XrmEx.MultiSelectOptionSetField.md#name)
-- [Option](XrmEx.MultiSelectOptionSetField.md#option)
-- [\_attribute](XrmEx.MultiSelectOptionSetField.md#_attribute)
-- [allFields](XrmEx.MultiSelectOptionSetField.md#allfields)
+- [Name](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#name)
+- [Option](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#option)
+- [\_attribute](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#_attribute)
+- [allFields](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#allfields)
 
 ### Accessors
 
-- [Attribute](XrmEx.MultiSelectOptionSetField.md#attribute)
-- [Value](XrmEx.MultiSelectOptionSetField.md#value)
-- [controls](XrmEx.MultiSelectOptionSetField.md#controls)
+- [Attribute](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#attribute)
+- [Value](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#value)
+- [controls](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#controls)
 
 ### Methods
 
-- [addNotification](XrmEx.MultiSelectOptionSetField.md#addnotification)
-- [addOnChange](XrmEx.MultiSelectOptionSetField.md#addonchange)
-- [fireOnChange](XrmEx.MultiSelectOptionSetField.md#fireonchange)
-- [getAttributeType](XrmEx.MultiSelectOptionSetField.md#getattributetype)
-- [getFormat](XrmEx.MultiSelectOptionSetField.md#getformat)
-- [getInitialValue](XrmEx.MultiSelectOptionSetField.md#getinitialvalue)
-- [getIsDirty](XrmEx.MultiSelectOptionSetField.md#getisdirty)
-- [getName](XrmEx.MultiSelectOptionSetField.md#getname)
-- [getOption](XrmEx.MultiSelectOptionSetField.md#getoption)
-- [getOptions](XrmEx.MultiSelectOptionSetField.md#getoptions)
-- [getParent](XrmEx.MultiSelectOptionSetField.md#getparent)
-- [getRequiredLevel](XrmEx.MultiSelectOptionSetField.md#getrequiredlevel)
-- [getSelectedOption](XrmEx.MultiSelectOptionSetField.md#getselectedoption)
-- [getSubmitMode](XrmEx.MultiSelectOptionSetField.md#getsubmitmode)
-- [getText](XrmEx.MultiSelectOptionSetField.md#gettext)
-- [getUserPrivilege](XrmEx.MultiSelectOptionSetField.md#getuserprivilege)
-- [getValue](XrmEx.MultiSelectOptionSetField.md#getvalue)
-- [removeNotification](XrmEx.MultiSelectOptionSetField.md#removenotification)
-- [removeOnChange](XrmEx.MultiSelectOptionSetField.md#removeonchange)
-- [setDisabled](XrmEx.MultiSelectOptionSetField.md#setdisabled)
-- [setIsValid](XrmEx.MultiSelectOptionSetField.md#setisvalid)
-- [setNotification](XrmEx.MultiSelectOptionSetField.md#setnotification)
-- [setRequired](XrmEx.MultiSelectOptionSetField.md#setrequired)
-- [setRequiredLevel](XrmEx.MultiSelectOptionSetField.md#setrequiredlevel)
-- [setSubmitMode](XrmEx.MultiSelectOptionSetField.md#setsubmitmode)
-- [setValue](XrmEx.MultiSelectOptionSetField.md#setvalue)
-- [setVisible](XrmEx.MultiSelectOptionSetField.md#setvisible)
+- [addNotification](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#addnotification)
+- [addOnChange](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#addonchange)
+- [fireOnChange](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#fireonchange)
+- [getAttributeType](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#getattributetype)
+- [getFormat](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#getformat)
+- [getInitialValue](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#getinitialvalue)
+- [getIsDirty](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#getisdirty)
+- [getName](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#getname)
+- [getOption](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#getoption)
+- [getOptions](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#getoptions)
+- [getParent](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#getparent)
+- [getRequiredLevel](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#getrequiredlevel)
+- [getSelectedOption](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#getselectedoption)
+- [getSubmitMode](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#getsubmitmode)
+- [getText](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#gettext)
+- [getUserPrivilege](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#getuserprivilege)
+- [getValue](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#getvalue)
+- [removeNotification](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#removenotification)
+- [removeOnChange](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#removeonchange)
+- [setDisabled](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#setdisabled)
+- [setIsValid](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#setisvalid)
+- [setNotification](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#setnotification)
+- [setRequired](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#setrequired)
+- [setRequiredLevel](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#setrequiredlevel)
+- [setSubmitMode](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#setsubmitmode)
+- [setValue](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#setvalue)
+- [setVisible](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md#setvisible)
 
 ## Constructors
 
@@ -92,11 +92,11 @@ Used to execute methods related to a single Attribute
 
 #### Overrides
 
-[Field](XrmEx.Field.md).[constructor](XrmEx.Field.md#constructor)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[constructor](https://github.com/AhashSritharan/classes/XrmEx.Field.md#constructor)
 
 #### Defined in
 
-[XrmEx.ts:947](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L947)
+[XrmEx.ts:947](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L947)
 
 ## Properties
 
@@ -106,11 +106,11 @@ Used to execute methods related to a single Attribute
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[Name](XrmEx.Field.md#name)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[Name](https://github.com/AhashSritharan/classes/XrmEx.Field.md#name)
 
 #### Defined in
 
-[XrmEx.ts:586](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L586)
+[XrmEx.ts:586](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L586)
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:946](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L946)
+[XrmEx.ts:946](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L946)
 
 ___
 
@@ -130,25 +130,25 @@ ___
 
 #### Overrides
 
-[Field](XrmEx.Field.md).[_attribute](XrmEx.Field.md#_attribute)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[_attribute](https://github.com/AhashSritharan/classes/XrmEx.Field.md#_attribute)
 
 #### Defined in
 
-[XrmEx.ts:945](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L945)
+[XrmEx.ts:945](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L945)
 
 ___
 
 ### allFields
 
-▪ `Static` **allFields**: [`Field`](XrmEx.Field.md)[] = `[]`
+▪ `Static` **allFields**: [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)[] = `[]`
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[allFields](XrmEx.Field.md#allfields)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[allFields](https://github.com/AhashSritharan/classes/XrmEx.Field.md#allfields)
 
 #### Defined in
 
-[XrmEx.ts:584](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L584)
+[XrmEx.ts:584](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L584)
 
 ## Accessors
 
@@ -166,7 +166,7 @@ Field.Attribute
 
 #### Defined in
 
-[XrmEx.ts:973](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L973)
+[XrmEx.ts:973](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L973)
 
 ___
 
@@ -188,7 +188,7 @@ Field.Value
 
 #### Defined in
 
-[XrmEx.ts:981](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L981)
+[XrmEx.ts:981](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L981)
 
 • `set` **Value**(`value`): `void`
 
@@ -208,7 +208,7 @@ Field.Value
 
 #### Defined in
 
-[XrmEx.ts:984](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L984)
+[XrmEx.ts:984](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L984)
 
 ___
 
@@ -230,13 +230,13 @@ Field.controls
 
 #### Defined in
 
-[XrmEx.ts:978](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L978)
+[XrmEx.ts:978](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L978)
 
 ## Methods
 
 ### addNotification
 
-▸ **addNotification**(`message`, `notificationLevel`, `uniqueId`, `actions?`): [`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+▸ **addNotification**(`message`, `notificationLevel`, `uniqueId`, `actions?`): [`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 Displays an error or recommendation notification for a control, and lets you specify actions to execute based on the notification.
 
@@ -251,21 +251,21 @@ Displays an error or recommendation notification for a control, and lets you spe
 
 #### Returns
 
-[`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+[`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[addNotification](XrmEx.Field.md#addnotification)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[addNotification](https://github.com/AhashSritharan/classes/XrmEx.Field.md#addnotification)
 
 #### Defined in
 
-[XrmEx.ts:780](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L780)
+[XrmEx.ts:780](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L780)
 
 ___
 
 ### addOnChange
 
-▸ **addOnChange**(`handlers`): [`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+▸ **addOnChange**(`handlers`): [`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 Adds a handler or an array of handlers to be called when the attribute's value is changed.
 
@@ -277,7 +277,7 @@ Adds a handler or an array of handlers to be called when the attribute's value i
 
 #### Returns
 
-[`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+[`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 #### Implementation of
 
@@ -285,23 +285,23 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.addOnChange
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[addOnChange](XrmEx.Field.md#addonchange)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[addOnChange](https://github.com/AhashSritharan/classes/XrmEx.Field.md#addonchange)
 
 #### Defined in
 
-[XrmEx.ts:752](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L752)
+[XrmEx.ts:752](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L752)
 
 ___
 
 ### fireOnChange
 
-▸ **fireOnChange**(): [`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+▸ **fireOnChange**(): [`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 Fire all "on change" event handlers.
 
 #### Returns
 
-[`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+[`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 #### Implementation of
 
@@ -309,11 +309,11 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.fireOnChange
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[fireOnChange](XrmEx.Field.md#fireonchange)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[fireOnChange](https://github.com/AhashSritharan/classes/XrmEx.Field.md#fireonchange)
 
 #### Defined in
 
-[XrmEx.ts:739](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L739)
+[XrmEx.ts:739](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L739)
 
 ___
 
@@ -331,11 +331,11 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getAttributeType
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getAttributeType](XrmEx.Field.md#getattributetype)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getAttributeType](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getattributetype)
 
 #### Defined in
 
-[XrmEx.ts:602](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L602)
+[XrmEx.ts:602](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L602)
 
 ___
 
@@ -353,11 +353,11 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getFormat
 
 #### Overrides
 
-[Field](XrmEx.Field.md).[getFormat](XrmEx.Field.md#getformat)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getFormat](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getformat)
 
 #### Defined in
 
-[XrmEx.ts:951](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L951)
+[XrmEx.ts:951](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L951)
 
 ___
 
@@ -375,7 +375,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getInitialValue
 
 #### Defined in
 
-[XrmEx.ts:970](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L970)
+[XrmEx.ts:970](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L970)
 
 ___
 
@@ -393,11 +393,11 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getIsDirty
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getIsDirty](XrmEx.Field.md#getisdirty)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getIsDirty](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getisdirty)
 
 #### Defined in
 
-[XrmEx.ts:608](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L608)
+[XrmEx.ts:608](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L608)
 
 ___
 
@@ -415,11 +415,11 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getName
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getName](XrmEx.Field.md#getname)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getName](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getname)
 
 #### Defined in
 
-[XrmEx.ts:611](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L611)
+[XrmEx.ts:611](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L611)
 
 ___
 
@@ -443,7 +443,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getOption
 
 #### Defined in
 
-[XrmEx.ts:954](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L954)
+[XrmEx.ts:954](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L954)
 
 ___
 
@@ -461,7 +461,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getOptions
 
 #### Defined in
 
-[XrmEx.ts:961](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L961)
+[XrmEx.ts:961](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L961)
 
 ___
 
@@ -479,11 +479,11 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getParent
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getParent](XrmEx.Field.md#getparent)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getParent](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getparent)
 
 #### Defined in
 
-[XrmEx.ts:614](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L614)
+[XrmEx.ts:614](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L614)
 
 ___
 
@@ -501,11 +501,11 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getRequiredLevel
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getRequiredLevel](XrmEx.Field.md#getrequiredlevel)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getRequiredLevel](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getrequiredlevel)
 
 #### Defined in
 
-[XrmEx.ts:617](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L617)
+[XrmEx.ts:617](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L617)
 
 ___
 
@@ -523,7 +523,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getSelectedOption
 
 #### Defined in
 
-[XrmEx.ts:964](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L964)
+[XrmEx.ts:964](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L964)
 
 ___
 
@@ -541,11 +541,11 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getSubmitMode
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getSubmitMode](XrmEx.Field.md#getsubmitmode)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getSubmitMode](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getsubmitmode)
 
 #### Defined in
 
-[XrmEx.ts:620](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L620)
+[XrmEx.ts:620](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L620)
 
 ___
 
@@ -563,7 +563,7 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getText
 
 #### Defined in
 
-[XrmEx.ts:967](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L967)
+[XrmEx.ts:967](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L967)
 
 ___
 
@@ -581,11 +581,11 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getUserPrivilege
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getUserPrivilege](XrmEx.Field.md#getuserprivilege)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getUserPrivilege](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getuserprivilege)
 
 #### Defined in
 
-[XrmEx.ts:623](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L623)
+[XrmEx.ts:623](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L623)
 
 ___
 
@@ -603,17 +603,17 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.getValue
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[getValue](XrmEx.Field.md#getvalue)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[getValue](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getvalue)
 
 #### Defined in
 
-[XrmEx.ts:632](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L632)
+[XrmEx.ts:632](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L632)
 
 ___
 
 ### removeNotification
 
-▸ **removeNotification**(`uniqueId`): [`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+▸ **removeNotification**(`uniqueId`): [`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 Clears the notification identified by uniqueId.
 
@@ -629,17 +629,17 @@ If the uniqueId parameter is not used, the current notification shown will be re
 
 #### Returns
 
-[`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+[`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 true if it succeeds, false if it fails.
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[removeNotification](XrmEx.Field.md#removenotification)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[removeNotification](https://github.com/AhashSritharan/classes/XrmEx.Field.md#removenotification)
 
 #### Defined in
 
-[XrmEx.ts:811](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L811)
+[XrmEx.ts:811](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L811)
 
 ___
 
@@ -663,17 +663,17 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.removeOnChange
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[removeOnChange](XrmEx.Field.md#removeonchange)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[removeOnChange](https://github.com/AhashSritharan/classes/XrmEx.Field.md#removeonchange)
 
 #### Defined in
 
-[XrmEx.ts:626](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L626)
+[XrmEx.ts:626](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L626)
 
 ___
 
 ### setDisabled
 
-▸ **setDisabled**(`disabled`): [`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+▸ **setDisabled**(`disabled`): [`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 Sets the state of the control to either enabled, or disabled.
 
@@ -685,15 +685,15 @@ Sets the state of the control to either enabled, or disabled.
 
 #### Returns
 
-[`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+[`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setDisabled](XrmEx.Field.md#setdisabled)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setDisabled](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setdisabled)
 
 #### Defined in
 
-[XrmEx.ts:701](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L701)
+[XrmEx.ts:701](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L701)
 
 ___
 
@@ -718,17 +718,17 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.setIsValid
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setIsValid](XrmEx.Field.md#setisvalid)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setIsValid](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setisvalid)
 
 #### Defined in
 
-[XrmEx.ts:635](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L635)
+[XrmEx.ts:635](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L635)
 
 ___
 
 ### setNotification
 
-▸ **setNotification**(`message`, `uniqueId`): [`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+▸ **setNotification**(`message`, `uniqueId`): [`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 Sets a control-local notification message.
 
@@ -746,23 +746,23 @@ When this method is used on Microsoft Dynamics CRM for tablets a red "X" icon
 
 #### Returns
 
-[`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+[`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 true if it succeeds, false if it fails.
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setNotification](XrmEx.Field.md#setnotification)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setNotification](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setnotification)
 
 #### Defined in
 
-[XrmEx.ts:671](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L671)
+[XrmEx.ts:671](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L671)
 
 ___
 
 ### setRequired
 
-▸ **setRequired**(`required`): [`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+▸ **setRequired**(`required`): [`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 Sets the required level.
 
@@ -774,21 +774,21 @@ Sets the required level.
 
 #### Returns
 
-[`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+[`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setRequired](XrmEx.Field.md#setrequired)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setRequired](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setrequired)
 
 #### Defined in
 
-[XrmEx.ts:729](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L729)
+[XrmEx.ts:729](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L729)
 
 ___
 
 ### setRequiredLevel
 
-▸ **setRequiredLevel**(`requirementLevel`): [`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+▸ **setRequiredLevel**(`requirementLevel`): [`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 Sets the required level.
 
@@ -800,7 +800,7 @@ Sets the required level.
 
 #### Returns
 
-[`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+[`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 #### Implementation of
 
@@ -808,11 +808,11 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.setRequiredLevel
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setRequiredLevel](XrmEx.Field.md#setrequiredlevel)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setRequiredLevel](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setrequiredlevel)
 
 #### Defined in
 
-[XrmEx.ts:714](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L714)
+[XrmEx.ts:714](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L714)
 
 ___
 
@@ -836,11 +836,11 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.setSubmitMode
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setSubmitMode](XrmEx.Field.md#setsubmitmode)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setSubmitMode](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setsubmitmode)
 
 #### Defined in
 
-[XrmEx.ts:629](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L629)
+[XrmEx.ts:629](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L629)
 
 ___
 
@@ -864,17 +864,17 @@ Xrm.Attributes.MultiSelectOptionSetAttribute.setValue
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setValue](XrmEx.Field.md#setvalue)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setValue](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setvalue)
 
 #### Defined in
 
-[XrmEx.ts:599](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L599)
+[XrmEx.ts:599](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L599)
 
 ___
 
 ### setVisible
 
-▸ **setVisible**(`visible`): [`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+▸ **setVisible**(`visible`): [`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 Sets the visibility state.
 
@@ -886,12 +886,12 @@ Sets the visibility state.
 
 #### Returns
 
-[`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)<`Options`\>
+[`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)<`Options`\>
 
 #### Inherited from
 
-[Field](XrmEx.Field.md).[setVisible](XrmEx.Field.md#setvisible)
+[Field](https://github.com/AhashSritharan/classes/XrmEx.Field.md).[setVisible](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setvisible)
 
 #### Defined in
 
-[XrmEx.ts:688](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L688)
+[XrmEx.ts:688](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L688)

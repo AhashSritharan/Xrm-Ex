@@ -1,8 +1,8 @@
-[xrm-ex](../README.md) / [Exports](../modules.md) / [XrmEx](../modules/XrmEx.md) / Tab
+[xrm-ex](https://github.com/AhashSritharan/README.md) / [Exports](https://github.com/AhashSritharan/modules.md) / [XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md) / Tab
 
 # Class: Tab<Sections\>
 
-[XrmEx](../modules/XrmEx.md).Tab
+[XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md).Tab
 
 ## Type parameters
 
@@ -18,32 +18,32 @@
 
 ### Constructors
 
-- [constructor](XrmEx.Tab.md#constructor)
+- [constructor](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#constructor)
 
 ### Properties
 
-- [Name](XrmEx.Tab.md#name)
-- [Section](XrmEx.Tab.md#section)
-- [\_tab](XrmEx.Tab.md#_tab)
-- [sections](XrmEx.Tab.md#sections)
+- [Name](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#name)
+- [Section](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#section)
+- [\_tab](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#_tab)
+- [sections](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#sections)
 
 ### Accessors
 
-- [Tab](XrmEx.Tab.md#tab)
+- [Tab](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#tab)
 
 ### Methods
 
-- [addTabStateChange](XrmEx.Tab.md#addtabstatechange)
-- [getDisplayState](XrmEx.Tab.md#getdisplaystate)
-- [getLabel](XrmEx.Tab.md#getlabel)
-- [getName](XrmEx.Tab.md#getname)
-- [getParent](XrmEx.Tab.md#getparent)
-- [getVisible](XrmEx.Tab.md#getvisible)
-- [removeTabStateChange](XrmEx.Tab.md#removetabstatechange)
-- [setDisplayState](XrmEx.Tab.md#setdisplaystate)
-- [setFocus](XrmEx.Tab.md#setfocus)
-- [setLabel](XrmEx.Tab.md#setlabel)
-- [setVisible](XrmEx.Tab.md#setvisible)
+- [addTabStateChange](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#addtabstatechange)
+- [getDisplayState](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#getdisplaystate)
+- [getLabel](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#getlabel)
+- [getName](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#getname)
+- [getParent](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#getparent)
+- [getVisible](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#getvisible)
+- [removeTabStateChange](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#removetabstatechange)
+- [setDisplayState](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#setdisplaystate)
+- [setFocus](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#setfocus)
+- [setLabel](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#setlabel)
+- [setVisible](https://github.com/AhashSritharan/classes/XrmEx.Tab.md#setvisible)
 
 ## Constructors
 
@@ -66,7 +66,7 @@
 
 #### Defined in
 
-[XrmEx.ts:1343](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1343)
+[XrmEx.ts:1343](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1343)
 
 ## Properties
 
@@ -76,7 +76,7 @@
 
 #### Defined in
 
-[XrmEx.ts:1340](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1340)
+[XrmEx.ts:1340](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1340)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1342](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1342)
+[XrmEx.ts:1342](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1342)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:1341](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1341)
+[XrmEx.ts:1341](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1341)
 
 ___
 
@@ -110,7 +110,7 @@ Xrm.Controls.Tab.sections
 
 #### Defined in
 
-[XrmEx.ts:1350](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1350)
+[XrmEx.ts:1350](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1350)
 
 ## Accessors
 
@@ -124,7 +124,7 @@ Xrm.Controls.Tab.sections
 
 #### Defined in
 
-[XrmEx.ts:1352](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1352)
+[XrmEx.ts:1352](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1352)
 
 ## Methods
 
@@ -148,7 +148,7 @@ Xrm.Controls.Tab.addTabStateChange
 
 #### Defined in
 
-[XrmEx.ts:1357](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1357)
+[XrmEx.ts:1357](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1357)
 
 ___
 
@@ -166,7 +166,7 @@ Xrm.Controls.Tab.getDisplayState
 
 #### Defined in
 
-[XrmEx.ts:1360](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1360)
+[XrmEx.ts:1360](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1360)
 
 ___
 
@@ -184,7 +184,7 @@ Xrm.Controls.Tab.getLabel
 
 #### Defined in
 
-[XrmEx.ts:1381](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1381)
+[XrmEx.ts:1381](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1381)
 
 ___
 
@@ -202,7 +202,7 @@ Xrm.Controls.Tab.getName
 
 #### Defined in
 
-[XrmEx.ts:1363](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1363)
+[XrmEx.ts:1363](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1363)
 
 ___
 
@@ -220,7 +220,7 @@ Xrm.Controls.Tab.getParent
 
 #### Defined in
 
-[XrmEx.ts:1366](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1366)
+[XrmEx.ts:1366](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1366)
 
 ___
 
@@ -238,7 +238,7 @@ Xrm.Controls.Tab.getVisible
 
 #### Defined in
 
-[XrmEx.ts:1378](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1378)
+[XrmEx.ts:1378](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1378)
 
 ___
 
@@ -262,7 +262,7 @@ Xrm.Controls.Tab.removeTabStateChange
 
 #### Defined in
 
-[XrmEx.ts:1369](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1369)
+[XrmEx.ts:1369](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1369)
 
 ___
 
@@ -286,7 +286,7 @@ Xrm.Controls.Tab.setDisplayState
 
 #### Defined in
 
-[XrmEx.ts:1372](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1372)
+[XrmEx.ts:1372](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1372)
 
 ___
 
@@ -304,7 +304,7 @@ Xrm.Controls.Tab.setFocus
 
 #### Defined in
 
-[XrmEx.ts:1387](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1387)
+[XrmEx.ts:1387](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1387)
 
 ___
 
@@ -328,7 +328,7 @@ Xrm.Controls.Tab.setLabel
 
 #### Defined in
 
-[XrmEx.ts:1384](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1384)
+[XrmEx.ts:1384](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1384)
 
 ___
 
@@ -352,4 +352,4 @@ Xrm.Controls.Tab.setVisible
 
 #### Defined in
 
-[XrmEx.ts:1375](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L1375)
+[XrmEx.ts:1375](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L1375)

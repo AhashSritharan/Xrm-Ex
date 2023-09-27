@@ -1,8 +1,8 @@
-[xrm-ex](../README.md) / [Exports](../modules.md) / [XrmEx](../modules/XrmEx.md) / Field
+[xrm-ex](https://github.com/AhashSritharan/README.md) / [Exports](https://github.com/AhashSritharan/modules.md) / [XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md) / Field
 
 # Class: Field
 
-[XrmEx](../modules/XrmEx.md).Field
+[XrmEx](https://github.com/AhashSritharan/modules/XrmEx.md).Field
 
 Used to execute methods related to a single Attribute
 
@@ -10,19 +10,19 @@ Used to execute methods related to a single Attribute
 
 - **`Field`**
 
-  ↳ [`TextField`](XrmEx.TextField.md)
+  ↳ [`TextField`](https://github.com/AhashSritharan/classes/XrmEx.TextField.md)
 
-  ↳ [`NumberField`](XrmEx.NumberField.md)
+  ↳ [`NumberField`](https://github.com/AhashSritharan/classes/XrmEx.NumberField.md)
 
-  ↳ [`DateField`](XrmEx.DateField.md)
+  ↳ [`DateField`](https://github.com/AhashSritharan/classes/XrmEx.DateField.md)
 
-  ↳ [`BooleanField`](XrmEx.BooleanField.md)
+  ↳ [`BooleanField`](https://github.com/AhashSritharan/classes/XrmEx.BooleanField.md)
 
-  ↳ [`MultiSelectOptionSetField`](XrmEx.MultiSelectOptionSetField.md)
+  ↳ [`MultiSelectOptionSetField`](https://github.com/AhashSritharan/classes/XrmEx.MultiSelectOptionSetField.md)
 
-  ↳ [`LookupField`](XrmEx.LookupField.md)
+  ↳ [`LookupField`](https://github.com/AhashSritharan/classes/XrmEx.LookupField.md)
 
-  ↳ [`OptionsetField`](XrmEx.OptionsetField.md)
+  ↳ [`OptionsetField`](https://github.com/AhashSritharan/classes/XrmEx.OptionsetField.md)
 
 ## Implements
 
@@ -32,44 +32,44 @@ Used to execute methods related to a single Attribute
 
 ### Constructors
 
-- [constructor](XrmEx.Field.md#constructor)
+- [constructor](https://github.com/AhashSritharan/classes/XrmEx.Field.md#constructor)
 
 ### Properties
 
-- [Name](XrmEx.Field.md#name)
-- [\_attribute](XrmEx.Field.md#_attribute)
-- [allFields](XrmEx.Field.md#allfields)
+- [Name](https://github.com/AhashSritharan/classes/XrmEx.Field.md#name)
+- [\_attribute](https://github.com/AhashSritharan/classes/XrmEx.Field.md#_attribute)
+- [allFields](https://github.com/AhashSritharan/classes/XrmEx.Field.md#allfields)
 
 ### Accessors
 
-- [Attribute](XrmEx.Field.md#attribute)
-- [Value](XrmEx.Field.md#value)
-- [controls](XrmEx.Field.md#controls)
+- [Attribute](https://github.com/AhashSritharan/classes/XrmEx.Field.md#attribute)
+- [Value](https://github.com/AhashSritharan/classes/XrmEx.Field.md#value)
+- [controls](https://github.com/AhashSritharan/classes/XrmEx.Field.md#controls)
 
 ### Methods
 
-- [addNotification](XrmEx.Field.md#addnotification)
-- [addOnChange](XrmEx.Field.md#addonchange)
-- [fireOnChange](XrmEx.Field.md#fireonchange)
-- [getAttributeType](XrmEx.Field.md#getattributetype)
-- [getFormat](XrmEx.Field.md#getformat)
-- [getIsDirty](XrmEx.Field.md#getisdirty)
-- [getName](XrmEx.Field.md#getname)
-- [getParent](XrmEx.Field.md#getparent)
-- [getRequiredLevel](XrmEx.Field.md#getrequiredlevel)
-- [getSubmitMode](XrmEx.Field.md#getsubmitmode)
-- [getUserPrivilege](XrmEx.Field.md#getuserprivilege)
-- [getValue](XrmEx.Field.md#getvalue)
-- [removeNotification](XrmEx.Field.md#removenotification)
-- [removeOnChange](XrmEx.Field.md#removeonchange)
-- [setDisabled](XrmEx.Field.md#setdisabled)
-- [setIsValid](XrmEx.Field.md#setisvalid)
-- [setNotification](XrmEx.Field.md#setnotification)
-- [setRequired](XrmEx.Field.md#setrequired)
-- [setRequiredLevel](XrmEx.Field.md#setrequiredlevel)
-- [setSubmitMode](XrmEx.Field.md#setsubmitmode)
-- [setValue](XrmEx.Field.md#setvalue)
-- [setVisible](XrmEx.Field.md#setvisible)
+- [addNotification](https://github.com/AhashSritharan/classes/XrmEx.Field.md#addnotification)
+- [addOnChange](https://github.com/AhashSritharan/classes/XrmEx.Field.md#addonchange)
+- [fireOnChange](https://github.com/AhashSritharan/classes/XrmEx.Field.md#fireonchange)
+- [getAttributeType](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getattributetype)
+- [getFormat](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getformat)
+- [getIsDirty](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getisdirty)
+- [getName](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getname)
+- [getParent](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getparent)
+- [getRequiredLevel](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getrequiredlevel)
+- [getSubmitMode](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getsubmitmode)
+- [getUserPrivilege](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getuserprivilege)
+- [getValue](https://github.com/AhashSritharan/classes/XrmEx.Field.md#getvalue)
+- [removeNotification](https://github.com/AhashSritharan/classes/XrmEx.Field.md#removenotification)
+- [removeOnChange](https://github.com/AhashSritharan/classes/XrmEx.Field.md#removeonchange)
+- [setDisabled](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setdisabled)
+- [setIsValid](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setisvalid)
+- [setNotification](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setnotification)
+- [setRequired](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setrequired)
+- [setRequiredLevel](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setrequiredlevel)
+- [setSubmitMode](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setsubmitmode)
+- [setValue](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setvalue)
+- [setVisible](https://github.com/AhashSritharan/classes/XrmEx.Field.md#setvisible)
 
 ## Constructors
 
@@ -85,7 +85,7 @@ Used to execute methods related to a single Attribute
 
 #### Defined in
 
-[XrmEx.ts:589](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L589)
+[XrmEx.ts:589](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L589)
 
 ## Properties
 
@@ -95,7 +95,7 @@ Used to execute methods related to a single Attribute
 
 #### Defined in
 
-[XrmEx.ts:586](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L586)
+[XrmEx.ts:586](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L586)
 
 ___
 
@@ -105,17 +105,17 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:587](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L587)
+[XrmEx.ts:587](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L587)
 
 ___
 
 ### allFields
 
-▪ `Static` **allFields**: [`Field`](XrmEx.Field.md)[] = `[]`
+▪ `Static` **allFields**: [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)[] = `[]`
 
 #### Defined in
 
-[XrmEx.ts:584](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L584)
+[XrmEx.ts:584](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L584)
 
 ## Accessors
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[XrmEx.ts:639](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L639)
+[XrmEx.ts:639](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L639)
 
 ___
 
@@ -147,7 +147,7 @@ The value.
 
 #### Defined in
 
-[XrmEx.ts:655](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L655)
+[XrmEx.ts:655](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L655)
 
 • `set` **Value**(`value`): `void`
 
@@ -163,7 +163,7 @@ The value.
 
 #### Defined in
 
-[XrmEx.ts:659](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L659)
+[XrmEx.ts:659](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L659)
 
 ___
 
@@ -181,13 +181,13 @@ Xrm.Attributes.Attribute.controls
 
 #### Defined in
 
-[XrmEx.ts:647](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L647)
+[XrmEx.ts:647](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L647)
 
 ## Methods
 
 ### addNotification
 
-▸ **addNotification**(`message`, `notificationLevel`, `uniqueId`, `actions?`): [`Field`](XrmEx.Field.md)
+▸ **addNotification**(`message`, `notificationLevel`, `uniqueId`, `actions?`): [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 Displays an error or recommendation notification for a control, and lets you specify actions to execute based on the notification.
 
@@ -202,17 +202,17 @@ Displays an error or recommendation notification for a control, and lets you spe
 
 #### Returns
 
-[`Field`](XrmEx.Field.md)
+[`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 #### Defined in
 
-[XrmEx.ts:780](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L780)
+[XrmEx.ts:780](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L780)
 
 ___
 
 ### addOnChange
 
-▸ **addOnChange**(`handlers`): [`Field`](XrmEx.Field.md)
+▸ **addOnChange**(`handlers`): [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 Adds a handler or an array of handlers to be called when the attribute's value is changed.
 
@@ -224,7 +224,7 @@ Adds a handler or an array of handlers to be called when the attribute's value i
 
 #### Returns
 
-[`Field`](XrmEx.Field.md)
+[`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 #### Implementation of
 
@@ -232,19 +232,19 @@ Xrm.Attributes.Attribute.addOnChange
 
 #### Defined in
 
-[XrmEx.ts:752](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L752)
+[XrmEx.ts:752](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L752)
 
 ___
 
 ### fireOnChange
 
-▸ **fireOnChange**(): [`Field`](XrmEx.Field.md)
+▸ **fireOnChange**(): [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 Fire all "on change" event handlers.
 
 #### Returns
 
-[`Field`](XrmEx.Field.md)
+[`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 #### Implementation of
 
@@ -252,7 +252,7 @@ Xrm.Attributes.Attribute.fireOnChange
 
 #### Defined in
 
-[XrmEx.ts:739](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L739)
+[XrmEx.ts:739](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L739)
 
 ___
 
@@ -270,7 +270,7 @@ Xrm.Attributes.Attribute.getAttributeType
 
 #### Defined in
 
-[XrmEx.ts:602](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L602)
+[XrmEx.ts:602](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L602)
 
 ___
 
@@ -288,7 +288,7 @@ Xrm.Attributes.Attribute.getFormat
 
 #### Defined in
 
-[XrmEx.ts:605](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L605)
+[XrmEx.ts:605](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L605)
 
 ___
 
@@ -306,7 +306,7 @@ Xrm.Attributes.Attribute.getIsDirty
 
 #### Defined in
 
-[XrmEx.ts:608](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L608)
+[XrmEx.ts:608](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L608)
 
 ___
 
@@ -324,7 +324,7 @@ Xrm.Attributes.Attribute.getName
 
 #### Defined in
 
-[XrmEx.ts:611](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L611)
+[XrmEx.ts:611](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L611)
 
 ___
 
@@ -342,7 +342,7 @@ Xrm.Attributes.Attribute.getParent
 
 #### Defined in
 
-[XrmEx.ts:614](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L614)
+[XrmEx.ts:614](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L614)
 
 ___
 
@@ -360,7 +360,7 @@ Xrm.Attributes.Attribute.getRequiredLevel
 
 #### Defined in
 
-[XrmEx.ts:617](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L617)
+[XrmEx.ts:617](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L617)
 
 ___
 
@@ -378,7 +378,7 @@ Xrm.Attributes.Attribute.getSubmitMode
 
 #### Defined in
 
-[XrmEx.ts:620](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L620)
+[XrmEx.ts:620](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L620)
 
 ___
 
@@ -396,7 +396,7 @@ Xrm.Attributes.Attribute.getUserPrivilege
 
 #### Defined in
 
-[XrmEx.ts:623](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L623)
+[XrmEx.ts:623](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L623)
 
 ___
 
@@ -414,13 +414,13 @@ Xrm.Attributes.Attribute.getValue
 
 #### Defined in
 
-[XrmEx.ts:632](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L632)
+[XrmEx.ts:632](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L632)
 
 ___
 
 ### removeNotification
 
-▸ **removeNotification**(`uniqueId`): [`Field`](XrmEx.Field.md)
+▸ **removeNotification**(`uniqueId`): [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 Clears the notification identified by uniqueId.
 
@@ -436,13 +436,13 @@ If the uniqueId parameter is not used, the current notification shown will be re
 
 #### Returns
 
-[`Field`](XrmEx.Field.md)
+[`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 true if it succeeds, false if it fails.
 
 #### Defined in
 
-[XrmEx.ts:811](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L811)
+[XrmEx.ts:811](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L811)
 
 ___
 
@@ -466,13 +466,13 @@ Xrm.Attributes.Attribute.removeOnChange
 
 #### Defined in
 
-[XrmEx.ts:626](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L626)
+[XrmEx.ts:626](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L626)
 
 ___
 
 ### setDisabled
 
-▸ **setDisabled**(`disabled`): [`Field`](XrmEx.Field.md)
+▸ **setDisabled**(`disabled`): [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 Sets the state of the control to either enabled, or disabled.
 
@@ -484,11 +484,11 @@ Sets the state of the control to either enabled, or disabled.
 
 #### Returns
 
-[`Field`](XrmEx.Field.md)
+[`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 #### Defined in
 
-[XrmEx.ts:701](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L701)
+[XrmEx.ts:701](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L701)
 
 ___
 
@@ -513,13 +513,13 @@ Xrm.Attributes.Attribute.setIsValid
 
 #### Defined in
 
-[XrmEx.ts:635](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L635)
+[XrmEx.ts:635](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L635)
 
 ___
 
 ### setNotification
 
-▸ **setNotification**(`message`, `uniqueId`): [`Field`](XrmEx.Field.md)
+▸ **setNotification**(`message`, `uniqueId`): [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 Sets a control-local notification message.
 
@@ -537,19 +537,19 @@ When this method is used on Microsoft Dynamics CRM for tablets a red "X" icon
 
 #### Returns
 
-[`Field`](XrmEx.Field.md)
+[`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 true if it succeeds, false if it fails.
 
 #### Defined in
 
-[XrmEx.ts:671](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L671)
+[XrmEx.ts:671](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L671)
 
 ___
 
 ### setRequired
 
-▸ **setRequired**(`required`): [`Field`](XrmEx.Field.md)
+▸ **setRequired**(`required`): [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 Sets the required level.
 
@@ -561,17 +561,17 @@ Sets the required level.
 
 #### Returns
 
-[`Field`](XrmEx.Field.md)
+[`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 #### Defined in
 
-[XrmEx.ts:729](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L729)
+[XrmEx.ts:729](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L729)
 
 ___
 
 ### setRequiredLevel
 
-▸ **setRequiredLevel**(`requirementLevel`): [`Field`](XrmEx.Field.md)
+▸ **setRequiredLevel**(`requirementLevel`): [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 Sets the required level.
 
@@ -583,7 +583,7 @@ Sets the required level.
 
 #### Returns
 
-[`Field`](XrmEx.Field.md)
+[`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 #### Implementation of
 
@@ -591,7 +591,7 @@ Xrm.Attributes.Attribute.setRequiredLevel
 
 #### Defined in
 
-[XrmEx.ts:714](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L714)
+[XrmEx.ts:714](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L714)
 
 ___
 
@@ -615,7 +615,7 @@ Xrm.Attributes.Attribute.setSubmitMode
 
 #### Defined in
 
-[XrmEx.ts:629](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L629)
+[XrmEx.ts:629](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L629)
 
 ___
 
@@ -639,13 +639,13 @@ Xrm.Attributes.Attribute.setValue
 
 #### Defined in
 
-[XrmEx.ts:599](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L599)
+[XrmEx.ts:599](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L599)
 
 ___
 
 ### setVisible
 
-▸ **setVisible**(`visible`): [`Field`](XrmEx.Field.md)
+▸ **setVisible**(`visible`): [`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 Sets the visibility state.
 
@@ -657,8 +657,8 @@ Sets the visibility state.
 
 #### Returns
 
-[`Field`](XrmEx.Field.md)
+[`Field`](https://github.com/AhashSritharan/classes/XrmEx.Field.md)
 
 #### Defined in
 
-[XrmEx.ts:688](https://github.com/zucccerberg/Xrm-Ex/blob/6795b36/src/XrmEx.ts#L688)
+[XrmEx.ts:688](https://github.com/AhashSritharan/Xrm-Ex/blob/6521b1e/src/XrmEx.ts#L688)
