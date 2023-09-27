@@ -136,7 +136,7 @@ YourNamespace.Contact = YourNamespace.Contact || {};
 })(YourNamespace.Contact);
 ```
 ## Documentation
-For a comprehensive guide to using XrmEx, please check out the full [documentation](https://github.com/AhashSritharan/Xrm-Ex/blob/main/docs/modules/XrmEx.html).
+For a comprehensive guide to using XrmEx, please check out the full [documentation](https://htmlpreview.github.io/?https://github.com/AhashSritharan/Xrm-Ex/blob/main/docs/modules/XrmEx.html).
 
 ## Contribution Guidelines
 
