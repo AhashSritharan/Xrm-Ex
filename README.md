@@ -13,10 +13,10 @@ XrmEx offers a comprehensive suite of wrappers that seamlessly integrate the Dyn
 
 - [Xrm-Ex: Dynamics 365 Xrm Extensions](#xrm-ex-dynamics-365-xrm-extensions)
   - [Installation](#installation)
+  - [Documentation](#documentation)
   - [Getting Started](#getting-started)
     - [Set up Project](#set-up-project)
     - [Deployment](#deployment)
-  - [Documentation](#documentation)
   - [Contribution Guidelines](#contribution-guidelines)
 - [Why Use the XrmEx Library?](#why-use-the-xrmex-library)
   - [1. Event Handling](#1-event-handling)
@@ -47,12 +47,14 @@ XrmEx offers a comprehensive suite of wrappers that seamlessly integrate the Dyn
       - [Without XrmEx:](#without-xrmex-7)
       - [With XrmEx:](#with-xrmex-7)
 
-
 ## Installation
 XrmEx can be easily installed via npm:
 ```shell
 npm install xrm-ex
 ```
+
+## Documentation
+For a comprehensive guide to using XrmEx, please check out the full [documentation](https://xrm-ex.ahash.dev/modules/src_XrmEx.XrmEx.html).
 
 ## Getting Started
 ### Set up Project
@@ -137,8 +139,6 @@ YourNamespace.Contact = YourNamespace.Contact || {};
 
 })(YourNamespace.Contact);
 ```
-## Documentation
-For a comprehensive guide to using XrmEx, please check out the full [documentation](https://xrm-ex.ahash.dev/modules/src_XrmEx.XrmEx.html).
 
 ## Contribution Guidelines
 
