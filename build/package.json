@@ -21,14 +21,6 @@
   "exports": "./build/index.js",
   "types": "./build/index.d.ts",
   "license": "MIT",
-  "engines": {
-    "node": "^18.15.0",
-    "npm": "^9.5.0"
-  },
-  "volta": {
-    "node": "18.15.0",
-    "npm": "9.5.0"
-  },
   "publishConfig": {
     "access": "public"
   },
