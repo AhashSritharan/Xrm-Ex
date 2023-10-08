@@ -1,7 +1,8 @@
 name: XrmEx
 
-on: [push]
-
+on:
+  push:
+  
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
