@@ -1,8 +1,7 @@
 import { expect, test } from "@playwright/test";
-import { exec } from 'child_process';
 import { XrmMockGenerator } from "xrm-mock";
 
-import { XrmEx } from "../build/src/XrmEx";
+import { XrmEx } from "../testBuild/src/XrmEx";
 
 var fields: Fields;
 var tabs: Tabs;

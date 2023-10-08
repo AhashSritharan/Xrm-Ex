@@ -1,5 +1,5 @@
 /// <reference path="../node_modules/@types/xrm/index.d.ts" />
-var XrmEx;
+export var XrmEx;
 (function (XrmEx) {
     /**
      * Throws an error with the given error message.

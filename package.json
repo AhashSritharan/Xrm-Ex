@@ -34,7 +34,7 @@
   },
   "scripts": {
     "build": "npm run clean && npm run type:dts && npm run build:main && npm run format && npm run copy && npm run postbuild && npm run zip",
-    "build:main": "tsc --build",
+    "build:main": "tsc --project tsconfig.build.json && tsc --project tsconfig.build2.json && node postbuild.js",
     "clean": "rimraf build/src coverage nyc_output",
     "docs": "npx typedoc --out docs --readme READMEDOCS.md src/XrmEx.ts node_modules/@types/xrm/index.d.ts",
     "copy": "npm run copyReadme",
