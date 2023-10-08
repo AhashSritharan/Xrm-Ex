@@ -99,6 +99,7 @@ YourNamespace.Contact = YourNamespace.Contact || {};
         fields = new Fields();
         tabs = new Tabs();
         grids = new Grids();
+        parent.window.XrmEx = XrmEx;
     }
 
 })(YourNamespace.Contact);

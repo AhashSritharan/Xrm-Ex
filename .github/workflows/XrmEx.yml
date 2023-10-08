@@ -32,6 +32,7 @@ jobs:
         run: npm run lint:check
 
       - name: Release
+        if: github.repository == 'AhashSritharan/Xrm-Ex'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
