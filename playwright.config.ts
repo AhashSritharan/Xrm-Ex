@@ -1,11 +1,4 @@
 import { defineConfig, devices } from '@playwright/test';
-import * as fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-if (!fs.existsSync(__dirname + '/playwright/.auth/user.json')) fs.writeFileSync(__dirname + '/playwright/.auth/user.json', '{}', 'utf8');
-export const STORAGE_STATE = 'playwright/.auth/user.json';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
@@ -32,14 +25,11 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    { name: 'setup', testMatch: /.*\.setup\.ts/ },
     {
       name: 'chromium',
       use: {
-        ...devices['Desktop Chrome'],
-        storageState: STORAGE_STATE
-      },
-      dependencies: ['setup'],
+        ...devices['Desktop Chrome']
+      }
     },
     /*
 

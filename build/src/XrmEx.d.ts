@@ -22,7 +22,7 @@ type EntityReference = {
     id: string;
     entityType: string;
 };
-declare namespace XrmEx {
+export declare namespace XrmEx {
     /**
      * Throws an error with the given error message.
      * @param {string} errorMessage - The error message to throw.
@@ -470,3 +470,4 @@ declare namespace XrmEx {
     }
     export {};
 }
+export {};
