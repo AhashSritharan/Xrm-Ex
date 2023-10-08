@@ -45,7 +45,7 @@ export namespace XrmEx {
    * Returns the name of the calling function.
    * @returns {string} - The name of the calling function.
    */
-  export function getMethodName(): string {
+  export function getFunctionName(): string {
     try {
       const error = new Error();
       const stackTrace = error.stack?.split("\n").map((line) => line.trim());
@@ -57,7 +57,7 @@ export namespace XrmEx {
 
       return functionName;
     } catch (error: any) {
-      throw new Error(`XrmEx.getMethodName:\n${error.message}`);
+      throw new Error(`XrmEx.getFunctionName:\n${error.message}`);
     }
   }
   /**
@@ -88,7 +88,7 @@ export namespace XrmEx {
     try {
       return await Xrm.App.addGlobalNotification(notification);
     } catch (error: any) {
-      throw new Error(`XrmEx.${getMethodName()}:\n${error.message}`);
+      throw new Error(`XrmEx.${getFunctionName()}:\n${error.message}`);
     }
   }
   /**
@@ -102,7 +102,7 @@ export namespace XrmEx {
     try {
       return await Xrm.App.clearGlobalNotification(uniqueId);
     } catch (error: any) {
-      throw new Error(`XrmEx.${getMethodName()}:\n${error.message}`);
+      throw new Error(`XrmEx.${getFunctionName()}:\n${error.message}`);
     }
   }
   /**
@@ -359,7 +359,7 @@ export namespace XrmEx {
       );
     } catch (error: any) {
       console.error(error.message);
-      throw new Error(`XrmEx.${getMethodName()}:\n${error.message}`);
+      throw new Error(`XrmEx.${getFunctionName()}:\n${error.message}`);
     }
     /**
      * Uses canvas.measureText to compute and return the width of the given text of given font in pixels.
@@ -459,7 +459,7 @@ export namespace XrmEx {
           uniqueId
         );
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -471,7 +471,7 @@ export namespace XrmEx {
       try {
         return Form.formContext.ui.clearFormNotification(uniqueId);
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -493,7 +493,7 @@ export namespace XrmEx {
           Form.formContext.data.entity.addOnSave(handler);
         });
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -518,7 +518,7 @@ export namespace XrmEx {
           Form.formContext.data.entity.addOnPostSave(handler);
         });
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -541,7 +541,7 @@ export namespace XrmEx {
           Form.formContext.data.addOnLoad(handler);
         });
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -573,7 +573,7 @@ export namespace XrmEx {
           });
         }
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
   }
@@ -677,7 +677,7 @@ export namespace XrmEx {
         );
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
 
@@ -690,7 +690,7 @@ export namespace XrmEx {
         this.controls.forEach((control) => control.setVisible(visible));
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
 
@@ -703,7 +703,7 @@ export namespace XrmEx {
         this.controls.forEach((control) => control.setDisabled(disabled));
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
 
@@ -718,7 +718,7 @@ export namespace XrmEx {
         this.Attribute.setRequiredLevel(requirementLevel);
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
 
@@ -731,7 +731,7 @@ export namespace XrmEx {
         this.Attribute.setRequiredLevel(required ? "required" : "none");
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
 
@@ -741,7 +741,7 @@ export namespace XrmEx {
         this.Attribute.fireOnChange();
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
 
@@ -770,7 +770,7 @@ export namespace XrmEx {
         }
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
 
@@ -799,7 +799,7 @@ export namespace XrmEx {
         });
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -815,7 +815,7 @@ export namespace XrmEx {
         });
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
   }
@@ -1061,7 +1061,7 @@ export namespace XrmEx {
           append && this.Value ? this.Value.concat(lookupValue) : [lookupValue];
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -1091,7 +1091,7 @@ export namespace XrmEx {
         );
         return record;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -1113,7 +1113,7 @@ export namespace XrmEx {
         this._customFilters.push(_addCustomFilter);
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
 
       function _addCustomFilter() {
@@ -1161,7 +1161,7 @@ export namespace XrmEx {
         });
         this._customFilters.push(_addCustomFilter);
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
       function _addCustomFilter() {
         _addCustomFilter.controls.forEach((control) => {
@@ -1183,7 +1183,7 @@ export namespace XrmEx {
         );
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
   }
@@ -1264,7 +1264,7 @@ export namespace XrmEx {
         }
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -1284,7 +1284,7 @@ export namespace XrmEx {
         }
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -1295,7 +1295,7 @@ export namespace XrmEx {
         this.control.clearOptions();
         return this;
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
   }

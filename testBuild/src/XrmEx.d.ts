@@ -33,7 +33,7 @@ export declare namespace XrmEx {
      * Returns the name of the calling function.
      * @returns {string} - The name of the calling function.
      */
-    export function getMethodName(): string;
+    export function getFunctionName(): string;
     /**
      * Displays a notification for an app with the given message and level, and lets you specify whether to show a close button.
      * @param {string} message - The message to display in the notification.

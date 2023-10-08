@@ -103,7 +103,7 @@ YourNamespace.Contact = YourNamespace.Contact || {};
     class Grids {
         ContactSubgrid = new XrmEx.GridControl("Test");
     }
-    /**@type {Fields()}*/ var fields;
+    /**@type {Fields}*/ var fields;
     /**@type {Tabs()}*/ var tabs;
     /**@type {Grids()}*/ var grids;
 
@@ -118,7 +118,7 @@ YourNamespace.Contact = YourNamespace.Contact || {};
             await XrmEx.openAlertDialog("Success", "Xrm works.");
         } catch (error) {
             console.error(error);
-            await XrmEx.openAlertDialog("Error", `Error in ${XrmEx.getMethodName()}\n` + error.message);
+            await XrmEx.openAlertDialog("Error", `Error in ${XrmEx.getFunctionName()}\n` + error.message);
         }
     };
     /**
@@ -259,14 +259,14 @@ XrmEx abstracts away the complexities of data retrieval, making it more straight
 ### Without XrmEx:
 
 ```js
-await Xrm.Navigation.openAlertDialog({ text: `Error in ${XrmEx.getMethodName()}\n` + error.message, title: "Error" }, { height: 120, width: 260 });
+await Xrm.Navigation.openAlertDialog({ text: `Error in ${XrmEx.getFunctionName()}\n` + error.message, title: "Error" }, { height: 120, width: 260 });
 ```
 
 This method requires manual sizing and is more verbose, making it less efficient for dynamic content.
 
 ### With XrmEx:
 ```js
-await XrmEx.openAlertDialog("Error", `Error in ${XrmEx.getMethodName()}\n` + error.message);
+await XrmEx.openAlertDialog("Error", `Error in ${XrmEx.getFunctionName()}\n` + error.message);
 ```
 
 The XrmEx approach **automatically sizes the dialog based on content** to avoid scrolling, offering a simplified and concise method.
