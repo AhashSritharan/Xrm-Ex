@@ -1,11 +1,9 @@
 name: XrmEx
-
 on:
   push:
-  
+  pull_request:
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
 jobs:
   XrmEx:
     runs-on: ubuntu-latest
@@ -32,6 +30,7 @@ jobs:
         run: npm run lint:check
 
       - name: Release
+        if: github.repository == 'AhashSritharan/Xrm-Ex'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
