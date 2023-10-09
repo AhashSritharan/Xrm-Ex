@@ -104,8 +104,8 @@ YourNamespace.Contact = YourNamespace.Contact || {};
         ContactSubgrid = new XrmEx.Class.GridControl("Test");
     }
     /**@type {Fields}*/ var fields;
-    /**@type {Tabs()}*/ var tabs;
-    /**@type {Grids()}*/ var grids;
+    /**@type {Tabs}*/ var tabs;
+    /**@type {Grids}*/ var grids;
 
     /**
      * @param {Xrm.FormContext | Xrm.Events.EventContext} executionContext 
