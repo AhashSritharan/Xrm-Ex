@@ -7,12 +7,12 @@ var fields: Fields;
 var tabs: Tabs;
 var grids: Grids;
 class Fields {
-  Firstname = new XrmEx.TextField("firstname");
-  Customer = new XrmEx.LookupField("parentcustomerid");
-  DoNotEmail = new XrmEx.BooleanField("donotemail");
-  Birthday = new XrmEx.DateField("birthdate");
-  Weight = new XrmEx.NumberField("weight");
-  PreferredContactMethod = new XrmEx.OptionsetField(
+  Firstname = new XrmEx.Class.TextField("firstname");
+  Customer = new XrmEx.Class.LookupField("parentcustomerid");
+  DoNotEmail = new XrmEx.Class.BooleanField("donotemail");
+  Birthday = new XrmEx.Class.DateField("birthdate");
+  Weight = new XrmEx.Class.NumberField("weight");
+  PreferredContactMethod = new XrmEx.Class.OptionsetField(
     "preferredcontactmethodcode",
     {
       Any: 1,
@@ -24,12 +24,12 @@ class Fields {
   );
 }
 class Tabs {
-  General = new XrmEx.Tab("tab1", {
-    Section1: new XrmEx.Section("section1")
+  General = new XrmEx.Class.Tab("tab1", {
+    Section1: new XrmEx.Class.Section("section1")
   });
 }
 class Grids {
-  ContactSubgrid = new XrmEx.GridControl("Test");
+  ContactSubgrid = new XrmEx.Class.GridControl("Test");
 }
 
 test.describe("Test XrmEx", () => {

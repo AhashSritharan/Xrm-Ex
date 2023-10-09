@@ -75,11 +75,11 @@ var YourNamespace = YourNamespace || {};
 YourNamespace.Contact = YourNamespace.Contact || {};
 (function (Self) { //Only properties assigned to the Self object will be exposed to the global scope
     class Fields {
-        Firstname = new XrmEx.TextField("firstname");
-        Customer = new XrmEx.LookupField("parentcustomerid");
-        DoNotEmail = new XrmEx.BooleanField("donotemail");
-        Birthday = new XrmEx.DateField("birthdate");
-        PreferredContactMethod = new XrmEx.OptionsetField(
+        Firstname = new XrmEx.Class.TextField("firstname");
+        Customer = new XrmEx.Class.LookupField("parentcustomerid");
+        DoNotEmail = new XrmEx.Class.BooleanField("donotemail");
+        Birthday = new XrmEx.Class.DateField("birthdate");
+        PreferredContactMethod = new XrmEx.Class.OptionsetField(
             "preferredcontactmethodcode",
             {
                 Any: 1,
@@ -91,17 +91,17 @@ YourNamespace.Contact = YourNamespace.Contact || {};
         );
     }
     class Tabs {
-        General = new XrmEx.Tab("tab1", {
-            Section1: new XrmEx.Section("section1"),
-            Section2: new XrmEx.Section("section2"),
+        General = new XrmEx.Class.Tab("tab1", {
+            Section1: new XrmEx.Class.Section("section1"),
+            Section2: new XrmEx.Class.Section("section2"),
         });
-        Details = new XrmEx.Tab("tab2", {
-            Section1: new XrmEx.Section("section1"),
-            Section2: new XrmEx.Section("section2"),
+        Details = new XrmEx.Class.Tab("tab2", {
+            Section1: new XrmEx.Class.Section("section1"),
+            Section2: new XrmEx.Class.Section("section2"),
         });
     }
     class Grids {
-        ContactSubgrid = new XrmEx.GridControl("Test");
+        ContactSubgrid = new XrmEx.Class.GridControl("Test");
     }
     /**@type {Fields}*/ var fields;
     /**@type {Tabs()}*/ var tabs;
