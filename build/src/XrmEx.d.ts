@@ -22,7 +22,7 @@ type EntityReference = {
     id: string;
     entityType: string;
 };
-export declare namespace XrmEx {
+declare namespace XrmEx {
     /**
      * Throws an error with the given error message.
      * @param {string} errorMessage - The error message to throw.
@@ -161,8 +161,8 @@ export declare namespace XrmEx {
     }
     namespace Class {
         /**
-     * Used to execute methods related to a single Attribute
-     */
+         * Used to execute methods related to a single Attribute
+         */
         export class Field implements Xrm.Attributes.Attribute {
             static allFields: Field[];
             readonly Name: string;
@@ -472,4 +472,3 @@ export declare namespace XrmEx {
         export {};
     }
 }
-export {};

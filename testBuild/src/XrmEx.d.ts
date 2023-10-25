@@ -161,8 +161,8 @@ export declare namespace XrmEx {
     }
     namespace Class {
         /**
-     * Used to execute methods related to a single Attribute
-     */
+         * Used to execute methods related to a single Attribute
+         */
         export class Field implements Xrm.Attributes.Attribute {
             static allFields: Field[];
             readonly Name: string;
