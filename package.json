@@ -33,11 +33,13 @@
     "access": "public"
   },
   "scripts": {
-    "build": "npm run clean && npm run type:dts && npm run build:main && npm run format && npm run copy && npm run postbuild && npm run zip",
-    "build:main": "tsc --project tsconfig.build.json && tsc --project tsconfig.build2.json && node postbuild.js",
+    "build": "npm run clean && npm run type:dts && npm run releasebuild && npm run format && npm run copy && npm run postbuild && npm run zip && npm run testbuild",
+    "releasebuild": "npm run replace -- \"export namespace XrmEx\" \"namespace XrmEx\" \"./src/XrmEx.ts\" && tsc --project tsconfig.build.json",
+    "testbuild": "npm run replace -- \"namespace XrmEx\" \"export namespace XrmEx\" \"./src/XrmEx.ts\" && tsc --project tsconfig.build2.json",
     "clean": "rimraf build/src coverage nyc_output",
     "docs": "npx typedoc --out docs --readme READMEDOCS.md src/XrmEx.ts node_modules/@types/xrm/index.d.ts",
     "copy": "npm run copyReadme",
+    "replace": "node replace.js",
     "copyReadme": "node -e \"require('fs').cpSync('./README.md', './build/README.md');\"",
     "postbuild": "rimraf build/tests",
     "zip": "npm-build-zip --destination=release/ --name=xrm-ex --name_only=true",

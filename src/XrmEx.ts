@@ -45,19 +45,20 @@ export namespace XrmEx {
    * Returns the name of the calling function.
    * @returns {string} - The name of the calling function.
    */
-  export function getMethodName(): string {
+  export function getFunctionName(): string {
     try {
       const error = new Error();
       const stackTrace = error.stack?.split("\n").map((line) => line.trim());
       const callingFunctionLine =
         stackTrace && stackTrace.length >= 3 ? stackTrace[2] : undefined;
       const functionNameMatch =
-        callingFunctionLine?.match(/at\s+([^\s]+)\s+\(/);
+        callingFunctionLine?.match(/at\s+([^\s]+)\s+\(/) ||
+        callingFunctionLine?.match(/at\s+([^\s]+)/);
       const functionName = functionNameMatch ? functionNameMatch[1] : "";
 
       return functionName;
     } catch (error: any) {
-      throw new Error(`XrmEx.getMethodName:\n${error.message}`);
+      throw new Error(`XrmEx.getFunctionName:\n${error.message}`);
     }
   }
   /**
@@ -88,7 +89,7 @@ export namespace XrmEx {
     try {
       return await Xrm.App.addGlobalNotification(notification);
     } catch (error: any) {
-      throw new Error(`XrmEx.${getMethodName()}:\n${error.message}`);
+      throw new Error(`XrmEx.${getFunctionName()}:\n${error.message}`);
     }
   }
   /**
@@ -102,7 +103,7 @@ export namespace XrmEx {
     try {
       return await Xrm.App.clearGlobalNotification(uniqueId);
     } catch (error: any) {
-      throw new Error(`XrmEx.${getMethodName()}:\n${error.message}`);
+      throw new Error(`XrmEx.${getFunctionName()}:\n${error.message}`);
     }
   }
   /**
@@ -359,7 +360,7 @@ export namespace XrmEx {
       );
     } catch (error: any) {
       console.error(error.message);
-      throw new Error(`XrmEx.${getMethodName()}:\n${error.message}`);
+      throw new Error(`XrmEx.${getFunctionName()}:\n${error.message}`);
     }
     /**
      * Uses canvas.measureText to compute and return the width of the given text of given font in pixels.
@@ -398,26 +399,34 @@ export namespace XrmEx {
     }
     /**Sets a reference to the current form context*/
     static set formContext(context: Xrm.FormContext | Xrm.Events.EventContext) {
+      if (!context)
+        throw new Error(
+          `XrmEx.Form.setFormContext: The executionContext or formContext was not passed to the function.`
+        );
       if ("getFormContext" in context) {
         this._executionContext = context;
         this._formContext = context.getFormContext();
       } else if ("data" in context) this._formContext = context;
       else
         throw new Error(
-          `XrmEx.Form.setFormContext: The executionContext or formContext was not passed to the function.`
+          `XrmEx.Form.setFormContext: The passed context is not an executionContext or formContext.`
         );
     }
     /**Sets a reference to the current execution context*/
     static set executionContext(
       context: Xrm.FormContext | Xrm.Events.EventContext
     ) {
+      if (!context)
+        throw new Error(
+          `XrmEx.Form.setExecutionContext: The executionContext or formContext was not passed to the function.`
+        );
       if ("getFormContext" in context) {
         this._executionContext = context;
         this._formContext = context.getFormContext();
       } else if ("data" in context) this._formContext = context;
       else
         throw new Error(
-          `XrmEx.Form.setExecutionContext: The executionContext or formContext was not passed to the function.`
+          `XrmEx.Form.setExecutionContext: The passed context is not an executionContext or formContext.`
         );
     }
     /**Returns true if form is from type create*/
@@ -459,7 +468,7 @@ export namespace XrmEx {
           uniqueId
         );
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -471,7 +480,7 @@ export namespace XrmEx {
       try {
         return Form.formContext.ui.clearFormNotification(uniqueId);
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -493,7 +502,7 @@ export namespace XrmEx {
           Form.formContext.data.entity.addOnSave(handler);
         });
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -518,7 +527,7 @@ export namespace XrmEx {
           Form.formContext.data.entity.addOnPostSave(handler);
         });
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -541,7 +550,7 @@ export namespace XrmEx {
           Form.formContext.data.addOnLoad(handler);
         });
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
     /**
@@ -549,7 +558,7 @@ export namespace XrmEx {
      * @param handler The function reference.
      */
     static addOnChangeEventHandler(
-      fields: Field[],
+      fields: Class.Field[],
       handlers:
         | Xrm.Events.ContextSensitiveHandler
         | Xrm.Events.ContextSensitiveHandler[],
@@ -573,893 +582,942 @@ export namespace XrmEx {
           });
         }
       } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
   }
-  /**
-   * Used to execute methods related to a single Attribute
-   */
-  export class Field implements Xrm.Attributes.Attribute {
-    public static allFields: Field[] = [];
 
-    public readonly Name!: string;
-    protected _attribute?: Xrm.Attributes.Attribute;
-
-    constructor(attributeName: string) {
-      const existingField = Field.allFields.find(
-        (f) => f.Name === attributeName
-      );
-      if (existingField) {
-        return existingField;
-      }
-      this.Name = attributeName;
-      Field.allFields.push(this);
-    }
-    setValue(value: any): void {
-      return this.Attribute.setValue(value);
-    }
-    getAttributeType(): Xrm.Attributes.AttributeType {
-      return this.Attribute.getAttributeType();
-    }
-    getFormat(): Xrm.Attributes.AttributeFormat {
-      return this.Attribute.getFormat();
-    }
-    getIsDirty(): boolean {
-      return this.Attribute.getIsDirty();
-    }
-    getName(): string {
-      return this.Attribute.getName();
-    }
-    getParent(): Xrm.Entity {
-      return this.Attribute.getParent();
-    }
-    getRequiredLevel(): Xrm.Attributes.RequirementLevel {
-      return this.Attribute.getRequiredLevel();
-    }
-    getSubmitMode(): Xrm.SubmitMode {
-      return this.Attribute.getSubmitMode();
-    }
-    getUserPrivilege(): Xrm.Privilege {
-      return this.Attribute.getUserPrivilege();
-    }
-    removeOnChange(handler: Xrm.Events.Attribute.ChangeEventHandler): void {
-      return this.Attribute.removeOnChange(handler);
-    }
-    setSubmitMode(submitMode: Xrm.SubmitMode): void {
-      return this.Attribute.setSubmitMode(submitMode);
-    }
-    getValue() {
-      return this.Attribute.getValue();
-    }
-    setIsValid(isValid: boolean, message?: string): void {
-      return this.Attribute.setIsValid(isValid, message);
-    }
-
-    public get Attribute(): Xrm.Attributes.Attribute {
-      return (this._attribute ??=
-        Form.formContext.getAttribute(this.Name) ??
-        XrmEx.throwError(
-          `The attribute '${this.Name}' was not found on the form.`
-        ));
-    }
-
-    public get controls(): Xrm.Collection.ItemCollection<Xrm.Controls.StandardControl> {
-      return this.Attribute.controls;
-    }
-
+  export namespace Class {
     /**
-     * Gets the value.
-     * @returns The value.
+     * Used to execute methods related to a single Attribute
      */
-    public get Value(): any {
-      return this.Attribute.getValue();
-    }
+    export class Field implements Xrm.Attributes.Attribute {
+      public static allFields: Field[] = [];
 
-    public set Value(value: any) {
-      this.Attribute.setValue(value);
-    }
+      public readonly Name!: string;
+      protected _attribute?: Xrm.Attributes.Attribute;
 
-    /**
-     * Sets a control-local notification message.
-     * @param message The message.
-     * @param uniqueId Unique identifier.
-     * @returns true if it succeeds, false if it fails.
-     * @remarks     When this method is used on Microsoft Dynamics CRM for tablets a red "X" icon
-     *              appears next to the control. Tapping on the icon will display the message.
-     */
-    public setNotification(message: string, uniqueId: string): this {
-      try {
-        if (!message) throw new Error(`no message was provided.`);
-        if (!uniqueId) throw new Error(`no uniqueId was provided.`);
-        this.controls.forEach((control) =>
-          control.setNotification(message, uniqueId)
+      constructor(attributeName: string) {
+        const existingField = Field.allFields.find(
+          (f) => f.Name === attributeName
         );
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
-      }
-    }
-
-    /**
-     * Sets the visibility state.
-     * @param visible true to show, false to hide.
-     */
-    public setVisible(visible: boolean): this {
-      try {
-        this.controls.forEach((control) => control.setVisible(visible));
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
-      }
-    }
-
-    /**
-     * Sets the state of the control to either enabled, or disabled.
-     * @param disabled true to disable, false to enable.
-     */
-    public setDisabled(disabled: boolean): this {
-      try {
-        this.controls.forEach((control) => control.setDisabled(disabled));
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
-      }
-    }
-
-    /**
-     * Sets the required level.
-     * @param requirementLevel The requirement level, as either "none", "required", or "recommended"
-     */
-    public setRequiredLevel(
-      requirementLevel: Xrm.Attributes.RequirementLevel
-    ): this {
-      try {
-        this.Attribute.setRequiredLevel(requirementLevel);
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
-      }
-    }
-
-    /**
-     * Sets the required level.
-     * @param required The requirement level, as either false for "none" or true for "required"
-     */
-    public setRequired(required: boolean): this {
-      try {
-        this.Attribute.setRequiredLevel(required ? "required" : "none");
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
-      }
-    }
-
-    /**Fire all "on change" event handlers. */
-    public fireOnChange(): this {
-      try {
-        this.Attribute.fireOnChange();
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
-      }
-    }
-
-    /**
-     * Adds a handler or an array of handlers to be called when the attribute's value is changed.
-     * @param handlers The function reference or an array of function references.
-     */
-    public addOnChange(
-      handlers:
-        | Xrm.Events.ContextSensitiveHandler
-        | Xrm.Events.ContextSensitiveHandler[]
-    ): this {
-      try {
-        if (Array.isArray(handlers)) {
-          for (const handler of handlers) {
-            if (typeof handler !== "function")
-              throw new Error(`'${handler}' is not a function`);
-            this.Attribute.removeOnChange(handler);
-            this.Attribute.addOnChange(handler);
-          }
-        } else {
-          if (typeof handlers !== "function")
-            throw new Error(`'${handlers}' is not a function`);
-          this.Attribute.removeOnChange(handlers);
-          this.Attribute.addOnChange(handlers);
+        if (existingField) {
+          return existingField;
         }
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+        this.Name = attributeName;
+        Field.allFields.push(this);
       }
-    }
+      setValue(value: any): void {
+        return this.Attribute.setValue(value);
+      }
+      getAttributeType(): Xrm.Attributes.AttributeType {
+        return this.Attribute.getAttributeType();
+      }
+      getFormat(): Xrm.Attributes.AttributeFormat {
+        return this.Attribute.getFormat();
+      }
+      getIsDirty(): boolean {
+        return this.Attribute.getIsDirty();
+      }
+      getName(): string {
+        return this.Attribute.getName();
+      }
+      getParent(): Xrm.Entity {
+        return this.Attribute.getParent();
+      }
+      getRequiredLevel(): Xrm.Attributes.RequirementLevel {
+        return this.Attribute.getRequiredLevel();
+      }
+      getSubmitMode(): Xrm.SubmitMode {
+        return this.Attribute.getSubmitMode();
+      }
+      getUserPrivilege(): Xrm.Privilege {
+        return this.Attribute.getUserPrivilege();
+      }
+      removeOnChange(handler: Xrm.Events.Attribute.ChangeEventHandler): void {
+        return this.Attribute.removeOnChange(handler);
+      }
+      setSubmitMode(submitMode: Xrm.SubmitMode): void {
+        return this.Attribute.setSubmitMode(submitMode);
+      }
+      getValue() {
+        return this.Attribute.getValue();
+      }
+      setIsValid(isValid: boolean, message?: string): void {
+        return this.Attribute.setIsValid(isValid, message);
+      }
 
-    /**
-     * Displays an error or recommendation notification for a control, and lets you specify actions to execute based on the notification.
-     */
-    public addNotification(
-      message: string,
-      notificationLevel: "ERROR" | "RECOMMENDATION",
-      uniqueId: string,
-      actions?: Xrm.Controls.ControlNotificationAction[]
-    ): this {
-      try {
-        if (!uniqueId) throw new Error(`no uniqueId was provided.`);
-        if (actions && !Array.isArray(actions))
-          throw new Error(
-            `the action parameter is not an array of ControlNotificationAction`
+      public get Attribute(): Xrm.Attributes.Attribute {
+        return (this._attribute ??=
+          Form.formContext.getAttribute(this.Name) ??
+          XrmEx.throwError(
+            `The attribute '${this.Name}' was not found on the form.`
+          ));
+      }
+
+      public get controls(): Xrm.Collection.ItemCollection<Xrm.Controls.StandardControl> {
+        return this.Attribute.controls;
+      }
+
+      /**
+       * Gets the value.
+       * @returns The value.
+       */
+      public get Value(): any {
+        return this.Attribute.getValue();
+      }
+
+      public set Value(value: any) {
+        this.Attribute.setValue(value);
+      }
+
+      /**
+       * Sets a control-local notification message.
+       * @param message The message.
+       * @param uniqueId Unique identifier.
+       * @returns true if it succeeds, false if it fails.
+       * @remarks     When this method is used on Microsoft Dynamics CRM for tablets a red "X" icon
+       *              appears next to the control. Tapping on the icon will display the message.
+       */
+      public setNotification(message: string, uniqueId: string): this {
+        try {
+          if (!message) throw new Error(`no message was provided.`);
+          if (!uniqueId) throw new Error(`no uniqueId was provided.`);
+          this.controls.forEach((control) =>
+            control.setNotification(message, uniqueId)
           );
-        this.controls.forEach((control) => {
-          control.addNotification({
-            messages: [message],
-            notificationLevel: notificationLevel,
-            uniqueId: uniqueId,
-            actions: actions,
-          });
-        });
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
-      }
-    }
-    /**
-     * Clears the notification identified by uniqueId.
-     * @param uniqueId (Optional) Unique identifier.
-     * @returns true if it succeeds, false if it fails.
-     * @remarks If the uniqueId parameter is not used, the current notification shown will be removed.
-     */
-    removeNotification(uniqueId: string): this {
-      try {
-        this.controls.forEach((control) => {
-          control.clearNotification(uniqueId);
-        });
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
-      }
-    }
-  }
-  export class TextField
-    extends Field
-    implements Xrm.Attributes.StringAttribute
-  {
-    protected declare _attribute: Xrm.Attributes.StringAttribute;
-    constructor(attribute: string) {
-      super(attribute);
-    }
-    getMaxLength(): number {
-      return this.Attribute.getMaxLength();
-    }
-    getFormat(): Xrm.Attributes.StringAttributeFormat {
-      return this.Attribute.getFormat() as Xrm.Attributes.StringAttributeFormat;
-    }
-    get Attribute() {
-      return (this._attribute ??=
-        Form.formContext.getAttribute(this.Name) ??
-        XrmEx.throwError(`Field '${this.Name}' does not exist`));
-    }
-    get controls() {
-      return this.Attribute.controls;
-    }
-    get Value(): string {
-      return this.Attribute.getValue() ?? null;
-    }
-    set Value(value: string) {
-      this.Attribute.setValue(value);
-    }
-  }
-  export class NumberField
-    extends Field
-    implements Xrm.Attributes.NumberAttribute
-  {
-    protected declare _attribute: Xrm.Attributes.NumberAttribute;
-    constructor(attribute: string) {
-      super(attribute);
-    }
-    getFormat(): Xrm.Attributes.IntegerAttributeFormat {
-      return this.Attribute.getFormat() as Xrm.Attributes.IntegerAttributeFormat;
-    }
-    getMax(): number {
-      return this.Attribute.getMax();
-    }
-    getMin(): number {
-      return this.Attribute.getMin();
-    }
-    getPrecision(): number {
-      return this.Attribute.getPrecision();
-    }
-    setPrecision(precision: number): void {
-      return this.Attribute.setPrecision(precision);
-    }
-    get Attribute() {
-      return (this._attribute ??=
-        Form.formContext.getAttribute(this.Name) ??
-        XrmEx.throwError(`Field '${this.Name}' does not exist`));
-    }
-    get controls() {
-      return this.Attribute.controls;
-    }
-    get Value(): number {
-      return this.Attribute.getValue() ?? null;
-    }
-    set Value(value: number) {
-      this.Attribute.setValue(value);
-    }
-  }
-  export class DateField extends Field implements Xrm.Attributes.DateAttribute {
-    protected declare _attribute: Xrm.Attributes.DateAttribute;
-    constructor(attribute: string) {
-      super(attribute);
-    }
-    getFormat(): Xrm.Attributes.DateAttributeFormat {
-      return this.Attribute.getFormat() as Xrm.Attributes.DateAttributeFormat;
-    }
-    get Attribute() {
-      return (this._attribute ??=
-        Form.formContext.getAttribute(this.Name) ??
-        XrmEx.throwError(`Field '${this.Name}' does not exist`));
-    }
-    get controls() {
-      return this.Attribute.controls;
-    }
-    get Value(): Date {
-      return this.Attribute.getValue() ?? null;
-    }
-    set Value(value: Date) {
-      this.Attribute.setValue(value);
-    }
-  }
-  export class BooleanField
-    extends Field
-    implements Xrm.Attributes.BooleanAttribute
-  {
-    protected declare _attribute: Xrm.Attributes.BooleanAttribute;
-    constructor(attribute: string) {
-      super(attribute);
-    }
-    getAttributeType() {
-      return this.Attribute.getAttributeType();
-    }
-    getInitialValue(): boolean {
-      return this.Attribute.getInitialValue();
-    }
-    get Attribute() {
-      return (this._attribute ??=
-        Form.formContext.getAttribute(this.Name) ??
-        XrmEx.throwError(`Field '${this.Name}' does not exist`));
-    }
-    get controls() {
-      return this.Attribute.controls;
-    }
-    get Value(): boolean {
-      return this.Attribute.getValue() ?? null;
-    }
-    set Value(value: boolean) {
-      this.Attribute.setValue(value);
-    }
-  }
-  export class MultiSelectOptionSetField<Options extends OptionValues>
-    extends Field
-    implements Xrm.Attributes.MultiSelectOptionSetAttribute
-  {
-    protected declare _attribute: Xrm.Attributes.MultiSelectOptionSetAttribute;
-    Option: Options;
-    constructor(attributeName: string, option?: Options) {
-      super(attributeName);
-      this.Option = option;
-    }
-    getFormat(): Xrm.Attributes.OptionSetAttributeFormat {
-      return this.Attribute.getFormat() as Xrm.Attributes.OptionSetAttributeFormat;
-    }
-    getOption(value: number | string): Xrm.OptionSetValue {
-      if (typeof value === "number") {
-        return this.Attribute.getOption(value);
-      } else {
-        return this.Attribute.getOption(value);
-      }
-    }
-    getOptions(): Xrm.OptionSetValue[] {
-      return this.Attribute.getOptions();
-    }
-    getSelectedOption(): Xrm.OptionSetValue[] {
-      return this.Attribute.getSelectedOption();
-    }
-    getText(): string[] {
-      return this.Attribute.getText();
-    }
-    getInitialValue(): number[] {
-      return this.Attribute.getInitialValue();
-    }
-    get Attribute() {
-      return (this._attribute ??=
-        Form.formContext.getAttribute(this.Name) ??
-        XrmEx.throwError(`Field '${this.Name}' does not exist`));
-    }
-    get controls() {
-      return this.Attribute.controls;
-    }
-    get Value(): number[] {
-      return this.Attribute.getValue();
-    }
-    set Value(value: (keyof Options)[] | number[]) {
-      if (Array.isArray(value)) {
-        let values = [];
-        value.forEach((v) => {
-          if (typeof v == "number") values.push(v);
-          else values.push(this.Option[v]);
-        });
-        this.Attribute.setValue(values);
-      } else XrmEx.throwError(`Field Value '${value}' is not an Array`);
-    }
-  }
-  export class LookupField
-    extends Field
-    implements Xrm.Attributes.LookupAttribute
-  {
-    protected declare _attribute: Xrm.Attributes.LookupAttribute;
-    protected _customFilters: any = [];
-    constructor(attribute: string) {
-      super(attribute);
-    }
-    getIsPartyList(): boolean {
-      return this.Attribute.getIsPartyList();
-    }
-    get Attribute() {
-      return (this._attribute ??=
-        Form.formContext.getAttribute(this.Name) ??
-        XrmEx.throwError(`Field '${this.Name}' does not exist`));
-    }
-    get controls() {
-      return this.Attribute.controls;
-    }
-    /**Gets the id of the first lookup value*/
-    get Id() {
-      return this.Value && this.Value.length > 0
-        ? XrmEx.normalizeGuid(this.Value[0].id)
-        : null;
-    }
-    /**Gets the entityType of the first lookup value*/
-    get EntityType() {
-      return this.Value && this.Value.length > 0
-        ? this.Value[0].entityType
-        : null;
-    }
-    /**Gets the formatted value of the first lookup value*/
-    get FormattedValue() {
-      return this.Value && this.Value.length > 0 ? this.Value[0].name : null;
-    }
-    get Value(): Xrm.LookupValue[] {
-      return this.Attribute.getValue() ?? null;
-    }
-    set Value(value: Xrm.LookupValue[]) {
-      this.Attribute.setValue(value);
-    }
-    /**
-     * Sets the value of a lookup
-     * @param id Guid of the record
-     * @param entityType logicalname of the entity
-     * @param name formatted value
-     * @param append if true, adds value to the array instead of replacing it
-     */
-    setLookupValue(
-      id: string,
-      entityType: any,
-      name: any,
-      append = false
-    ): this {
-      try {
-        if (!id) throw new Error(`no id parameter was provided.`);
-        if (!entityType)
-          throw new Error(`no entityType parameter was provided.`);
-        id = XrmEx.normalizeGuid(id);
-        const lookupValue = {
-          id,
-          entityType,
-          name,
-        };
-        this.Value =
-          append && this.Value ? this.Value.concat(lookupValue) : [lookupValue];
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
-      }
-    }
-    /**
-     * Retrieves an entity record.
-     * @param options (Optional) OData system query options, $select and $expand, to retrieve your data.
-     * - Use the $select system query option to limit the properties returned by including a comma-separated
-     *   list of property names. This is an important performance best practice. If properties aren’t
-     *   specified using $select, all properties will be returned.
-     * - Use the $expand system query option to control what data from related entities is returned. If you
-     *   just include the name of the navigation property, you’ll receive all the properties for related
-     *   records. You can limit the properties returned for related records using the $select system query
-     *   option in parentheses after the navigation property name. Use this for both single-valued and
-     *   collection-valued navigation properties.
-     * - You can also specify multiple query options by using & to separate the query options.
-     * @example <caption>options example:</caption>
-     * options: $select=name&$expand=primarycontactid($select=contactid,fullname)
-     * @returns On success, returns a promise containing a JSON object with the retrieved attributes and their values.
-     * @see {@link https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-webapi/retrieverecord External Link: retrieveRecord (Client API reference)}
-     */
-    async retrieve(options: string) {
-      try {
-        if (!this.Id || !this.EntityType) return null;
-        const record = await Xrm.WebApi.retrieveRecord(
-          this.EntityType,
-          this.Id,
-          options
-        );
-        return record;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
-      }
-    }
-    /**
-     * Adds an additional custom filter to the lookup, with the "AND" filter operator.
-     * @param filter Specifies the filter, as a serialized FetchXML "filter" node.
-     * @param entityLogicalName (Optional) The logical name of the entity.
-     * @remarks     If entityLogicalName is not specified, the filter will be applied to all entities
-     *              valid for the Lookup control.
-     * @example     Example filter: <filter type="and">
-     *                              <condition attribute="address1_city" operator="eq" value="Redmond" />
-     *                              </filter>
-     */
-    addPreFilterToLookup(filterXml: string, entityLogicalName?: string): this {
-      try {
-        _addCustomFilter.controls = this.controls;
-        this.controls.forEach((control) => {
-          control.addPreSearch(_addCustomFilter);
-        });
-        this._customFilters.push(_addCustomFilter);
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
       }
 
-      function _addCustomFilter() {
-        _addCustomFilter.controls.forEach((control) => {
-          control.addCustomFilter(filterXml, entityLogicalName);
-        });
+      /**
+       * Sets the visibility state.
+       * @param visible true to show, false to hide.
+       */
+      public setVisible(visible: boolean): this {
+        try {
+          this.controls.forEach((control) => control.setVisible(visible));
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
       }
-    }
-    /**
-     * Adds an additional custom filter to the lookup, with the "AND" filter operator.
-     * @param entityLogicalName (Optional) The logical name of the entity.
-     * @param primaryAttributeIdName (Optional) The logical name of the primary key.
-     * @param fetchXml Specifies the FetchXML used to filter.
-     * @remarks     If entityLogicalName is not specified, the filter will be applied to all entities
-     *              valid for the Lookup control.
-     * @example     Example fetchXml: <fetch>
-     *                              <entity name="contact">
-     *                                  <filter>
-     *                                  <condition attribute="address1_city" operator="eq" value="Redmond" />
-     *                                  </filter>
-     *                              </entity>
-     *                              </fetch>
-     */
-    async addPreFilterToLookupAdvanced(
-      entityLogicalName: string,
-      primaryAttributeIdName: string,
-      fetchXml: string
-    ): Promise<void> {
-      try {
-        const result = await Xrm.WebApi.online.retrieveMultipleRecords(
-          entityLogicalName,
-          "?fetchXml=" + fetchXml
-        );
-        const data = result.entities;
-        let filteredEntities = "";
-        _addCustomFilter.controls = this.controls;
-        data.forEach((item) => {
-          filteredEntities += `<value>${item[primaryAttributeIdName]}</value>`;
-        });
-        fetchXml = filteredEntities
-          ? `<filter><condition attribute='${primaryAttributeIdName}' operator='in'>${filteredEntities}</condition></filter>`
-          : `<filter><condition attribute='${primaryAttributeIdName}' operator='null'/></filter>`;
-        this.controls.forEach((control) => {
-          control.addPreSearch(_addCustomFilter);
-        });
-        this._customFilters.push(_addCustomFilter);
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+
+      /**
+       * Sets the state of the control to either enabled, or disabled.
+       * @param disabled true to disable, false to enable.
+       */
+      public setDisabled(disabled: boolean): this {
+        try {
+          this.controls.forEach((control) => control.setDisabled(disabled));
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
       }
-      function _addCustomFilter() {
-        _addCustomFilter.controls.forEach((control) => {
-          control.addCustomFilter(fetchXml, entityLogicalName);
-        });
+
+      /**
+       * Sets the required level.
+       * @param requirementLevel The requirement level, as either "none", "required", or "recommended"
+       */
+      public setRequiredLevel(
+        requirementLevel: Xrm.Attributes.RequirementLevel
+      ): this {
+        try {
+          this.Attribute.setRequiredLevel(requirementLevel);
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
       }
-    }
-    /**
-     * Removes all filters set on the current lookup attribute by using addPreFilterToLookup or addPreFilterToLookupAdvanced
-     */
-    clearPreFilterFromLookup(): this {
-      try {
-        this._customFilters.forEach(
-          (customFilter: Xrm.Events.ContextSensitiveHandler) => {
-            this.controls.forEach((control) => {
-              control.removePreSearch(customFilter);
+
+      /**
+       * Sets the required level.
+       * @param required The requirement level, as either false for "none" or true for "required"
+       */
+      public setRequired(required: boolean): this {
+        try {
+          this.Attribute.setRequiredLevel(required ? "required" : "none");
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
+      }
+
+      /**Fire all "on change" event handlers. */
+      public fireOnChange(): this {
+        try {
+          this.Attribute.fireOnChange();
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
+      }
+
+      /**
+       * Adds a handler or an array of handlers to be called when the attribute's value is changed.
+       * @param handlers The function reference or an array of function references.
+       */
+      public addOnChange(
+        handlers:
+          | Xrm.Events.ContextSensitiveHandler
+          | Xrm.Events.ContextSensitiveHandler[]
+      ): this {
+        try {
+          if (Array.isArray(handlers)) {
+            for (const handler of handlers) {
+              if (typeof handler !== "function")
+                throw new Error(`'${handler}' is not a function`);
+              this.Attribute.removeOnChange(handler);
+              this.Attribute.addOnChange(handler);
+            }
+          } else {
+            if (typeof handlers !== "function")
+              throw new Error(`'${handlers}' is not a function`);
+            this.Attribute.removeOnChange(handlers);
+            this.Attribute.addOnChange(handlers);
+          }
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
+      }
+
+      /**
+       * Displays an error or recommendation notification for a control, and lets you specify actions to execute based on the notification.
+       */
+      public addNotification(
+        message: string,
+        notificationLevel: "ERROR" | "RECOMMENDATION",
+        uniqueId: string,
+        actions?: Xrm.Controls.ControlNotificationAction[]
+      ): this {
+        try {
+          if (!uniqueId) throw new Error(`no uniqueId was provided.`);
+          if (actions && !Array.isArray(actions))
+            throw new Error(
+              `the action parameter is not an array of ControlNotificationAction`
+            );
+          this.controls.forEach((control) => {
+            control.addNotification({
+              messages: [message],
+              notificationLevel: notificationLevel,
+              uniqueId: uniqueId,
+              actions: actions,
             });
-          }
-        );
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
-      }
-    }
-  }
-  type OptionValues = {
-    [key: string]: number;
-  };
-  export class OptionsetField<Options extends OptionValues>
-    extends Field
-    implements Xrm.Attributes.OptionSetAttribute
-  {
-    protected declare _attribute: Xrm.Attributes.OptionSetAttribute;
-    protected _control!: Xrm.Controls.OptionSetControl;
-    Option: Options;
-    constructor(attributeName: string, option?: Options) {
-      super(attributeName);
-      this.Option = option;
-    }
-    getFormat(): Xrm.Attributes.OptionSetAttributeFormat {
-      return this.Attribute.getFormat() as Xrm.Attributes.OptionSetAttributeFormat;
-    }
-    getOption(value: number | string): Xrm.OptionSetValue {
-      if (typeof value === "number") {
-        return this.Attribute.getOption(value);
-      } else {
-        return this.Attribute.getOption(value);
-      }
-    }
-    getOptions(): Xrm.OptionSetValue[] {
-      return this.Attribute.getOptions();
-    }
-    getSelectedOption(): Xrm.OptionSetValue {
-      return this.Attribute.getSelectedOption();
-    }
-    getText(): string {
-      return this.Attribute.getText();
-    }
-    getInitialValue(): number {
-      return this.Attribute.getInitialValue();
-    }
-    get Attribute() {
-      return (this._attribute ??=
-        Form.formContext.getAttribute(this.Name) ??
-        XrmEx.throwError(`Field '${this.Name}' does not exist`));
-    }
-    get controls() {
-      return this.Attribute.controls;
-    }
-    get control() {
-      return (this._control ??=
-        Form.formContext.getControl(this.Name) ??
-        XrmEx.throwError(`Control '${this.Name}' does not exist`));
-    }
-    get Value(): number {
-      return this.Attribute.getValue();
-    }
-    set Value(value: keyof Options | number) {
-      if (typeof value == "number") this.Attribute.setValue(value);
-      else this.Attribute.setValue(this.Option[value]);
-    }
-    /**
-     * Adds an option.
-     *
-     * @param values an array with the option values to add
-     * @param index (Optional) zero-based index of the option.
-     *
-     * @remarks This method does not check that the values within the options you add are valid.
-     *          If index is not provided, the new option will be added to the end of the list.
-     */
-    addOption(values: number[], index?: number): this {
-      try {
-        if (!Array.isArray(values))
-          throw new Error(`values is not an Array:\nvalues: '${values}'`);
-        const optionSetValues = this.control.getAttribute().getOptions() ?? [];
-        for (const element of optionSetValues) {
-          if (values.includes(element.value)) {
-            this.control.addOption(element, index);
-          }
+          });
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
         }
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
-    }
-    /**
-     * Removes the option matching the value.
-     *
-     * @param value The value.
-     */
-    removeOption(values: number[]): this {
-      try {
-        if (!Array.isArray(values))
-          throw new Error(`values is not an Array:\nvalues: '${values}'`);
-        const optionSetValues = this.control.getAttribute().getOptions() ?? [];
-        for (const element of optionSetValues) {
-          if (values.includes(element.value)) {
-            this.control.removeOption(element.value);
-          }
+      /**
+       * Clears the notification identified by uniqueId.
+       * @param uniqueId (Optional) Unique identifier.
+       * @returns true if it succeeds, false if it fails.
+       * @remarks If the uniqueId parameter is not used, the current notification shown will be removed.
+       */
+      removeNotification(uniqueId: string): this {
+        try {
+          this.controls.forEach((control) => {
+            control.clearNotification(uniqueId);
+          });
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
         }
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
       }
     }
-    /**
-     * Clears all options.
-     */
-    clearOptions(): this {
-      try {
-        this.control.clearOptions();
-        return this;
-      } catch (error: any) {
-        throw new Error(`XrmEx.${XrmEx.getMethodName()}:\n${error.message}`);
+    export class TextField
+      extends Field
+      implements Xrm.Attributes.StringAttribute
+    {
+      protected declare _attribute: Xrm.Attributes.StringAttribute;
+      constructor(attribute: string) {
+        super(attribute);
+      }
+      getMaxLength(): number {
+        return this.Attribute.getMaxLength();
+      }
+      getFormat(): Xrm.Attributes.StringAttributeFormat {
+        return this.Attribute.getFormat() as Xrm.Attributes.StringAttributeFormat;
+      }
+      get Attribute() {
+        return (this._attribute ??=
+          Form.formContext.getAttribute(this.Name) ??
+          XrmEx.throwError(`Field '${this.Name}' does not exist`));
+      }
+      get controls() {
+        return this.Attribute.controls;
+      }
+      get Value(): string {
+        return this.Attribute.getValue() ?? null;
+      }
+      set Value(value: string) {
+        this.Attribute.setValue(value);
       }
     }
-  }
-  export class Section implements Xrm.Controls.Section {
-    public readonly Name!: string;
-    protected _section?: Xrm.Controls.Section;
-    public parentTab?: Xrm.Controls.Tab;
-    constructor(name: string) {
-      this.Name = name;
-    }
-    public get Section(): Xrm.Controls.Section {
-      return (this._section ??=
-        this.parentTab.sections.get(this.Name) ??
-        XrmEx.throwError(
-          `The section '${this.Name}' was not found on the form.`
-        ));
-    }
-    getName(): string {
-      return this.Section.getName();
-    }
-    getParent(): Xrm.Controls.Tab {
-      return this.Section.getParent();
-    }
-    controls: Xrm.Collection.ItemCollection<Xrm.Controls.Control>;
-    setVisible(visible: boolean): void {
-      return this.Section.setVisible(visible);
-    }
-    getVisible(): boolean {
-      return this.Section.getVisible();
-    }
-    getLabel(): string {
-      return this.Section.getLabel();
-    }
-    setLabel(label: string): void {
-      return this.Section.setLabel(label);
-    }
-  }
-  type TabSections = {
-    [key: string]: Section;
-  };
-  export class Tab<Sections extends TabSections> implements Xrm.Controls.Tab {
-    public readonly Name!: string;
-    protected _tab?: Xrm.Controls.Tab;
-    Section: Sections;
-    constructor(name: string, section?: Sections) {
-      this.Name = name;
-      this.Section = section;
-      for (let key in section) {
-        section[key].parentTab = this;
+    export class NumberField
+      extends Field
+      implements Xrm.Attributes.NumberAttribute
+    {
+      protected declare _attribute: Xrm.Attributes.NumberAttribute;
+      constructor(attribute: string) {
+        super(attribute);
+      }
+      getFormat(): Xrm.Attributes.IntegerAttributeFormat {
+        return this.Attribute.getFormat() as Xrm.Attributes.IntegerAttributeFormat;
+      }
+      getMax(): number {
+        return this.Attribute.getMax();
+      }
+      getMin(): number {
+        return this.Attribute.getMin();
+      }
+      getPrecision(): number {
+        return this.Attribute.getPrecision();
+      }
+      setPrecision(precision: number): void {
+        return this.Attribute.setPrecision(precision);
+      }
+      get Attribute() {
+        return (this._attribute ??=
+          Form.formContext.getAttribute(this.Name) ??
+          XrmEx.throwError(`Field '${this.Name}' does not exist`));
+      }
+      get controls() {
+        return this.Attribute.controls;
+      }
+      get Value(): number {
+        return this.Attribute.getValue() ?? null;
+      }
+      set Value(value: number) {
+        this.Attribute.setValue(value);
       }
     }
-    sections: Xrm.Collection.ItemCollection<Xrm.Controls.Section>;
+    export class DateField
+      extends Field
+      implements Xrm.Attributes.DateAttribute
+    {
+      protected declare _attribute: Xrm.Attributes.DateAttribute;
+      constructor(attribute: string) {
+        super(attribute);
+      }
+      getFormat(): Xrm.Attributes.DateAttributeFormat {
+        return this.Attribute.getFormat() as Xrm.Attributes.DateAttributeFormat;
+      }
+      get Attribute() {
+        return (this._attribute ??=
+          Form.formContext.getAttribute(this.Name) ??
+          XrmEx.throwError(`Field '${this.Name}' does not exist`));
+      }
+      get controls() {
+        return this.Attribute.controls;
+      }
+      get Value(): Date {
+        return this.Attribute.getValue() ?? null;
+      }
+      set Value(value: Date) {
+        this.Attribute.setValue(value);
+      }
+    }
+    export class BooleanField
+      extends Field
+      implements Xrm.Attributes.BooleanAttribute
+    {
+      protected declare _attribute: Xrm.Attributes.BooleanAttribute;
+      constructor(attribute: string) {
+        super(attribute);
+      }
+      getAttributeType() {
+        return this.Attribute.getAttributeType();
+      }
+      getInitialValue(): boolean {
+        return this.Attribute.getInitialValue();
+      }
+      get Attribute() {
+        return (this._attribute ??=
+          Form.formContext.getAttribute(this.Name) ??
+          XrmEx.throwError(`Field '${this.Name}' does not exist`));
+      }
+      get controls() {
+        return this.Attribute.controls;
+      }
+      get Value(): boolean {
+        return this.Attribute.getValue() ?? null;
+      }
+      set Value(value: boolean) {
+        this.Attribute.setValue(value);
+      }
+    }
+    export class MultiSelectOptionSetField<Options extends OptionValues>
+      extends Field
+      implements Xrm.Attributes.MultiSelectOptionSetAttribute
+    {
+      protected declare _attribute: Xrm.Attributes.MultiSelectOptionSetAttribute;
+      Option: Options;
+      constructor(attributeName: string, option?: Options) {
+        super(attributeName);
+        this.Option = option;
+      }
+      getFormat(): Xrm.Attributes.OptionSetAttributeFormat {
+        return this.Attribute.getFormat() as Xrm.Attributes.OptionSetAttributeFormat;
+      }
+      getOption(value: number | string): Xrm.OptionSetValue {
+        if (typeof value === "number") {
+          return this.Attribute.getOption(value);
+        } else {
+          return this.Attribute.getOption(value);
+        }
+      }
+      getOptions(): Xrm.OptionSetValue[] {
+        return this.Attribute.getOptions();
+      }
+      getSelectedOption(): Xrm.OptionSetValue[] {
+        return this.Attribute.getSelectedOption();
+      }
+      getText(): string[] {
+        return this.Attribute.getText();
+      }
+      getInitialValue(): number[] {
+        return this.Attribute.getInitialValue();
+      }
+      get Attribute() {
+        return (this._attribute ??=
+          Form.formContext.getAttribute(this.Name) ??
+          XrmEx.throwError(`Field '${this.Name}' does not exist`));
+      }
+      get controls() {
+        return this.Attribute.controls;
+      }
+      get Value(): number[] {
+        return this.Attribute.getValue();
+      }
+      set Value(value: (keyof Options)[] | number[]) {
+        if (Array.isArray(value)) {
+          let values = [];
+          value.forEach((v) => {
+            if (typeof v == "number") values.push(v);
+            else values.push(this.Option[v]);
+          });
+          this.Attribute.setValue(values);
+        } else XrmEx.throwError(`Field Value '${value}' is not an Array`);
+      }
+    }
+    export class LookupField
+      extends Field
+      implements Xrm.Attributes.LookupAttribute
+    {
+      protected declare _attribute: Xrm.Attributes.LookupAttribute;
+      protected _customFilters: any = [];
+      constructor(attribute: string) {
+        super(attribute);
+      }
+      getIsPartyList(): boolean {
+        return this.Attribute.getIsPartyList();
+      }
+      get Attribute() {
+        return (this._attribute ??=
+          Form.formContext.getAttribute(this.Name) ??
+          XrmEx.throwError(`Field '${this.Name}' does not exist`));
+      }
+      get controls() {
+        return this.Attribute.controls;
+      }
+      /**Gets the id of the first lookup value*/
+      get Id() {
+        return this.Value && this.Value.length > 0
+          ? XrmEx.normalizeGuid(this.Value[0].id)
+          : null;
+      }
+      /**Gets the entityType of the first lookup value*/
+      get EntityType() {
+        return this.Value && this.Value.length > 0
+          ? this.Value[0].entityType
+          : null;
+      }
+      /**Gets the formatted value of the first lookup value*/
+      get FormattedValue() {
+        return this.Value && this.Value.length > 0 ? this.Value[0].name : null;
+      }
+      get Value(): Xrm.LookupValue[] {
+        return this.Attribute.getValue() ?? null;
+      }
+      set Value(value: Xrm.LookupValue[]) {
+        this.Attribute.setValue(value);
+      }
+      /**
+       * Sets the value of a lookup
+       * @param id Guid of the record
+       * @param entityType logicalname of the entity
+       * @param name formatted value
+       * @param append if true, adds value to the array instead of replacing it
+       */
+      setLookupValue(
+        id: string,
+        entityType: any,
+        name: any,
+        append = false
+      ): this {
+        try {
+          if (!id) throw new Error(`no id parameter was provided.`);
+          if (!entityType)
+            throw new Error(`no entityType parameter was provided.`);
+          id = XrmEx.normalizeGuid(id);
+          const lookupValue = {
+            id,
+            entityType,
+            name,
+          };
+          this.Value =
+            append && this.Value
+              ? this.Value.concat(lookupValue)
+              : [lookupValue];
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
+      }
+      /**
+       * Retrieves an entity record.
+       * @param options (Optional) OData system query options, $select and $expand, to retrieve your data.
+       * - Use the $select system query option to limit the properties returned by including a comma-separated
+       *   list of property names. This is an important performance best practice. If properties aren’t
+       *   specified using $select, all properties will be returned.
+       * - Use the $expand system query option to control what data from related entities is returned. If you
+       *   just include the name of the navigation property, you’ll receive all the properties for related
+       *   records. You can limit the properties returned for related records using the $select system query
+       *   option in parentheses after the navigation property name. Use this for both single-valued and
+       *   collection-valued navigation properties.
+       * - You can also specify multiple query options by using & to separate the query options.
+       * @example <caption>options example:</caption>
+       * options: $select=name&$expand=primarycontactid($select=contactid,fullname)
+       * @returns On success, returns a promise containing a JSON object with the retrieved attributes and their values.
+       * @see {@link https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/clientapi/reference/xrm-webapi/retrieverecord External Link: retrieveRecord (Client API reference)}
+       */
+      async retrieve(options: string) {
+        try {
+          if (!this.Id || !this.EntityType) return null;
+          const record = await Xrm.WebApi.retrieveRecord(
+            this.EntityType,
+            this.Id,
+            options
+          );
+          return record;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
+      }
+      /**
+       * Adds an additional custom filter to the lookup, with the "AND" filter operator.
+       * @param filter Specifies the filter, as a serialized FetchXML "filter" node.
+       * @param entityLogicalName (Optional) The logical name of the entity.
+       * @remarks     If entityLogicalName is not specified, the filter will be applied to all entities
+       *              valid for the Lookup control.
+       * @example     Example filter: <filter type="and">
+       *                              <condition attribute="address1_city" operator="eq" value="Redmond" />
+       *                              </filter>
+       */
+      addPreFilterToLookup(
+        filterXml: string,
+        entityLogicalName?: string
+      ): this {
+        try {
+          _addCustomFilter.controls = this.controls;
+          this.controls.forEach((control) => {
+            control.addPreSearch(_addCustomFilter);
+          });
+          this._customFilters.push(_addCustomFilter);
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
 
-    public get Tab(): Xrm.Controls.Tab {
-      return (this._tab ??=
-        Form.formContext.ui.tabs.get(this.Name) ??
-        XrmEx.throwError(`The tab '${this.Name}' was not found on the form.`));
+        function _addCustomFilter() {
+          _addCustomFilter.controls.forEach((control) => {
+            control.addCustomFilter(filterXml, entityLogicalName);
+          });
+        }
+      }
+      /**
+       * Adds an additional custom filter to the lookup, with the "AND" filter operator.
+       * @param entityLogicalName (Optional) The logical name of the entity.
+       * @param primaryAttributeIdName (Optional) The logical name of the primary key.
+       * @param fetchXml Specifies the FetchXML used to filter.
+       * @remarks     If entityLogicalName is not specified, the filter will be applied to all entities
+       *              valid for the Lookup control.
+       * @example     Example fetchXml: <fetch>
+       *                              <entity name="contact">
+       *                                  <filter>
+       *                                  <condition attribute="address1_city" operator="eq" value="Redmond" />
+       *                                  </filter>
+       *                              </entity>
+       *                              </fetch>
+       */
+      async addPreFilterToLookupAdvanced(
+        entityLogicalName: string,
+        primaryAttributeIdName: string,
+        fetchXml: string
+      ): Promise<void> {
+        try {
+          const result = await Xrm.WebApi.online.retrieveMultipleRecords(
+            entityLogicalName,
+            "?fetchXml=" + fetchXml
+          );
+          const data = result.entities;
+          let filteredEntities = "";
+          _addCustomFilter.controls = this.controls;
+          data.forEach((item) => {
+            filteredEntities += `<value>${item[primaryAttributeIdName]}</value>`;
+          });
+          fetchXml = filteredEntities
+            ? `<filter><condition attribute='${primaryAttributeIdName}' operator='in'>${filteredEntities}</condition></filter>`
+            : `<filter><condition attribute='${primaryAttributeIdName}' operator='null'/></filter>`;
+          this.controls.forEach((control) => {
+            control.addPreSearch(_addCustomFilter);
+          });
+          this._customFilters.push(_addCustomFilter);
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
+        function _addCustomFilter() {
+          _addCustomFilter.controls.forEach((control) => {
+            control.addCustomFilter(fetchXml, entityLogicalName);
+          });
+        }
+      }
+      /**
+       * Removes all filters set on the current lookup attribute by using addPreFilterToLookup or addPreFilterToLookupAdvanced
+       */
+      clearPreFilterFromLookup(): this {
+        try {
+          this._customFilters.forEach(
+            (customFilter: Xrm.Events.ContextSensitiveHandler) => {
+              this.controls.forEach((control) => {
+                control.removePreSearch(customFilter);
+              });
+            }
+          );
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
+      }
     }
-    addTabStateChange(handler: Xrm.Events.ContextSensitiveHandler): void {
-      return this.Tab.addTabStateChange(handler);
+    type OptionValues = {
+      [key: string]: number;
+    };
+    export class OptionsetField<Options extends OptionValues>
+      extends Field
+      implements Xrm.Attributes.OptionSetAttribute
+    {
+      protected declare _attribute: Xrm.Attributes.OptionSetAttribute;
+      protected _control!: Xrm.Controls.OptionSetControl;
+      Option: Options;
+      constructor(attributeName: string, option?: Options) {
+        super(attributeName);
+        this.Option = option;
+      }
+      getFormat(): Xrm.Attributes.OptionSetAttributeFormat {
+        return this.Attribute.getFormat() as Xrm.Attributes.OptionSetAttributeFormat;
+      }
+      getOption(value: number | string): Xrm.OptionSetValue {
+        if (typeof value === "number") {
+          return this.Attribute.getOption(value);
+        } else {
+          return this.Attribute.getOption(value);
+        }
+      }
+      getOptions(): Xrm.OptionSetValue[] {
+        return this.Attribute.getOptions();
+      }
+      getSelectedOption(): Xrm.OptionSetValue {
+        return this.Attribute.getSelectedOption();
+      }
+      getText(): string {
+        return this.Attribute.getText();
+      }
+      getInitialValue(): number {
+        return this.Attribute.getInitialValue();
+      }
+      get Attribute() {
+        return (this._attribute ??=
+          Form.formContext.getAttribute(this.Name) ??
+          XrmEx.throwError(`Field '${this.Name}' does not exist`));
+      }
+      get controls() {
+        return this.Attribute.controls;
+      }
+      get control() {
+        return (this._control ??=
+          Form.formContext.getControl(this.Name) ??
+          XrmEx.throwError(`Control '${this.Name}' does not exist`));
+      }
+      get Value(): number {
+        return this.Attribute.getValue();
+      }
+      set Value(value: keyof Options | number) {
+        if (typeof value == "number") this.Attribute.setValue(value);
+        else this.Attribute.setValue(this.Option[value]);
+      }
+      /**
+       * Adds an option.
+       *
+       * @param values an array with the option values to add
+       * @param index (Optional) zero-based index of the option.
+       *
+       * @remarks This method does not check that the values within the options you add are valid.
+       *          If index is not provided, the new option will be added to the end of the list.
+       */
+      addOption(values: number[], index?: number): this {
+        try {
+          if (!Array.isArray(values))
+            throw new Error(`values is not an Array:\nvalues: '${values}'`);
+          const optionSetValues =
+            this.control.getAttribute().getOptions() ?? [];
+          for (const element of optionSetValues) {
+            if (values.includes(element.value)) {
+              this.control.addOption(element, index);
+            }
+          }
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
+      }
+      /**
+       * Removes the option matching the value.
+       *
+       * @param value The value.
+       */
+      removeOption(values: number[]): this {
+        try {
+          if (!Array.isArray(values))
+            throw new Error(`values is not an Array:\nvalues: '${values}'`);
+          const optionSetValues =
+            this.control.getAttribute().getOptions() ?? [];
+          for (const element of optionSetValues) {
+            if (values.includes(element.value)) {
+              this.control.removeOption(element.value);
+            }
+          }
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
+      }
+      /**
+       * Clears all options.
+       */
+      clearOptions(): this {
+        try {
+          this.control.clearOptions();
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
+      }
     }
-    getDisplayState(): Xrm.DisplayState {
-      return this.Tab.getDisplayState();
+    export class Section implements Xrm.Controls.Section {
+      public readonly Name!: string;
+      protected _section?: Xrm.Controls.Section;
+      public parentTab?: Xrm.Controls.Tab;
+      constructor(name: string) {
+        this.Name = name;
+      }
+      public get Section(): Xrm.Controls.Section {
+        return (this._section ??=
+          this.parentTab.sections.get(this.Name) ??
+          XrmEx.throwError(
+            `The section '${this.Name}' was not found on the form.`
+          ));
+      }
+      getName(): string {
+        return this.Section.getName();
+      }
+      getParent(): Xrm.Controls.Tab {
+        return this.Section.getParent();
+      }
+      controls: Xrm.Collection.ItemCollection<Xrm.Controls.Control>;
+      setVisible(visible: boolean): void {
+        return this.Section.setVisible(visible);
+      }
+      getVisible(): boolean {
+        return this.Section.getVisible();
+      }
+      getLabel(): string {
+        return this.Section.getLabel();
+      }
+      setLabel(label: string): void {
+        return this.Section.setLabel(label);
+      }
     }
-    getName(): string {
-      return this.Tab.getName();
+    type TabSections = {
+      [key: string]: Section;
+    };
+    export class Tab<Sections extends TabSections> implements Xrm.Controls.Tab {
+      public readonly Name!: string;
+      protected _tab?: Xrm.Controls.Tab;
+      Section: Sections;
+      constructor(name: string, section?: Sections) {
+        this.Name = name;
+        this.Section = section;
+        for (let key in section) {
+          section[key].parentTab = this;
+        }
+      }
+      sections: Xrm.Collection.ItemCollection<Xrm.Controls.Section>;
+
+      public get Tab(): Xrm.Controls.Tab {
+        return (this._tab ??=
+          Form.formContext.ui.tabs.get(this.Name) ??
+          XrmEx.throwError(
+            `The tab '${this.Name}' was not found on the form.`
+          ));
+      }
+      addTabStateChange(handler: Xrm.Events.ContextSensitiveHandler): void {
+        return this.Tab.addTabStateChange(handler);
+      }
+      getDisplayState(): Xrm.DisplayState {
+        return this.Tab.getDisplayState();
+      }
+      getName(): string {
+        return this.Tab.getName();
+      }
+      getParent(): Xrm.Ui {
+        return this.Tab.getParent();
+      }
+      removeTabStateChange(handler: Xrm.Events.ContextSensitiveHandler): void {
+        return this.Tab.removeTabStateChange(handler);
+      }
+      setDisplayState(displayState: Xrm.DisplayState): void {
+        return this.Tab.setDisplayState(displayState);
+      }
+      setVisible(visible: boolean): void {
+        return this.Tab.setVisible(visible);
+      }
+      getVisible(): boolean {
+        return this.Tab.getVisible();
+      }
+      getLabel(): string {
+        return this.Tab.getLabel();
+      }
+      setLabel(label: string): void {
+        return this.Tab.setLabel(label);
+      }
+      setFocus(): void {
+        return this.Tab.setFocus();
+      }
     }
-    getParent(): Xrm.Ui {
-      return this.Tab.getParent();
-    }
-    removeTabStateChange(handler: Xrm.Events.ContextSensitiveHandler): void {
-      return this.Tab.removeTabStateChange(handler);
-    }
-    setDisplayState(displayState: Xrm.DisplayState): void {
-      return this.Tab.setDisplayState(displayState);
-    }
-    setVisible(visible: boolean): void {
-      return this.Tab.setVisible(visible);
-    }
-    getVisible(): boolean {
-      return this.Tab.getVisible();
-    }
-    getLabel(): string {
-      return this.Tab.getLabel();
-    }
-    setLabel(label: string): void {
-      return this.Tab.setLabel(label);
-    }
-    setFocus(): void {
-      return this.Tab.setFocus();
-    }
-  }
-  export class GridControl implements Xrm.Controls.GridControl {
-    public readonly Name!: string;
-    protected _gridControl?: Xrm.Controls.GridControl;
-    constructor(name: string) {
-      this.Name = name;
-    }
-    public get GridControl(): Xrm.Controls.GridControl {
-      return (
-        (this._gridControl ??=
-          Form.formContext.getControl<Xrm.Controls.GridControl>(this.Name)) ??
-        XrmEx.throwError(`The grid '${this.Name}' was not found on the form.`)
-      );
-    }
-    public get Grid(): Xrm.Controls.Grid {
-      return this.GridControl.getGrid();
-    }
-    addOnLoad(handler: Xrm.Events.GridControl.LoadEventHandler): void {
-      return this.GridControl.addOnLoad(handler);
-    }
-    getContextType(): XrmEnum.GridControlContext {
-      return this.GridControl.getContextType();
-    }
-    getEntityName(): string {
-      return this.GridControl.getEntityName();
-    }
-    getFetchXml(): string {
-      return this.GridControl.getFetchXml();
-    }
-    getGrid(): Xrm.Controls.Grid {
-      return this.GridControl.getGrid();
-    }
-    getRelationship(): Xrm.Controls.GridRelationship {
-      return this.GridControl.getRelationship();
-    }
-    getUrl(client?: XrmEnum.GridClient): string {
-      return this.GridControl.getUrl(client);
-    }
-    getViewSelector(): Xrm.Controls.ViewSelector {
-      return this.GridControl.getViewSelector();
-    }
-    openRelatedGrid(): void {
-      return this.GridControl.openRelatedGrid();
-    }
-    refresh(): void {
-      return this.GridControl.refresh();
-    }
-    refreshRibbon(): void {
-      return this.GridControl.refreshRibbon();
-    }
-    removeOnLoad(handler: () => void): void {
-      return this.GridControl.removeOnLoad(handler);
-    }
-    getControlType(): string {
-      return this.GridControl.getControlType();
-    }
-    getName(): string {
-      return this.GridControl.getName();
-    }
-    getParent(): Xrm.Controls.Section {
-      return this.GridControl.getParent();
-    }
-    getLabel(): string {
-      return this.GridControl.getLabel();
-    }
-    setLabel(label: string): void {
-      return this.GridControl.setLabel(label);
-    }
-    getVisible(): boolean {
-      return this.GridControl.getVisible();
-    }
-    setVisible(visible: boolean): void {
-      return this.GridControl.setVisible(visible);
+    export class GridControl implements Xrm.Controls.GridControl {
+      public readonly Name!: string;
+      protected _gridControl?: Xrm.Controls.GridControl;
+      constructor(name: string) {
+        this.Name = name;
+      }
+      public get GridControl(): Xrm.Controls.GridControl {
+        return (
+          (this._gridControl ??=
+            Form.formContext.getControl<Xrm.Controls.GridControl>(this.Name)) ??
+          XrmEx.throwError(`The grid '${this.Name}' was not found on the form.`)
+        );
+      }
+      public get Grid(): Xrm.Controls.Grid {
+        return this.GridControl.getGrid();
+      }
+      addOnLoad(handler: Xrm.Events.GridControl.LoadEventHandler): void {
+        return this.GridControl.addOnLoad(handler);
+      }
+      getContextType(): XrmEnum.GridControlContext {
+        return this.GridControl.getContextType();
+      }
+      getEntityName(): string {
+        return this.GridControl.getEntityName();
+      }
+      getFetchXml(): string {
+        return this.GridControl.getFetchXml();
+      }
+      getGrid(): Xrm.Controls.Grid {
+        return this.GridControl.getGrid();
+      }
+      getRelationship(): Xrm.Controls.GridRelationship {
+        return this.GridControl.getRelationship();
+      }
+      getUrl(client?: XrmEnum.GridClient): string {
+        return this.GridControl.getUrl(client);
+      }
+      getViewSelector(): Xrm.Controls.ViewSelector {
+        return this.GridControl.getViewSelector();
+      }
+      openRelatedGrid(): void {
+        return this.GridControl.openRelatedGrid();
+      }
+      refresh(): void {
+        return this.GridControl.refresh();
+      }
+      refreshRibbon(): void {
+        return this.GridControl.refreshRibbon();
+      }
+      removeOnLoad(handler: () => void): void {
+        return this.GridControl.removeOnLoad(handler);
+      }
+      getControlType(): string {
+        return this.GridControl.getControlType();
+      }
+      getName(): string {
+        return this.GridControl.getName();
+      }
+      getParent(): Xrm.Controls.Section {
+        return this.GridControl.getParent();
+      }
+      getLabel(): string {
+        return this.GridControl.getLabel();
+      }
+      setLabel(label: string): void {
+        return this.GridControl.setLabel(label);
+      }
+      getVisible(): boolean {
+        return this.GridControl.getVisible();
+      }
+      setVisible(visible: boolean): void {
+        return this.GridControl.setVisible(visible);
+      }
     }
   }
 }
