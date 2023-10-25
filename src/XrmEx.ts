@@ -9,17 +9,17 @@
 type RequestParameter = {
   Name: string;
   Type:
-    | "Boolean"
-    | "DateTime"
-    | "Decimal"
-    | "Entity"
-    | "EntityCollection"
-    | "EntityReference"
-    | "Float"
-    | "Integer"
-    | "Money"
-    | "Picklist"
-    | "String";
+  | "Boolean"
+  | "DateTime"
+  | "Decimal"
+  | "Entity"
+  | "EntityCollection"
+  | "EntityReference"
+  | "Float"
+  | "Integer"
+  | "Money"
+  | "Picklist"
+  | "String";
   Value: any;
 };
 /**
@@ -384,7 +384,7 @@ export namespace XrmEx {
   export class Form {
     protected static _formContext: Xrm.FormContext;
     protected static _executionContext: Xrm.Events.EventContext;
-    constructor() {}
+    constructor() { }
     /**Gets a reference to the current form context*/
     static get formContext(): Xrm.FormContext {
       return this._formContext;
@@ -850,8 +850,7 @@ export namespace XrmEx {
     }
     export class TextField
       extends Field
-      implements Xrm.Attributes.StringAttribute
-    {
+      implements Xrm.Attributes.StringAttribute {
       protected declare _attribute: Xrm.Attributes.StringAttribute;
       constructor(attribute: string) {
         super(attribute);
@@ -879,8 +878,7 @@ export namespace XrmEx {
     }
     export class NumberField
       extends Field
-      implements Xrm.Attributes.NumberAttribute
-    {
+      implements Xrm.Attributes.NumberAttribute {
       protected declare _attribute: Xrm.Attributes.NumberAttribute;
       constructor(attribute: string) {
         super(attribute);
@@ -917,8 +915,7 @@ export namespace XrmEx {
     }
     export class DateField
       extends Field
-      implements Xrm.Attributes.DateAttribute
-    {
+      implements Xrm.Attributes.DateAttribute {
       protected declare _attribute: Xrm.Attributes.DateAttribute;
       constructor(attribute: string) {
         super(attribute);
@@ -943,8 +940,7 @@ export namespace XrmEx {
     }
     export class BooleanField
       extends Field
-      implements Xrm.Attributes.BooleanAttribute
-    {
+      implements Xrm.Attributes.BooleanAttribute {
       protected declare _attribute: Xrm.Attributes.BooleanAttribute;
       constructor(attribute: string) {
         super(attribute);
@@ -972,8 +968,7 @@ export namespace XrmEx {
     }
     export class MultiSelectOptionSetField<Options extends OptionValues>
       extends Field
-      implements Xrm.Attributes.MultiSelectOptionSetAttribute
-    {
+      implements Xrm.Attributes.MultiSelectOptionSetAttribute {
       protected declare _attribute: Xrm.Attributes.MultiSelectOptionSetAttribute;
       Option: Options;
       constructor(attributeName: string, option?: Options) {
@@ -1026,8 +1021,7 @@ export namespace XrmEx {
     }
     export class LookupField
       extends Field
-      implements Xrm.Attributes.LookupAttribute
-    {
+      implements Xrm.Attributes.LookupAttribute {
       protected declare _attribute: Xrm.Attributes.LookupAttribute;
       protected _customFilters: any = [];
       constructor(attribute: string) {
@@ -1239,8 +1233,7 @@ export namespace XrmEx {
     };
     export class OptionsetField<Options extends OptionValues>
       extends Field
-      implements Xrm.Attributes.OptionSetAttribute
-    {
+      implements Xrm.Attributes.OptionSetAttribute {
       protected declare _attribute: Xrm.Attributes.OptionSetAttribute;
       protected _control!: Xrm.Controls.OptionSetControl;
       Option: Options;
