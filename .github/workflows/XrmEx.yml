@@ -7,6 +7,8 @@ env:
 jobs:
   XrmEx:
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.39.0-jammy
 
     concurrency:
       group: ${{ github.ref }}
@@ -14,7 +16,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: volta-cli/action@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
       - run: npm ci
 
       - name: Dependencies audit
@@ -28,17 +35,6 @@ jobs:
 
       - name: Lint check
         run: npm run lint:check
-
-      - name: Setup Node.js for Playwright
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: Install dependencies for Playwright
-        run: npm ci
-
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
 
       - name: Run Playwright tests
         run: |
