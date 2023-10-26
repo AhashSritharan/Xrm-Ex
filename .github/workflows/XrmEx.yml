@@ -28,7 +28,12 @@ jobs:
 
       - name: Check Repository
         id: check-repo
-        run: echo "::set-output name=isMainRepo::$(if [ "${{ github.repository }}" == "AhashSritharan/Xrm-Ex" ]; then echo true; else echo false; fi)"
+        run: |
+          if [ "${{ github.repository }}" == "AhashSritharan/Xrm-Ex" ]; then 
+            echo 'isMainRepo=true' >> $GITHUB_ENV
+          else
+            echo 'isMainRepo=false' >> $GITHUB_ENV
+          fi
         
   Playwright_Test:
     needs: Prepare_and_Build
@@ -37,6 +42,9 @@ jobs:
       image: mcr.microsoft.com/playwright:v1.39.0-jammy
     steps:
       - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Run Playwright tests
         run: |
@@ -59,7 +67,7 @@ jobs:
   Release_and_Upload:
     needs: Playwright_Test
     runs-on: ubuntu-latest
-    if: needs.Prepare_and_Build.outputs.isMainRepo == 'true'
+    if: ${{ needs.Prepare_and_Build.outputs.check-repo.outputs.isMainRepo }} == 'true'
     steps:
       - uses: actions/checkout@v3
       - uses: volta-cli/action@v3
