@@ -48,7 +48,7 @@ jobs:
 
       - name: Run Playwright tests
         run: |
-          if ${{ needs.Prepare_and_Build.outputs.isMainRepo }}; then
+          if [ "${{ needs.Prepare_and_Build.outputs.isMainRepo }}" == "true" ]; then
             npx playwright test
           else
             npx playwright test contact.spec.ts
