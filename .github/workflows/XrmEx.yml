@@ -48,7 +48,7 @@ jobs:
   Release:
     needs: Test
     runs-on: ubuntu-latest
-    if: github.repository == 'AhashSritharan/Xrm-Ex'
+    if: github.repository == 'AhashSritharan/Xrm-Ex' && github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v3
       - uses: volta-cli/action@v3
