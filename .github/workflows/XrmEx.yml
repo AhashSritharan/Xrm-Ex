@@ -5,13 +5,10 @@ on:
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 jobs:
-  XrmEx:
+  Prepare_and_Build:
     runs-on: ubuntu-latest
-
-    concurrency:
-      group: ${{ github.ref }}
-      cancel-in-progress: true
-
+    outputs:
+      isMainRepo: ${{ steps.check-repo.outputs.isMainRepo }}
     steps:
       - uses: actions/checkout@v3
       - uses: volta-cli/action@v3
@@ -29,34 +26,28 @@ jobs:
       - name: Lint check
         run: npm run lint:check
 
-      - name: Setup Node.js for Playwright
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: Install dependencies for Playwright
-        run: npm ci
-
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+      - name: Check Repository
+        id: check-repo
+        run: echo "::set-output name=isMainRepo::$(if [ "${{ github.repository }}" == "AhashSritharan/Xrm-Ex" ]; then echo true; else echo false; fi)"
+        
+  Playwright_Test:
+    needs: Prepare_and_Build
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.39.0-jammy
+    steps:
+      - uses: actions/checkout@v3
 
       - name: Run Playwright tests
         run: |
-          if [ "${{ github.repository }}" == "AhashSritharan/Xrm-Ex" ]; then
+          if ${{ needs.Prepare_and_Build.outputs.isMainRepo }}; then
             npx playwright test
           else
             npx playwright test contact.spec.ts
           fi
         env:
           ENV_VAR_JSON: ${{ secrets.ENV_VAR_JSON }}
-
-      - name: Release
-        if: github.repository == 'AhashSritharan/Xrm-Ex'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm run semantic-release
-
+          
       - name: Upload Playwright Report
         if: always()
         uses: actions/upload-artifact@v3
@@ -64,3 +55,18 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+
+  Release_and_Upload:
+    needs: Playwright_Test
+    runs-on: ubuntu-latest
+    if: needs.Prepare_and_Build.outputs.isMainRepo == 'true'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: volta-cli/action@v3
+      - run: npm ci
+
+      - name: Release
+        run: npm run semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
