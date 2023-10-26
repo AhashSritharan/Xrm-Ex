@@ -5,14 +5,15 @@ on:
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 jobs:
-  Prepare_and_Build:
+  Test:
     runs-on: ubuntu-latest
-    outputs:
-      isMainRepo: ${{ steps.check-repo.outputs.isMainRepo }}
+    container:
+      image: mcr.microsoft.com/playwright:v1.39.0-jammy
     steps:
       - uses: actions/checkout@v3
-      - uses: volta-cli/action@v3
-      - run: npm ci
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Dependencies audit
         run: npm audit --audit-level=moderate
@@ -25,30 +26,10 @@ jobs:
 
       - name: Lint check
         run: npm run lint:check
-
-      - name: Check Repository
-        id: check-repo
-        run: |
-          if [ "${{ github.repository }}" == "AhashSritharan/Xrm-Ex" ]; then 
-            echo 'isMainRepo=true' >> $GITHUB_ENV
-          else
-            echo 'isMainRepo=false' >> $GITHUB_ENV
-          fi
-        
-  Playwright_Test:
-    needs: Prepare_and_Build
-    runs-on: ubuntu-latest
-    container:
-      image: mcr.microsoft.com/playwright:v1.39.0-jammy
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Install dependencies
-        run: npm ci
-
+      
       - name: Run Playwright tests
         run: |
-          if [ "${{ needs.Prepare_and_Build.outputs.isMainRepo }}" == "true" ]; then
+          if [ "${{ github.repository }}" == "AhashSritharan/Xrm-Ex" ]; then
             npx playwright test
           else
             npx playwright test contact.spec.ts
@@ -64,15 +45,20 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
-  Release_and_Upload:
+  Release:
     needs: Playwright_Test
     runs-on: ubuntu-latest
-    if: ${{ needs.Prepare_and_Build.outputs.check-repo.outputs.isMainRepo }} == 'true'
+    if: github.repository == 'AhashSritharan/Xrm-Ex'
     steps:
       - uses: actions/checkout@v3
       - uses: volta-cli/action@v3
-      - run: npm ci
 
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+      
       - name: Release
         run: npm run semantic-release
         env:
