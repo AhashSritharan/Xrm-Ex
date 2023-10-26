@@ -1,6 +1,7 @@
 {
   "include": [
     "./src/**/*.ts",
+    "./tests/example-spec.ts",
     ".eslintrc.cjs"
   ],
   "compilerOptions": {
