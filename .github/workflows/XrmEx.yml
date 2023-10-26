@@ -29,9 +29,38 @@ jobs:
       - name: Lint check
         run: npm run lint:check
 
+      - name: Setup Node.js for Playwright
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies for Playwright
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: |
+          if [ "${{ github.repository }}" == "AhashSritharan/Xrm-Ex" ]; then
+            npx playwright test
+          else
+            npx playwright test contact.spec.ts
+          fi
+        env:
+          ENV_VAR_JSON: ${{ secrets.ENV_VAR_JSON }}
+
       - name: Release
         if: github.repository == 'AhashSritharan/Xrm-Ex'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm run semantic-release
+
+      - name: Upload Playwright Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
