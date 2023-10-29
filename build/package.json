@@ -17,15 +17,13 @@
     "type": "git",
     "url": "https://github.com/AhashSritharan/Xrm-Ex.git"
   },
+  "homepage": "https://xrm-ex.ahash.dev/modules/src_XrmEx.XrmEx.html",
   "type": "module",
-  "exports": "./build/index.js",
-  "types": "./build/index.d.ts",
+  "exports": "./src/XrmEx.js",
+  "types": "./src/XrmEx.d.ts",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "build": "tsc --build"
   },
   "dependencies": {
     "@types/xrm": "^9.0.73"
