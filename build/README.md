@@ -1,7 +1,6 @@
 ![NPM](https://img.shields.io/npm/l/xrm-ex)
 ![NPM](https://img.shields.io/npm/v/xrm-ex)
 ![GitHub Workflow Status](https://github.com/AhashSritharan/Xrm-Ex/actions/workflows/XrmEx.yml/badge.svg?branch%253Dmain)
-![GitHub Workflow Status](https://github.com/AhashSritharan/Xrm-Ex/actions/workflows/playwright.yml/badge.svg?branch%253Dmain)
 
 [![NPM](https://nodei.co/npm/xrm-ex.png)](https://nodei.co/npm/xrm-ex/)
 
