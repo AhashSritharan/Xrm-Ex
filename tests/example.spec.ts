@@ -47,6 +47,12 @@ test.describe("Test Field Class", () => {
         });
         expect(response2).toBe(true);
     });
+    test("Get BPF Processes", async ({ page }) => {
+        var response = await page.evaluate(async () => {
+            return await XrmEx.Form.process.getEnabledProcesses();
+        });
+        expect(response).toBeTruthy();
+    });
 });
 
 type PromiseType<T extends Promise<any>> = T extends Promise<infer U>
@@ -62,7 +68,6 @@ declare global {
 var model: PromiseType<ReturnType<typeof getModel>>;
 async function getModel(page: Page) {
     return await page.evaluate(() => {
-        console.log(window.XrmEx.Form.executionContext);
         XrmEx.Form.executionContext = window.EventContext;
         class Fields {
             Firstname = new XrmEx.Class.TextField("firstname");
@@ -103,6 +108,7 @@ async function getModel(page: Page) {
             ContactSubgrid = new XrmEx.Class.GridControl("Test");
         }
         var model = {
+            formContext: XrmEx.Form.formContext,
             fields: new Fields(),
             tabs: new Tabs(),
             grids: new Grids(),

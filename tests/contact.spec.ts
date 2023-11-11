@@ -3,6 +3,7 @@ import { XrmMockGenerator } from "xrm-mock";
 
 import { XrmEx } from "../testBuild/src/XrmEx";
 
+var formContext: Xrm.FormContext;
 var fields: Fields;
 var tabs: Tabs;
 var grids: Grids;
@@ -51,6 +52,7 @@ test.describe("Test XrmEx", () => {
     XrmMockGenerator.Section.createSection("section1", "Section1", true, tab1);
     XrmMockGenerator.Control.createGrid("Test");
     XrmEx.Form.executionContext = XrmMockGenerator.getEventContext();
+    formContext = XrmEx.Form.formContext;
     fields = new Fields();
     tabs = new Tabs();
     grids = new Grids();

@@ -1,7 +1,6 @@
 ![NPM](https://img.shields.io/npm/l/xrm-ex)
 ![NPM](https://img.shields.io/npm/v/xrm-ex)
 ![GitHub Workflow Status](https://github.com/AhashSritharan/Xrm-Ex/actions/workflows/XrmEx.yml/badge.svg?branch%253Dmain)
-![GitHub Workflow Status](https://github.com/AhashSritharan/Xrm-Ex/actions/workflows/playwright.yml/badge.svg?branch%253Dmain)
 
 [![NPM](https://nodei.co/npm/xrm-ex.png)](https://nodei.co/npm/xrm-ex/)
 
@@ -67,6 +66,7 @@ YourNamespace.Contact = YourNamespace.Contact || {};
     class Grids {
         ContactSubgrid = new XrmEx.Class.GridControl("Test");
     }
+    /**@type {Xrm.FormContext}*/ var formContext;
     /**@type {Fields}*/ var fields;
     /**@type {Tabs}*/ var tabs;
     /**@type {Grids}*/ var grids;
@@ -95,7 +95,8 @@ YourNamespace.Contact = YourNamespace.Contact || {};
             await Xrm.Navigation.openAlertDialog({ title: "Error", text: errorMessage, });
             return;
         }
-        XrmEx.Form.formContext = executionContext;
+        XrmEx.Form.executionContext = executionContext;
+        formContext = XrmEx.Form.formContext;
         fields = new Fields();
         tabs = new Tabs();
         grids = new Grids();

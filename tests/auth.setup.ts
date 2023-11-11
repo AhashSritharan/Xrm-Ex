@@ -20,7 +20,7 @@ setup('authenticate', async ({ playwright, request }) => {
     const userAuthFile = 'playwright/.auth/user.json';
     const browser = await playwright.chromium.launch();
 
-    const context = await browser.newContext({ storageState: userAuthFile });
+    const context = await browser.newContext();
     const page = await context.newPage();
     await page.goto(env.CRM_URL);
     let url = page.url();

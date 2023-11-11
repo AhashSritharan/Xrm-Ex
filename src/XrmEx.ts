@@ -316,6 +316,27 @@ export namespace XrmEx {
       throw new Error(`XrmEx.normalizeGuid:\n'${guid}' is not a string`);
     return guid.toLowerCase().replace(/[{}]/g, "");
   }
+
+  /**
+   * Wraps a function that takes a callback as its last parameter and returns a Promise.
+   * @param {Function} fn the function to wrap
+   * @param context the parent property of the function f.e. formContext.data.process for formContext.data.process.getEnabledProcesses
+   * @param args the arguments to pass to the function
+   * @returns {Promise<any>} a Promise that resolves with the callback response
+   */
+  export function asPromise<T>(fn: Function, context, ...args): Promise<T> {
+    return new Promise<T>((resolve, reject) => {
+      const callback = (response: T) => {
+        resolve(response);
+      };
+      try {
+        // Call the function with the arguments and the callback at the end
+        fn.call(context, ...args, callback);
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }
   /**
    * Opens a dialog with dynamic height and width based on text content.
    * @param {string} title - The title of the dialog.
@@ -378,6 +399,98 @@ export namespace XrmEx {
       return metrics.width;
     }
   }
+
+  class Process {
+    /**
+     * Use this method to asynchronously retrieve the enabled business process flows that the user can switch to for an entity.
+     * @returns returns callback response as Promise
+     */
+    static getEnabledProcesses() {
+      return asPromise<Xrm.ProcessFlow.ProcessDictionary>(
+        Form.formContext.data.process.getEnabledProcesses,
+        Form.formContext.data.process
+      );
+    }
+    /**
+     * Returns all process instances for the entity record that the calling user has access to.
+     * @returns returns callback response as Promise
+     */
+    static getProcessInstances() {
+      return asPromise<Xrm.ProcessFlow.GetProcessInstancesDelegate>(
+        Form.formContext.data.process.getProcessInstances,
+        Form.formContext.data.process
+      );
+    }
+    /**
+     * Progresses to the next stage.
+     * @returns returns callback response as Promise
+     */
+    static moveNext() {
+      return asPromise<Xrm.ProcessFlow.ProcessCallbackDelegate>(
+        Form.formContext.data.process.moveNext,
+        Form.formContext.data.process
+      );
+    }
+    /**
+     * Moves to the previous stage.
+     * @returns returns callback response as Promise
+     */
+    static movePrevious() {
+      return asPromise<Xrm.ProcessFlow.ProcessCallbackDelegate>(
+        Form.formContext.data.process.movePrevious,
+        Form.formContext.data.process
+      );
+    }
+    /**
+     * Set a Process as the active process.
+     * @param processId The Id of the process to make the active process.
+     * @returns returns callback response as Promise
+     */
+    static setActiveProcess(processId: string) {
+      return asPromise<Xrm.ProcessFlow.ProcessCallbackDelegate>(
+        Form.formContext.data.process.setActiveProcess,
+        Form.formContext.data.process,
+        processId
+      );
+    }
+    /**
+     * Sets a process instance as the active instance
+     * @param processInstanceId The Id of the process instance to make the active instance.
+     * @returns returns callback response as Promise
+     */
+    static setActiveProcessInstance(processInstanceId: string) {
+      return asPromise<Xrm.ProcessFlow.SetProcessInstanceDelegate>(
+        Form.formContext.data.process.setActiveProcessInstance,
+        Form.formContext.data.process,
+        processInstanceId
+      );
+    }
+    /**
+     * Set a stage as the active stage.
+     * @param stageId the Id of the stage to make the active stage.
+     * @returns returns callback response as Promise
+     */
+    static setActiveStage(stageId: string) {
+      return asPromise<Xrm.ProcessFlow.SetProcessInstanceDelegate>(
+        Form.formContext.data.process.setActiveStage,
+        Form.formContext.data.process,
+        stageId
+      );
+    }
+    /**
+     * Use this method to set the current status of the process instance
+     * @param status The new status for the process
+     * @returns returns callback response as Promise
+     */
+    static setStatus(status: Xrm.ProcessFlow.ProcessStatus) {
+      return asPromise<Xrm.ProcessFlow.SetProcessInstanceDelegate>(
+        Form.formContext.data.process.setStatus,
+        Form.formContext.data.process,
+        status
+      );
+    }
+  }
+
   /**
    * Represents a form in Dynamics 365.
    */
@@ -445,6 +558,9 @@ export namespace XrmEx {
     static get IsNotUpdate() {
       return Form.formContext.ui.getFormType() != 2;
     }
+
+    static process = Process;
+
     /**
      * Displays a form level notification. Any number of notifications can be displayed and will remain until removed using clearFormNotification.
      * The height of the notification area is limited so each new message will be added to the top.
