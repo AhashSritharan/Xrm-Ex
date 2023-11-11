@@ -49,7 +49,7 @@ test.describe("Test Field Class", () => {
     });
     test("Get BPF Processes", async ({ page }) => {
         var response = await page.evaluate(async () => {
-            return await XrmEx.Form.process.getEnabledProcesses();
+            return await XrmEx.Process.getEnabledProcesses();
         });
         expect(response).toBeTruthy();
     });

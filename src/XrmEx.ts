@@ -400,7 +400,7 @@ export namespace XrmEx {
     }
   }
 
-  class Process {
+  export class Process {
     /**
      * Use this method to asynchronously retrieve the enabled business process flows that the user can switch to for an entity.
      * @returns returns callback response as Promise
@@ -559,8 +559,6 @@ export namespace XrmEx {
       return Form.formContext.ui.getFormType() != 2;
     }
 
-    static process = Process;
-
     /**
      * Displays a form level notification. Any number of notifications can be displayed and will remain until removed using clearFormNotification.
      * The height of the notification area is limited so each new message will be added to the top.
@@ -570,7 +568,7 @@ export namespace XrmEx {
      * WARNING: Notification will use the system warning icon.
      * INFO: Notification will use the system info icon.
      * @param uniqueId Unique identifier for the notification which is used with clearFormNotification to remove the notification.
-     * @returns true if it succeeds, otherwise false.
+     * @returns true if it succeeds, othenprwise false.
      */
     static addFormNotification(
       message: string,

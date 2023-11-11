@@ -28,12 +28,12 @@ declare namespace XrmEx {
      * @param {string} errorMessage - The error message to throw.
      * @throws {Error} - Always throws an error with the given error message.
      */
-    export function throwError(errorMessage: string): never;
+    function throwError(errorMessage: string): never;
     /**
      * Returns the name of the calling function.
      * @returns {string} - The name of the calling function.
      */
-    export function getFunctionName(): string;
+    function getFunctionName(): string;
     /**
      * Displays a notification for an app with the given message and level, and lets you specify whether to show a close button.
      * @param {string} message - The message to display in the notification.
@@ -41,13 +41,13 @@ declare namespace XrmEx {
      * @param {boolean} [showCloseButton=false] - Whether to show a close button on the notification. Defaults to false.
      * @returns {Promise<string>} - A promise that resolves with the ID of the created notification.
      */
-    export function addGlobalNotification(message: string, level: "SUCCESS" | "ERROR" | "WARNING" | "INFO", showCloseButton?: boolean): Promise<string>;
+    function addGlobalNotification(message: string, level: "SUCCESS" | "ERROR" | "WARNING" | "INFO", showCloseButton?: boolean): Promise<string>;
     /**
      * Clears a notification in the app with the given unique ID.
      * @param {string} uniqueId - The unique ID of the notification to clear.
      * @returns {Promise<string>} - A promise that resolves when the notification has been cleared.
      */
-    export function removeGlobalNotification(uniqueId: string): Promise<string>;
+    function removeGlobalNotification(uniqueId: string): Promise<string>;
     /**
      * Retrieves the value of an environment variable by using its schema name as key.
      * If the environment variable has both a default value and a current value, this function will retrieve the current value.
@@ -55,14 +55,14 @@ declare namespace XrmEx {
      * @returns {Promise<string>} - A promise that resolves with the value of the environment variable.
      * @async
      */
-    export function getEnvironmentVariableValue(environmentVariableSchemaName: string): Promise<string>;
+    function getEnvironmentVariableValue(environmentVariableSchemaName: string): Promise<string>;
     /**
      * Checks if the given request parameter is of a supported type and has a valid value.
      * @param {RequestParameter} requestParameter - The request parameter to check.
      * @returns {void}
      * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
      */
-    export function checkRequestParameterType(requestParameter: RequestParameter): void;
+    function checkRequestParameterType(requestParameter: RequestParameter): void;
     /**
      * Executes an Action.
      * @param {string} actionName - The unique name of the action.
@@ -71,7 +71,7 @@ declare namespace XrmEx {
      * @returns {Promise<any>} - A Promise with the request response.
      * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
      */
-    export function executeAction(actionName: string, requestParameters: RequestParameter[], boundEntity?: EntityReference): Promise<any>;
+    function executeAction(actionName: string, requestParameters: RequestParameter[], boundEntity?: EntityReference): Promise<any>;
     /**
      * Executes a Function.
      * @param {string} functionName - The unique name of the function.
@@ -80,13 +80,13 @@ declare namespace XrmEx {
      * @returns {Promise<any>} - A Promise with the request response.
      * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
      */
-    export function executeFunction(functionName: string, requestParameters: RequestParameter[], boundEntity?: EntityReference): Promise<any>;
+    function executeFunction(functionName: string, requestParameters: RequestParameter[], boundEntity?: EntityReference): Promise<any>;
     /**
      * Makes a GUID lowercase and removes brackets.
      * @param {string} guid - The GUID to normalize.
      * @returns {string} - The normalized GUID.
      */
-    export function normalizeGuid(guid: string): string;
+    function normalizeGuid(guid: string): string;
     /**
      * Wraps a function that takes a callback as its last parameter and returns a Promise.
      * @param {Function} fn the function to wrap
@@ -94,14 +94,14 @@ declare namespace XrmEx {
      * @param args the arguments to pass to the function
      * @returns {Promise<any>} a Promise that resolves with the callback response
      */
-    export function asPromise<T>(fn: Function, context: any, ...args: any[]): Promise<T>;
+    function asPromise<T>(fn: Function, context: any, ...args: any[]): Promise<T>;
     /**
      * Opens a dialog with dynamic height and width based on text content.
      * @param {string} title - The title of the dialog.
      * @param {string} text - The text content of the dialog.
      * @returns {Promise<any>} - A Promise with the dialog response.
      */
-    export function openAlertDialog(title: string, text: string): Promise<any>;
+    function openAlertDialog(title: string, text: string): Promise<any>;
     class Process {
         /**
          * Use this method to asynchronously retrieve the enabled business process flows that the user can switch to for an entity.
@@ -151,7 +151,7 @@ declare namespace XrmEx {
     /**
      * Represents a form in Dynamics 365.
      */
-    export class Form {
+    class Form {
         protected static _formContext: Xrm.FormContext;
         protected static _executionContext: Xrm.Events.EventContext;
         constructor();
@@ -173,7 +173,6 @@ declare namespace XrmEx {
         static get IsNotCreate(): boolean;
         /**Returns true if form is not from type update*/
         static get IsNotUpdate(): boolean;
-        static process: typeof Process;
         /**
          * Displays a form level notification. Any number of notifications can be displayed and will remain until removed using clearFormNotification.
          * The height of the notification area is limited so each new message will be added to the top.
@@ -183,7 +182,7 @@ declare namespace XrmEx {
          * WARNING: Notification will use the system warning icon.
          * INFO: Notification will use the system info icon.
          * @param uniqueId Unique identifier for the notification which is used with clearFormNotification to remove the notification.
-         * @returns true if it succeeds, otherwise false.
+         * @returns true if it succeeds, othenprwise false.
          */
         static addFormNotification(message: string, level: Xrm.FormNotificationLevel, uniqueId: string): boolean;
         /**
@@ -214,7 +213,7 @@ declare namespace XrmEx {
          */
         static addOnChangeEventHandler(fields: Class.Field[], handlers: Xrm.Events.ContextSensitiveHandler | Xrm.Events.ContextSensitiveHandler[], execute?: boolean): void;
     }
-    export namespace Class {
+    namespace Class {
         /**
          * Used to execute methods related to a single Attribute
          */
@@ -526,5 +525,4 @@ declare namespace XrmEx {
         }
         export {};
     }
-    export {};
 }
