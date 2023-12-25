@@ -138,7 +138,7 @@ formContext.data.entity.addOnSave(sample);
 ### With XrmEx:
 
 ```js
-XrmEx.Form.addOnSaveEventHandler([sample]);
+XrmEx.Form.addOnSave([sample]);
 ```
 The XrmEx approach is more concise and offers a clearer intent, especially when registering multiple functions.
 
@@ -157,7 +157,7 @@ lastname.fireOnChange();
 ### With XrmEx:
 
 ```js
-XrmEx.Form.addOnChangeEventHandler(
+XrmEx.Form.addOnChange(
   [fields.Firstname, fields.Lastname],
   [sample],
   true //fireOnChange
