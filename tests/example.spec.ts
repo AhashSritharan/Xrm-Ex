@@ -68,7 +68,7 @@ declare global {
 var model: PromiseType<ReturnType<typeof getModel>>;
 async function getModel(page: Page) {
     return await page.evaluate(() => {
-        XrmEx.Form.executionContext = window.EventContext;
+        XrmEx.Form.executionContext = window.EventContext ?? Xrm.Page;
         class Fields {
             Firstname = new XrmEx.Class.TextField("firstname");
             Lastname = new XrmEx.Class.TextField("lastname");

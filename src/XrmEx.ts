@@ -401,6 +401,133 @@ export namespace XrmEx {
   }
 
   export class Process {
+    static get data() {
+      return Form.formContext.data.process;
+    }
+    static get ui() {
+      return Form.formContext.ui.process;
+    }
+    /**
+     * Use this to add a function as an event handler for the OnPreProcessStatusChange event so that it will be called before the
+     * business process flow status changes.
+     * @param handler The function will be added to the bottom of the event
+     *                handler pipeline. The execution context is automatically
+     *                set to be the first parameter passed to the event handler.
+     *                Use a reference to a named function rather than an
+     *                anonymous function if you may later want to remove the
+     *                event handler.
+     */
+    static addOnPreProcessStatusChange(
+      handler: Xrm.Events.ProcessStatusChangeHandler
+    ) {
+      Form.formContext.data.process.removeOnPreProcessStatusChange(handler);
+      return Form.formContext.data.process.addOnPreProcessStatusChange(handler);
+    }
+    /**
+     * Use this to add a function as an event handler for the OnPreStageChange event so that it will be called before the
+     * business process flow stage changes.
+     * @param handler The function will be added to the bottom of the event
+     *                handler pipeline. The execution context is automatically
+     *                set to be the first parameter passed to the event handler.
+     *                Use a reference to a named function rather than an
+     *                anonymous function if you may later want to remove the
+     *                event handler.
+     */
+    static addOnPreStageChange(handler: Xrm.Events.StageChangeEventHandler) {
+      Form.formContext.data.process.removeOnPreStageChange(handler);
+      return Form.formContext.data.process.addOnPreStageChange(handler);
+    }
+    /**
+     * Use this to add a function as an event handler for the OnPreProcessStatusChange event so that it will be called when the
+     * business process flow status changes.
+     * @param handler The function will be added to the bottom of the event
+     *                handler pipeline. The execution context is automatically
+     *                set to be the first parameter passed to the event handler.
+     *                Use a reference to a named function rather than an
+     *                anonymous function if you may later want to remove the
+     *                event handler.
+     */
+    static addOnProcessStatusChange(
+      handler: Xrm.Events.ProcessStatusChangeHandler
+    ) {
+      Form.formContext.data.process.removeOnProcessStatusChange(handler);
+      return Form.formContext.data.process.addOnProcessStatusChange(handler);
+    }
+    /**
+     * Use this to add a function as an event handler for the OnStageChange event so that it will be called when the
+     * business process flow stage changes.
+     * @param handler The function will be added to the bottom of the event
+     *                handler pipeline. The execution context is automatically
+     *                set to be the first parameter passed to the event handler.
+     *                Use a reference to a named function rather than an
+     *                anonymous function if you may later want to remove the
+     *                event handler.
+     */
+    static addOnStageChange(handler: Xrm.Events.StageChangeEventHandler) {
+      Form.formContext.data.process.removeOnStageChange(handler);
+      return Form.formContext.data.process.addOnStageChange(handler);
+    }
+    /**
+     * Use this to add a function as an event handler for the OnStageSelected event so that it will be called
+     * when a business process flow stage is selected.
+     * @param handler The function will be added to the bottom of the event
+     *                handler pipeline. The execution context is automatically
+     *                set to be the first parameter passed to the event handler.
+     *                Use a reference to a named function rather than an
+     *                anonymous function if you may later want to remove the
+     *                event handler.
+     */
+    static addOnStageSelected(handler: Xrm.Events.ContextSensitiveHandler) {
+      Form.formContext.data.process.removeOnStageSelected(handler);
+      return Form.formContext.data.process.addOnStageSelected(handler);
+    }
+    /**
+     * Use this to remove a function as an event handler for the OnPreProcessStatusChange event.
+     * @param handler If an anonymous function is set using the addOnPreProcessStatusChange method it
+     *                cannot be removed using this method.
+     */
+    static removeOnPreProcessStatusChange(
+      handler: Xrm.Events.ProcessStatusChangeHandler
+    ) {
+      return Form.formContext.data.process.removeOnPreProcessStatusChange(
+        handler
+      );
+    }
+    /**
+     * Use this to remove a function as an event handler for the OnPreStageChange event.
+     * @param handler If an anonymous function is set using the addOnPreStageChange method it
+     *                cannot be removed using this method.
+     */
+    static removeOnPreStageChange(handler: Xrm.Events.StageChangeEventHandler) {
+      return Form.formContext.data.process.removeOnPreStageChange(handler);
+    }
+    /**
+     * Use this to remove a function as an event handler for the OnProcessStatusChange event.
+     * @param handler If an anonymous function is set using the addOnProcessStatusChange method it
+     *                cannot be removed using this method.
+     */
+    static removeOnProcessStatusChange(
+      handler: Xrm.Events.ProcessStatusChangeHandler
+    ) {
+      return Form.formContext.data.process.removeOnProcessStatusChange(handler);
+    }
+    /**
+     * Use this to remove a function as an event handler for the OnStageChange event.
+     * @param handler If an anonymous function is set using the addOnStageChange method it
+     *                cannot be removed using this method.
+     */
+    static removeOnStageChange(handler: Xrm.Events.StageChangeEventHandler) {
+      return Form.formContext.data.process.removeOnStageChange(handler);
+    }
+    /**
+     * Use this to remove a function as an event handler for the OnStageChange event.
+     * @param handler If an anonymous function is set using the addOnStageChange method it
+     *                cannot be removed using this method.
+     */
+    static removeOnStageSelected(handler: Xrm.Events.ContextSensitiveHandler) {
+      return Form.formContext.data.process.removeOnStageSelected(handler);
+    }
+
     /**
      * Use this method to asynchronously retrieve the enabled business process flows that the user can switch to for an entity.
      * @returns returns callback response as Promise
@@ -488,6 +615,174 @@ export namespace XrmEx {
         Form.formContext.data.process,
         status
       );
+    }
+  }
+
+  export class Fields {
+    /**
+     * Adds a handler or an array of handlers to be called when the attribute's value is changed.
+     * @param fields An array of fields to on which this method should be applied.
+     * @param handlers The function reference or an array of function references.
+     */
+    static addOnChange(
+      fields: Class.Field[],
+      handler: Xrm.Events.Attribute.ChangeEventHandler
+    ): void {
+      fields.forEach((field) => {
+        field.addOnChange(handler);
+      });
+    }
+    /**
+     * Fire all "on change" event handlers.
+     * @param fields An array of fields to on which this method should be applied.
+     */
+    static fireOnChange(fields: Class.Field[]): void {
+      fields.forEach((field) => {
+        field.fireOnChange();
+      });
+    }
+    /**
+     * Removes the handler from the "on change" event.
+     * @param fields An array of fields to on which this method should be applied.
+     * @param handler The handler.
+     */
+    static removeOnChange(
+      fields: Class.Field[],
+      handler: Xrm.Events.Attribute.ChangeEventHandler
+    ): void {
+      fields.forEach((field) => {
+        field.removeOnChange(handler);
+      });
+    }
+    /**
+     * Sets the required level.
+     * @param fields An array of fields to on which this method should be applied.
+     * @param requirementLevel The requirement level, as either "none", "required", or "recommended"
+     */
+    static setRequiredLevel(
+      fields: Class.Field[],
+      requirementLevel: Xrm.Attributes.RequirementLevel
+    ): void {
+      fields.forEach((field) => {
+        field.setRequiredLevel(requirementLevel);
+      });
+    }
+    /**
+     * Sets the submit mode.
+     * @param fields An array of fields to on which this method should be applied.
+     * @param submitMode The submit mode, as either "always", "never", or "dirty".
+     * @default submitMode "dirty"
+     * @see {@link XrmEnum.AttributeRequirementLevel}
+     */
+    static setSubmitMode(
+      fields: Class.Field[],
+      submitMode: Xrm.SubmitMode
+    ): void {
+      fields.forEach((field) => {
+        field.setSubmitMode(submitMode);
+      });
+    }
+    /**
+     * Sets the value.
+     * @param fields An array of fields to on which this method should be applied.
+     * @param value The value.
+     * @remarks Attributes on Quick Create Forms will not save values set with this method.
+     */
+    static setValue(fields: Class.Field[], value: any): void {
+      fields.forEach((field) => {
+        field.setValue(value);
+      });
+    }
+    /**
+     * Sets a value for a column to determine whether it is valid or invalid with a message
+     * @param fields An array of fields to on which this method should be applied.
+     * @param isValid Specify false to set the column value to invalid and true to set the value to valid.
+     * @param message The message to display.
+     * @see {@link https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/attributes/setisvalid External Link: setIsValid (Client API reference)}
+     */
+    static setIsValid(
+      fields: Class.Field[],
+      isValid: boolean,
+      message?: string
+    ): void {
+      fields.forEach((field) => {
+        field.setIsValid(isValid, message);
+      });
+    }
+    /**
+     * Sets the required level.
+     * @param fields An array of fields to on which this method should be applied.
+     * @param required The requirement level, as either false for "none" or true for "required"
+     */
+    static setRequired(fields: Class.Field[], required: boolean): void {
+      fields.forEach((field) => {
+        field.setRequired(required);
+      });
+    }
+    /**
+     * Sets the state of the control to either enabled, or disabled.
+     * @param fields An array of fields to on which this method should be applied.
+     * @param disabled true to disable, false to enable.
+     */
+    static setDisabled(fields: Class.Field[], disabled: boolean): void {
+      fields.forEach((field) => {
+        field.setDisabled(disabled);
+      });
+    }
+    /**
+     * Sets the visibility state.
+     * @param fields An array of fields to on which this method should be applied.
+     * @param visible true to show, false to hide.
+     */
+    static setVisible(fields: Class.Field[], visible: boolean): void {
+      fields.forEach((field) => {
+        field.setVisible(visible);
+      });
+    }
+    /**
+     * Sets a control-local notification message.
+     * @param fields An array of fields to on which this method should be applied.
+     * @param message The message.
+     * @param uniqueId Unique identifier.
+     * @returns true if it succeeds, false if it fails.
+     * @remarks     When this method is used on Microsoft Dynamics CRM for tablets a red "X" icon
+     *              appears next to the control. Tapping on the icon will display the message.
+     */
+    static setNotification(
+      fields: Class.Field[],
+      message: string,
+      uniqueId: string
+    ): void {
+      fields.forEach((field) => {
+        field.setNotification(message, uniqueId);
+      });
+    }
+    /**
+     * Displays an error or recommendation notification for a control, and lets you specify actions to execute based on the notification.
+     * @param fields An array of fields to on which this method should be applied.
+     */
+    static addNotification(
+      fields: Class.Field[],
+      message: string,
+      notificationLevel: "ERROR" | "RECOMMENDATION",
+      uniqueId: string,
+      actions?: Xrm.Controls.ControlNotificationAction[]
+    ): void {
+      fields.forEach((field) => {
+        field.addNotification(message, notificationLevel, uniqueId, actions);
+      });
+    }
+    /**
+     * Clears the notification identified by uniqueId.
+     * @param fields An array of fields to on which this method should be applied.
+     * @param uniqueId (Optional) Unique identifier.
+     * @returns true if it succeeds, false if it fails.
+     * @remarks If the uniqueId parameter is not used, the current notification shown will be removed.
+     */
+    static removeNotification(fields: Class.Field[], uniqueId: string): void {
+      fields.forEach((field) => {
+        field.removeNotification(uniqueId);
+      });
     }
   }
 
@@ -600,7 +895,7 @@ export namespace XrmEx {
     /**
      * Adds a handler to be called when the record is saved.
      */
-    static addOnSaveEventHandler(
+    static addOnSave(
       handlers:
         | Xrm.Events.ContextSensitiveHandler
         | Xrm.Events.ContextSensitiveHandler[]
@@ -613,6 +908,7 @@ export namespace XrmEx {
           if (typeof handler !== "function") {
             throw new Error(`'${handler}' is not a function`);
           }
+          Form.formContext.data.entity.removeOnSave(handler);
           Form.formContext.data.entity.addOnSave(handler);
         });
       } catch (error: any) {
@@ -625,7 +921,7 @@ export namespace XrmEx {
      * @remarks Added in 9.2
      * @see {@link https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/clientapi/reference/events/postsave External Link: PostSave Event Documentation}
      */
-    static addOnPostSaveEventHandler(
+    static addOnPostSave(
       handlers:
         | Xrm.Events.ContextSensitiveHandler
         | Xrm.Events.ContextSensitiveHandler[]
@@ -638,6 +934,7 @@ export namespace XrmEx {
           if (typeof handler !== "function") {
             throw new Error(`'${handler}' is not a function`);
           }
+          Form.formContext.data.entity.removeOnPostSave(handler);
           Form.formContext.data.entity.addOnPostSave(handler);
         });
       } catch (error: any) {
@@ -648,7 +945,7 @@ export namespace XrmEx {
      * Adds a function to be called when form data is loaded.
      * @param handler The function to be executed when the form data loads. The function will be added to the bottom of the event handler pipeline.
      */
-    static addOnLoadEventHandler(
+    static addOnLoad(
       handlers:
         | Xrm.Events.ContextSensitiveHandler
         | Xrm.Events.ContextSensitiveHandler[]
@@ -661,6 +958,7 @@ export namespace XrmEx {
           if (typeof handler !== "function") {
             throw new Error(`'${handler}' is not a function`);
           }
+          Form.formContext.data.removeOnLoad(handler);
           Form.formContext.data.addOnLoad(handler);
         });
       } catch (error: any) {
@@ -671,7 +969,7 @@ export namespace XrmEx {
      * Adds a handler to be called when the attribute's value is changed.
      * @param handler The function reference.
      */
-    static addOnChangeEventHandler(
+    static addOnChange(
       fields: Class.Field[],
       handlers:
         | Xrm.Events.ContextSensitiveHandler
@@ -687,6 +985,7 @@ export namespace XrmEx {
             throw new Error(`'${handler}' is not a function`);
           }
           fields.forEach((field) => {
+            field.removeOnChange(handler);
             field.addOnChange(handler);
           });
         });
@@ -1215,6 +1514,38 @@ export namespace XrmEx {
         }
       }
       /**
+       * Sets a lookup with a lookup from the retrieved record.
+       * @param selectName
+       * @param retrievedRecord
+       * @example
+       * var contact = await fields.Contact.retrieve('?$select=_parentcustomerid_value');
+       * fields.Account.setLookupFromRetrieve('_parentcustomerid_value', contact);
+       * //Alternate
+       * fields.Account.setLookupFromRetrieve('parentcustomerid', contact);
+       */
+      setLookupFromRetrieve(
+        selectName: string,
+        retrievedRecord: { [x: string]: any }
+      ) {
+        if (!selectName.endsWith("_value")) selectName = `_${selectName}_value`;
+        if (!retrievedRecord || !retrievedRecord[`${selectName}`]) {
+          this.Value = null;
+          return;
+        }
+        this.Value = [
+          {
+            id: retrievedRecord[`${selectName}`],
+            entityType:
+              retrievedRecord[
+                `${selectName}@Microsoft.Dynamics.CRM.lookuplogicalname`
+              ],
+            name: retrievedRecord[
+              `${selectName}@OData.Community.Display.V1.FormattedValue`
+            ],
+          },
+        ];
+      }
+      /**
        * Retrieves an entity record.
        * @param options (Optional) OData system query options, $select and $expand, to retrieve your data.
        * - Use the $select system query option to limit the properties returned by including a comma-separated
@@ -1576,6 +1907,7 @@ export namespace XrmEx {
         return this.GridControl.getGrid();
       }
       addOnLoad(handler: Xrm.Events.GridControl.LoadEventHandler): void {
+        this.GridControl.removeOnLoad(handler as any);
         return this.GridControl.addOnLoad(handler);
       }
       getContextType(): XrmEnum.GridControlContext {
