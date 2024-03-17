@@ -59,29 +59,43 @@ test.describe("Test XrmEx", () => {
   });
 
   test.describe("Test Field functions", () => {
-    test("Value", () => {
+    test("Field Value", () => {
       fields.Firstname.Value = "Joe";
       expect(fields.Firstname.Value).toBe("Joe");
       fields.Firstname.Value = "John";
       expect(fields.Firstname.Value).toBe("John");
     })
-    test("Visible", () => {
+    test("Field Visible", () => {
       fields.Firstname.setVisible(false);
       expect(fields.Firstname.controls.get()[0].getVisible()).toBe(false);
       fields.Firstname.setVisible(true);
       expect(fields.Firstname.controls.get()[0].getVisible()).toBe(true);
     })
-    test("Disabled", () => {
+    test("Field Disabled", () => {
       fields.Firstname.setDisabled(false);
       expect(fields.Firstname.controls.get()[0].getDisabled()).toBe(false);
       fields.Firstname.setDisabled(true);
       expect(fields.Firstname.controls.get()[0].getDisabled()).toBe(true);
     })
-    test("Required", () => {
+    test("Field Required", () => {
       fields.Firstname.setRequired(false);
       expect(fields.Firstname.getRequiredLevel()).toBe("none");
       fields.Firstname.setRequired(true);
       expect(fields.Firstname.getRequiredLevel()).toBe("required");
+    })
+  });
+  test.describe("Test Tab functions", () => {
+    test("Tab Visible", () => {
+      tabs.General.setVisible(false);
+      expect(tabs.General.getVisible()).toBe(false);
+      tabs.General.setVisible(true);
+      expect(tabs.General.getVisible()).toBe(true);
+    })
+    test("Section Visible", () => {
+      tabs.General.Section.Section1.setVisible(false);
+      expect(tabs.General.Section.Section1.getVisible()).toBe(false);
+      tabs.General.Section.Section1.setVisible(true);
+      expect(tabs.General.Section.Section1.getVisible()).toBe(true);
     })
   });
 });

@@ -672,7 +672,7 @@ export declare namespace XrmEx {
             protected _tab?: Xrm.Controls.Tab;
             Section: Sections;
             constructor(name: string, section?: Sections);
-            sections: Xrm.Collection.ItemCollection<Xrm.Controls.Section>;
+            get sections(): Xrm.Collection.ItemCollection<Xrm.Controls.Section>;
             get Tab(): Xrm.Controls.Tab;
             addTabStateChange(handler: Xrm.Events.ContextSensitiveHandler): void;
             getDisplayState(): Xrm.DisplayState;

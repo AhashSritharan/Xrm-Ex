@@ -1847,8 +1847,9 @@ export namespace XrmEx {
           section[key].parentTab = this;
         }
       }
-      sections: Xrm.Collection.ItemCollection<Xrm.Controls.Section>;
-
+      get sections() {
+        return this.Tab.sections;
+      }
       public get Tab(): Xrm.Controls.Tab {
         return (this._tab ??=
           Form.formContext.ui.tabs.get(this.Name) ??
