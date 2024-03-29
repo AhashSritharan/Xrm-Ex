@@ -116,13 +116,14 @@ export namespace XrmEx {
   export async function getEnvironmentVariableValue(
     environmentVariableSchemaName: string
   ): Promise<string> {
-    return executeFunction("RetrieveEnvironmentVariableValue", [
+    let response = await executeFunction("RetrieveEnvironmentVariableValue", [
       {
         Name: "DefinitionSchemaName",
         Type: "String",
         Value: environmentVariableSchemaName,
       },
     ]);
+    return Object.hasOwn(response, "Value") ? response.Value : response;
   }
   /**
    * A map of CRM data types to their corresponding type names, structural properties, and JavaScript types.

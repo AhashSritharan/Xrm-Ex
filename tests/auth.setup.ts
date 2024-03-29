@@ -1,6 +1,7 @@
 import { test as setup } from '@playwright/test';
 import fs from 'fs';
 import path from 'path';
+import { TOTP } from 'otpauth';
 import * as process from 'process';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
@@ -12,7 +13,7 @@ setup('authenticate', async ({ playwright, request }) => {
         : loadJson();
 
     //Exit in env properties are not set
-    if (!env || !env.CONTACT_RECORD_URL || !env.CRM_URL || !env.USER_NAME || !env.USER_PASSWORD) {
+    if (!env || !env.CONTACT_RECORD_URL || !env.CRM_URL || !env.USER_NAME || !env.USER_PASSWORD || !env.TOTP) {
         console.log('Missing environment variables');
         return;
     }
@@ -29,6 +30,17 @@ setup('authenticate', async ({ playwright, request }) => {
         await page.getByRole('button', { name: 'Next' }).click();
         await page.getByPlaceholder('Password').type(env.USER_PASSWORD);
         await page.getByRole('button', { name: 'Sign in' }).click();
+        const otpTextBox = page.getByRole('textbox', { name: 'Enter code' });
+        var totp = new TOTP({
+            algorithm: 'SHA1',
+            digits: 6,
+            period: 30,
+            secret: env.TOTP,
+        });
+        // Generate a token.
+        var token = totp.generate();
+        otpTextBox.fill(token);
+        await page.getByRole('button', { name: 'Verify' }).click();
         await page.getByRole('button', { name: 'No' }).click();
     }
     await page.context().storageState({ path: userAuthFile });
@@ -39,6 +51,7 @@ export interface CRMConfig {
     USER_NAME: string;
     USER_PASSWORD: string;
     CONTACT_RECORD_URL: string;
+    TOTP: string;
 }
 function loadJson() {
     const filePath = path.join(__dirname, '../playwright.env.json');
