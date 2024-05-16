@@ -341,15 +341,10 @@ console.log(response);
 
 ```js
 let response2 = await XrmEx.executeAction(
-    "theia_TestActionContact",
-    [
-        { Name: "Amount", Type: "Integer", Value: 5 },
-        {
-            Name: "Account",
-            Type: "EntityReference",
-            Value: fields.Customer.Value[0],
-        },
-    ],
+    "theia_TestActionContact",{
+        Amount: 5,
+        Account: fields.Customer.Value[0]
+    },
     XrmEx.Form.entityReference
 );
 console.log(response2);
