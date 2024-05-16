@@ -53,6 +53,22 @@ test.describe("Test Field Class", () => {
         });
         expect(response).toBeTruthy();
     });
+    test("Execute function", async ({ page }) => {
+        var response = await page.evaluate(async () => {
+            return await XrmEx.executeFunction("RetrieveTotalRecordCount", [
+                { Name: "EntityNames", Type: "EntityCollection", Value: ["contact", "account"] }
+            ]);
+        });
+        expect(response).toBeTruthy();
+    });
+    test("Execute function new method", async ({ page }) => {
+        var response = await page.evaluate(async () => {
+            return await XrmEx.executeFunction("RetrieveTotalRecordCount", {
+                EntityNames: ["contact", "account"]
+            });
+        });
+        expect(response).toBeTruthy();
+    });
 });
 
 type PromiseType<T extends Promise<any>> = T extends Promise<infer U>

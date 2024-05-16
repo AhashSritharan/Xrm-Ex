@@ -170,141 +170,98 @@ export namespace XrmEx {
       jsType: "number",
     },
   };
-  /**
-   * Checks if the given request parameter is of a supported type and has a valid value.
-   * @param {RequestParameter} requestParameter - The request parameter to check.
-   * @returns {void}
-   * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
-   */
-  export function checkRequestParameterType(
-    requestParameter: RequestParameter
-  ): void {
-    if (!typeMap[requestParameter.Type])
-      throw new Error(
-        `The property type ${requestParameter.Type} of the property ${requestParameter.Name} is not supported.`
-      );
-    const expectedType = typeMap[requestParameter.Type].jsType;
-    const actualType = typeof requestParameter.Value;
-    const invalidTypeMessage = `The value ${requestParameter.Value}\nof the property ${requestParameter.Name}\nis not of the expected type ${requestParameter.Type}.`;
-    if (
-      requestParameter.Type === "EntityReference" ||
-      requestParameter.Type === "Entity"
-    ) {
-      if (
-        !requestParameter.Value ||
-        !requestParameter.Value.hasOwnProperty("id") ||
-        !requestParameter.Value.hasOwnProperty("entityType")
-      ) {
-        throw new Error(invalidTypeMessage);
-      }
-      typeMap[
-        requestParameter.Type
-      ].typeName = `mscrm.${requestParameter.Value.entityType}`;
-    } else if (requestParameter.Type === "EntityCollection") {
-      if (
-        !Array.isArray(requestParameter.Value) ||
-        requestParameter.Value.every(
-          (v) =>
-            typeof v !== "object" ||
-            !v ||
-            !v.hasOwnProperty("id") ||
-            !v.hasOwnProperty("entityType")
-        )
-      ) {
-        throw new Error(invalidTypeMessage);
-      }
-    } else if (requestParameter.Type === "DateTime") {
-      if (!(requestParameter.Value instanceof Date)) {
-        throw new Error(invalidTypeMessage);
-      }
-    } else {
-      if (actualType !== expectedType) {
-        throw new Error(invalidTypeMessage);
-      }
-    }
+  export function getStructuralProperty(value: any): number {
+    const type = typeof value;
+    if (type == "string" || type == "number" || type == "boolean") return 1;
+    if (value instanceof Date) return 1;
+    if (Array.isArray(value)) return 4;
+    return 5;
   }
   /**
    * Executes an Action.
    * @param {string} actionName - The unique name of the action.
-   * @param {RequestParameter[]} requestParameters - An array of objects with the parameter name, type and value.
+   * @param {RequestParameter[] | object} requestParameters - An array of objects with the parameter name, type, and value.
    * @param {EntityReference} [boundEntity] - An optional EntityReference of the bound entity.
    * @returns {Promise<any>} - A Promise with the request response.
    * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
    */
   export async function executeAction(
     actionName: string,
-    requestParameters: RequestParameter[],
-    boundEntity?: EntityReference
+    requestParameters: RequestParameter[] | { [key: string]: any },
+    boundEntity?: EntityReference,
+    isFunction: boolean = false
   ): Promise<any> {
-    const parameterDefinition: any = {};
-    if (boundEntity)
-      requestParameters.push({
-        Name: "entity",
-        Value: boundEntity,
-        Type: "EntityReference",
-      });
-    for (const requestParameter of requestParameters) {
-      checkRequestParameterType(requestParameter);
-      parameterDefinition[requestParameter.Name] = {
-        typeName: typeMap[requestParameter.Type].typeName,
-        structuralProperty: typeMap[requestParameter.Type].structuralProperty,
+    const prepareParameterDefinition = (
+      params: RequestParameter[] | { [key: string]: any }
+    ) => {
+      const parameterDefinition: { [key: string]: any } = {};
+      if (Array.isArray(params)) {
+        if (boundEntity) {
+          params.push({
+            Name: "entity",
+            Value: boundEntity,
+            Type: "EntityReference",
+          });
+        }
+        params.forEach((p) => {
+          parameterDefinition[p.Name] = {
+            typeName: typeMap[p.Type].typeName,
+            structuralProperty: typeMap[p.Type].structuralProperty,
+          };
+        });
+      } else {
+        if (boundEntity) {
+          params["entity"] = boundEntity;
+        }
+        Object.keys(params).forEach((key) => {
+          parameterDefinition[key] = {
+            structuralProperty: getStructuralProperty(params[key]),
+          };
+        });
+      }
+      return parameterDefinition;
+    };
+
+    const createRequest = (
+      params: RequestParameter[] | { [key: string]: any },
+      definition: { [key: string]: any }
+    ) => {
+      const metadata = {
+        boundParameter: boundEntity ? "entity" : null,
+        operationType: isFunction ? 1 : 0,
+        operationName: actionName,
+        parameterTypes: definition,
       };
-    }
-    const req = Object.assign(
-      {
-        getMetadata: () => ({
-          boundParameter: boundEntity ? "entity" : null,
-          operationType: 0,
-          operationName: actionName,
-          parameterTypes: parameterDefinition,
-        }),
-      },
-      ...requestParameters.map((p) => ({ [p.Name]: p.Value }))
-    );
-    const response = await Xrm.WebApi.online.execute(req);
-    if (response.ok) return response.json().catch(() => response);
+      const mergedParams = Array.isArray(params)
+        ? Object.assign({}, ...params.map((p) => ({ [p.Name]: p.Value })))
+        : params;
+      return Object.assign({ getMetadata: () => metadata }, mergedParams);
+    };
+    const parameterDefinition = prepareParameterDefinition(requestParameters);
+    const request = createRequest(requestParameters, parameterDefinition);
+    const result = await Xrm.WebApi.online.execute(request);
+    if (result.ok) return result.json().catch(() => result);
   }
 
   /**
    * Executes a Function.
    * @param {string} functionName - The unique name of the function.
-   * @param {RequestParameter[]} requestParameters - An array of objects with the parameter name, type and value.
+   * @param {RequestParameter[] | object} requestParameters - An array of objects with the parameter name, type and value.
    * @param {EntityReference} [boundEntity] - An optional EntityReference of the bound entity.
    * @returns {Promise<any>} - A Promise with the request response.
    * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
    */
   export async function executeFunction(
     functionName: string,
-    requestParameters: RequestParameter[],
+    requestParameters: RequestParameter[] | object,
     boundEntity?: EntityReference
   ): Promise<any> {
-    const parameterDefinition: any = {};
-    if (boundEntity)
-      requestParameters.push({
-        Name: "entity",
-        Value: boundEntity,
-        Type: "EntityReference",
-      });
-    for (const requestParameter of requestParameters) {
-      checkRequestParameterType(requestParameter);
-      parameterDefinition[requestParameter.Name] = {
-        typeName: typeMap[requestParameter.Type].typeName,
-        structuralProperty: typeMap[requestParameter.Type].structuralProperty,
-      };
-    }
-    const req = Object.assign(
-      {
-        getMetadata: () => ({
-          boundParameter: boundEntity ? "entity" : null,
-          operationType: 1,
-          operationName: functionName,
-          parameterTypes: parameterDefinition,
-        }),
-      },
-      ...requestParameters.map((p) => ({ [p.Name]: p.Value }))
+    return await executeAction(
+      functionName,
+      requestParameters,
+      boundEntity,
+      true
     );
-    const response = await Xrm.WebApi.online.execute(req);
-    if (response.ok) return response.json().catch(() => response);
   }
 
   /**

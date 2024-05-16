@@ -4,5 +4,24 @@
   "cSpell.enabled": true,
   "editor.formatOnSave": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "playwright.workspaceSettings": {
+    "configs": [
+      {
+        "relativeConfigFile": "playwright.config.ts",
+        "selected": true,
+        "enabled": true,
+        "projects": [
+          {
+            "name": "setup",
+            "enabled": true
+          },
+          {
+            "name": "chromium",
+            "enabled": true
+          }
+        ]
+      }
+    ]
+  }
 }

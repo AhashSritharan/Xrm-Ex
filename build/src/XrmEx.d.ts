@@ -56,31 +56,27 @@ declare namespace XrmEx {
      * @async
      */
     function getEnvironmentVariableValue(environmentVariableSchemaName: string): Promise<string>;
-    /**
-     * Checks if the given request parameter is of a supported type and has a valid value.
-     * @param {RequestParameter} requestParameter - The request parameter to check.
-     * @returns {void}
-     * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
-     */
-    function checkRequestParameterType(requestParameter: RequestParameter): void;
+    function getStructuralProperty(value: any): number;
     /**
      * Executes an Action.
      * @param {string} actionName - The unique name of the action.
-     * @param {RequestParameter[]} requestParameters - An array of objects with the parameter name, type and value.
+     * @param {RequestParameter[] | object} requestParameters - An array of objects with the parameter name, type, and value.
      * @param {EntityReference} [boundEntity] - An optional EntityReference of the bound entity.
      * @returns {Promise<any>} - A Promise with the request response.
      * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
      */
-    function executeAction(actionName: string, requestParameters: RequestParameter[], boundEntity?: EntityReference): Promise<any>;
+    function executeAction(actionName: string, requestParameters: RequestParameter[] | {
+        [key: string]: any;
+    }, boundEntity?: EntityReference, isFunction?: boolean): Promise<any>;
     /**
      * Executes a Function.
      * @param {string} functionName - The unique name of the function.
-     * @param {RequestParameter[]} requestParameters - An array of objects with the parameter name, type and value.
+     * @param {RequestParameter[] | object} requestParameters - An array of objects with the parameter name, type and value.
      * @param {EntityReference} [boundEntity] - An optional EntityReference of the bound entity.
      * @returns {Promise<any>} - A Promise with the request response.
      * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
      */
-    function executeFunction(functionName: string, requestParameters: RequestParameter[], boundEntity?: EntityReference): Promise<any>;
+    function executeFunction(functionName: string, requestParameters: RequestParameter[] | object, boundEntity?: EntityReference): Promise<any>;
     /**
      * Makes a GUID lowercase and removes brackets.
      * @param {string} guid - The GUID to normalize.
