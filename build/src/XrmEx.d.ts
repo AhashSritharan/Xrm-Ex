@@ -88,13 +88,13 @@ declare namespace XrmEx {
      */
     function executeFunction(functionName: string, requestParameters: RequestParameter[] | object, boundEntity?: EntityReference): Promise<any>;
     /**
-   * Executes a CRUD request.
-   * @param {string} messageName - The unique name of the request.
-   * @param {RequestParameter[] | object} requestParameters - An array of objects with the parameter name, type, and value.
-   * @param {EntityReference} [boundEntity] - An optional EntityReference of the bound entity.
-   * @returns {Promise<any>} - A Promise with the request response.
-   * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
-   */
+     * Executes a CRUD request.
+     * @param {string} messageName - The unique name of the request.
+     * @param {RequestParameter[] | object} requestParameters - An array of objects with the parameter name, type, and value.
+     * @param {EntityReference} [boundEntity] - An optional EntityReference of the bound entity.
+     * @returns {Promise<any>} - A Promise with the request response.
+     * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
+     */
     function executeCRUD(functionName: string, requestParameters: RequestParameter[] | object, boundEntity?: EntityReference): Promise<any>;
     /**
      * Makes a GUID lowercase and removes brackets.
@@ -409,7 +409,6 @@ declare namespace XrmEx {
          * Used to execute methods related to a single Attribute
          */
         export class Field implements Xrm.Attributes.Attribute {
-            static allFields: Field[];
             readonly Name: string;
             protected _attribute?: Xrm.Attributes.Attribute;
             constructor(attributeName: string);

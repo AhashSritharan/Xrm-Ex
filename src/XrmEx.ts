@@ -991,20 +991,11 @@ export namespace XrmEx {
      * Used to execute methods related to a single Attribute
      */
     export class Field implements Xrm.Attributes.Attribute {
-      public static allFields: Field[] = [];
-
       public readonly Name!: string;
       protected _attribute?: Xrm.Attributes.Attribute;
 
       constructor(attributeName: string) {
-        const existingField = Field.allFields.find(
-          (f) => f.Name === attributeName
-        );
-        if (existingField) {
-          return existingField;
-        }
         this.Name = attributeName;
-        Field.allFields.push(this);
       }
       setValue(value: any): void {
         return this.Attribute.setValue(value);
