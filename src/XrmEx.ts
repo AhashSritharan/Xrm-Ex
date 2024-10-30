@@ -178,18 +178,19 @@ export namespace XrmEx {
     return 5;
   }
   /**
-   * Executes an Action.
-   * @param {string} actionName - The unique name of the action.
+   * Executes a request.
+   * @param {string} actionName - The unique name of the request.
    * @param {RequestParameter[] | object} requestParameters - An array of objects with the parameter name, type, and value.
    * @param {EntityReference} [boundEntity] - An optional EntityReference of the bound entity.
+   * @param {number} [operationType] - The type of the request. 0 for functions 1 for actions, 2 for CRUD operations.
    * @returns {Promise<any>} - A Promise with the request response.
    * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
    */
-  export async function executeAction(
+  async function execute(
     actionName: string,
     requestParameters: RequestParameter[] | { [key: string]: any },
     boundEntity?: EntityReference,
-    isFunction: boolean = false
+    operationType: number = 1
   ): Promise<any> {
     const prepareParameterDefinition = (
       params: RequestParameter[] | { [key: string]: any }
@@ -228,7 +229,7 @@ export namespace XrmEx {
     ) => {
       const metadata = {
         boundParameter: boundEntity ? "entity" : null,
-        operationType: isFunction ? 1 : 0,
+        operationType: operationType,
         operationName: actionName,
         parameterTypes: definition,
       };
@@ -244,6 +245,22 @@ export namespace XrmEx {
   }
 
   /**
+   * Executes an Action.
+   * @param {string} actionName - The unique name of the action.
+   * @param {RequestParameter[] | object} requestParameters - An array of objects with the parameter name, type, and value.
+   * @param {EntityReference} [boundEntity] - An optional EntityReference of the bound entity.
+   * @returns {Promise<any>} - A Promise with the request response.
+   * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
+   */
+  export async function executeAction(
+    functionName: string,
+    requestParameters: RequestParameter[] | object,
+    boundEntity?: EntityReference
+  ): Promise<any> {
+    return await execute(functionName, requestParameters, boundEntity, 1);
+  }
+
+  /**
    * Executes a Function.
    * @param {string} functionName - The unique name of the function.
    * @param {RequestParameter[] | object} requestParameters - An array of objects with the parameter name, type and value.
@@ -256,12 +273,23 @@ export namespace XrmEx {
     requestParameters: RequestParameter[] | object,
     boundEntity?: EntityReference
   ): Promise<any> {
-    return await executeAction(
-      functionName,
-      requestParameters,
-      boundEntity,
-      true
-    );
+    return await execute(functionName, requestParameters, boundEntity, 0);
+  }
+
+  /**
+   * Executes a CRUD request.
+   * @param {string} messageName - The unique name of the request.
+   * @param {RequestParameter[] | object} requestParameters - An array of objects with the parameter name, type, and value.
+   * @param {EntityReference} [boundEntity] - An optional EntityReference of the bound entity.
+   * @returns {Promise<any>} - A Promise with the request response.
+   * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
+   */
+  export async function executeCRUD(
+    functionName: string,
+    requestParameters: RequestParameter[] | object,
+    boundEntity?: EntityReference
+  ): Promise<any> {
+    return await execute(functionName, requestParameters, boundEntity, 2);
   }
 
   /**

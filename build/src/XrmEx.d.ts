@@ -65,9 +65,7 @@ declare namespace XrmEx {
      * @returns {Promise<any>} - A Promise with the request response.
      * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
      */
-    function executeAction(actionName: string, requestParameters: RequestParameter[] | {
-        [key: string]: any;
-    }, boundEntity?: EntityReference, isFunction?: boolean): Promise<any>;
+    function executeAction(functionName: string, requestParameters: RequestParameter[] | object, boundEntity?: EntityReference): Promise<any>;
     /**
      * Executes a Function.
      * @param {string} functionName - The unique name of the function.
@@ -77,6 +75,15 @@ declare namespace XrmEx {
      * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
      */
     function executeFunction(functionName: string, requestParameters: RequestParameter[] | object, boundEntity?: EntityReference): Promise<any>;
+    /**
+   * Executes a CRUD request.
+   * @param {string} messageName - The unique name of the request.
+   * @param {RequestParameter[] | object} requestParameters - An array of objects with the parameter name, type, and value.
+   * @param {EntityReference} [boundEntity] - An optional EntityReference of the bound entity.
+   * @returns {Promise<any>} - A Promise with the request response.
+   * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
+   */
+    function executeCRUD(functionName: string, requestParameters: RequestParameter[] | object, boundEntity?: EntityReference): Promise<any>;
     /**
      * Makes a GUID lowercase and removes brackets.
      * @param {string} guid - The GUID to normalize.
