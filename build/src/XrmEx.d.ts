@@ -541,6 +541,7 @@ declare namespace XrmEx {
         export class LookupField extends Field implements Xrm.Attributes.LookupAttribute {
             protected _attribute: Xrm.Attributes.LookupAttribute;
             protected _customFilters: any;
+            private viewId;
             constructor(attribute: string);
             getIsPartyList(): boolean;
             get Attribute(): Xrm.Attributes.LookupAttribute;
@@ -604,6 +605,7 @@ declare namespace XrmEx {
              */
             addPreFilterToLookup(filterXml: string, entityLogicalName?: string): this;
             /**
+             * @deprecated Use {@link LookupField.addCustomView} instead, which provides more flexible filtering capabilities and better performance
              * Adds an additional custom filter to the lookup, with the "AND" filter operator.
              * @param entityLogicalName (Optional) The logical name of the entity.
              * @param primaryAttributeIdName (Optional) The logical name of the primary key.
@@ -619,6 +621,21 @@ declare namespace XrmEx {
              *                              </fetch>
              */
             addPreFilterToLookupAdvanced(entityLogicalName: string, primaryAttributeIdName: string, fetchXml: string): Promise<void>;
+            /**
+             * Adds a custom view to filter the lookup using FetchXML
+             * Only works for one table at a time, cannot add views for multiple tables at the same time
+             * @param fetchXml The complete FetchXML query including filtering conditions
+             * @returns The LookupField instance for method chaining
+             */
+            addCustomView(fetchXml: string): this;
+            /**
+             * Extracts entity name from fetchXml
+             */
+            private extractEntityFromFetchXml;
+            /**
+             * Generates layoutXml based on fetchXml attributes
+             */
+            private generateLayoutXml;
             /**
              * Removes all filters set on the current lookup attribute by using addPreFilterToLookup or addPreFilterToLookupAdvanced
              */

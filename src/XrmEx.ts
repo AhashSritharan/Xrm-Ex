@@ -1420,6 +1420,7 @@ export namespace XrmEx {
     {
       protected declare _attribute: Xrm.Attributes.LookupAttribute;
       protected _customFilters: any = [];
+      private viewId = crypto.randomUUID();
       constructor(attribute: string) {
         super(attribute);
       }
@@ -1588,6 +1589,7 @@ export namespace XrmEx {
         }
       }
       /**
+       * @deprecated Use {@link LookupField.addCustomView} instead, which provides more flexible filtering capabilities and better performance
        * Adds an additional custom filter to the lookup, with the "AND" filter operator.
        * @param entityLogicalName (Optional) The logical name of the entity.
        * @param primaryAttributeIdName (Optional) The logical name of the primary key.
@@ -1635,6 +1637,87 @@ export namespace XrmEx {
             control.addCustomFilter(fetchXml, entityLogicalName);
           });
         }
+      }
+      /**
+       * Adds a custom view to filter the lookup using FetchXML
+       * Only works for one table at a time, cannot add views for multiple tables at the same time
+       * @param fetchXml The complete FetchXML query including filtering conditions
+       * @returns The LookupField instance for method chaining
+       */
+      addCustomView(fetchXml: string): this {
+        try {
+          if (!fetchXml) {
+            throw new Error("FetchXML is required");
+          }
+          const targetEntity = this.extractEntityFromFetchXml(fetchXml);
+          const layoutXml = this.generateLayoutXml(fetchXml);
+
+          this.controls.forEach((control) => {
+            control.addCustomView(
+              this.viewId,
+              targetEntity,
+              "Filtered View",
+              fetchXml,
+              layoutXml,
+              true
+            );
+          });
+          return this;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
+      }
+
+      /**
+       * Extracts entity name from fetchXml
+       */
+      private extractEntityFromFetchXml(fetchXml: string): string {
+        const match = fetchXml.match(/<entity.*?name=['"](.*?)['"]/);
+        if (!match) {
+          throw new Error("Could not extract entity name from fetchXml");
+        }
+        return match[1];
+      }
+
+      /**
+       * Generates layoutXml based on fetchXml attributes
+       */
+      private generateLayoutXml(fetchXml: string): string {
+        const attributes: string[] = [];
+        const regex = /<attribute.*?name=['"](.*?)['"]/g;
+        let match;
+
+        // Get up to 3 non-id attributes
+        while (
+          (match = regex.exec(fetchXml)) !== null &&
+          attributes.length < 3
+        ) {
+          if (!match[1].endsWith("id")) {
+            attributes.push(match[1]);
+          }
+        }
+
+        // If we didn't get any attributes, try to get the first attribute even if it's an ID
+        if (attributes.length === 0) {
+          const firstMatch = regex.exec(fetchXml);
+          attributes.push(firstMatch ? firstMatch[1] : "name");
+        }
+
+        // Generate cells based on available attributes
+        const cells = attributes
+          .map((attr, index) => {
+            const width = index === 0 ? 200 : 100;
+            return `<cell name='${attr}' width='${width}' />`;
+          })
+          .join("\n        ");
+
+        return `<grid name='resultset' object='1' jump='${attributes[0]}' select='1' icon='1' preview='1'>
+      <row name='result' id='${attributes[0]}'>
+        ${cells}
+      </row>
+    </grid>`;
       }
       /**
        * Removes all filters set on the current lookup attribute by using addPreFilterToLookup or addPreFilterToLookupAdvanced
