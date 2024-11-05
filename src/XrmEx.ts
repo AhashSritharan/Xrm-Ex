@@ -257,7 +257,7 @@ export namespace XrmEx {
     requestParameters: RequestParameter[] | object,
     boundEntity?: EntityReference
   ): Promise<any> {
-    return await execute(functionName, requestParameters, boundEntity, 1);
+    return await execute(functionName, requestParameters, boundEntity, 0);
   }
 
   /**
@@ -273,7 +273,7 @@ export namespace XrmEx {
     requestParameters: RequestParameter[] | object,
     boundEntity?: EntityReference
   ): Promise<any> {
-    return await execute(functionName, requestParameters, boundEntity, 0);
+    return await execute(functionName, requestParameters, boundEntity, 1);
   }
 
   /**
