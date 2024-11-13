@@ -1404,7 +1404,8 @@ export namespace XrmEx {
         return this.Attribute.getValue();
       }
       set Value(value: (keyof Options)[] | number[]) {
-        if (Array.isArray(value)) {
+        if (value === null) this.Attribute.setValue(null);
+        else if (Array.isArray(value)) {
           let values = [];
           value.forEach((v) => {
             if (typeof v == "number") values.push(v);
@@ -1793,6 +1794,7 @@ export namespace XrmEx {
       }
       set Value(value: keyof Options | number) {
         if (typeof value == "number") this.Attribute.setValue(value);
+        else if (value === null) this.Attribute.setValue(null);
         else this.Attribute.setValue(this.Option[value]);
       }
       /**
