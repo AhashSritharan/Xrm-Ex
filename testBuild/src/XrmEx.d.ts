@@ -58,11 +58,45 @@ export declare namespace XrmEx {
     function getEnvironmentVariableValue(environmentVariableSchemaName: string): Promise<string>;
     function getStructuralProperty(value: any): number;
     /**
+     * Builds a request object for use with Xrm.WebApi.online.execute or executeMultiple.
+     *
+     * This function extracts the logic to prepare parameters and create
+     * the request object without executing it. You can:
+     * - Directly execute the returned request object using `Xrm.WebApi.online.execute()`.
+     * - Use the request object later with `Xrm.WebApi.online.executeMultiple()`.
+     *
+     * @param {string} actionName - The unique name of the request (action/function/CRUD operation).
+     * @param {RequestParameter[] | {[key: string]: any}} requestParameters - An array of request parameters or an object representing key-value pairs of request parameters.
+     *   - If an array of `RequestParameter[]` is provided, each element should have `Name`, `Type`, and `Value` fields describing the request parameter.
+     *   - If an object is provided, its keys represent parameter names, and values represent the parameter values.
+     * @param {number} operationType - The type of the request. Use:
+     *   - `0` for Action
+     *   - `1` for Function
+     *   - `2` for CRUD
+     * @param {EntityReference} [boundEntity] - An optional `EntityReference` indicating the entity the request is bound to.
+     *
+     * @returns {object} - The request object that can be passed into `Xrm.WebApi.online.execute` or `Xrm.WebApi.online.executeMultiple`.
+     *
+     * @example
+     * // Build a request object for a custom action "new_DoSomething" (operationType = 0 for actions)
+     * const request = buildRequestObject("new_DoSomething", { param1: "value1", param2: 123 }, 0);
+     *
+     * // Execute the request immediately
+     * const result = await Xrm.WebApi.online.execute(request);
+     *
+     * // Or store the request and execute it later using executeMultiple
+     * const requests = [request, anotherRequest];
+     * const batchResult = await Xrm.WebApi.online.executeMultiple(requests);
+     */
+    function buildRequestObject(actionName: string, requestParameters: RequestParameter[] | {
+        [key: string]: any;
+    }, operationType: number, boundEntity?: EntityReference): any;
+    /**
      * Executes a request.
      * @param {string} actionName - The unique name of the request.
      * @param {RequestParameter[] | object} requestParameters - An array of objects with the parameter name, type, and value.
      * @param {EntityReference} [boundEntity] - An optional EntityReference of the bound entity.
-     * @param {number} [operationType] - The type of the request. 0 for functions 1 for actions, 2 for CRUD operations.
+     * @param {number} [operationType=1] - The type of the request. 0 for actions, 1 for functions, 2 for CRUD operations.
      * @returns {Promise<any>} - A Promise with the request response.
      * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
      */

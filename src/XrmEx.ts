@@ -177,49 +177,77 @@ export namespace XrmEx {
     if (Array.isArray(value)) return 4;
     return 5;
   }
+
   /**
-   * Executes a request.
-   * @param {string} actionName - The unique name of the request.
-   * @param {RequestParameter[] | object} requestParameters - An array of objects with the parameter name, type, and value.
-   * @param {EntityReference} [boundEntity] - An optional EntityReference of the bound entity.
-   * @param {number} [operationType] - The type of the request. 0 for functions 1 for actions, 2 for CRUD operations.
-   * @returns {Promise<any>} - A Promise with the request response.
-   * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
+   * Builds a request object for use with Xrm.WebApi.online.execute or executeMultiple.
+   *
+   * This function extracts the logic to prepare parameters and create
+   * the request object without executing it. You can:
+   * - Directly execute the returned request object using `Xrm.WebApi.online.execute()`.
+   * - Use the request object later with `Xrm.WebApi.online.executeMultiple()`.
+   *
+   * @param {string} actionName - The unique name of the request (action/function/CRUD operation).
+   * @param {RequestParameter[] | {[key: string]: any}} requestParameters - An array of request parameters or an object representing key-value pairs of request parameters.
+   *   - If an array of `RequestParameter[]` is provided, each element should have `Name`, `Type`, and `Value` fields describing the request parameter.
+   *   - If an object is provided, its keys represent parameter names, and values represent the parameter values.
+   * @param {number} operationType - The type of the request. Use:
+   *   - `0` for Action
+   *   - `1` for Function
+   *   - `2` for CRUD
+   * @param {EntityReference} [boundEntity] - An optional `EntityReference` indicating the entity the request is bound to.
+   *
+   * @returns {object} - The request object that can be passed into `Xrm.WebApi.online.execute` or `Xrm.WebApi.online.executeMultiple`.
+   *
+   * @example
+   * // Build a request object for a custom action "new_DoSomething" (operationType = 0 for actions)
+   * const request = buildRequestObject("new_DoSomething", { param1: "value1", param2: 123 }, 0);
+   *
+   * // Execute the request immediately
+   * const result = await Xrm.WebApi.online.execute(request);
+   *
+   * // Or store the request and execute it later using executeMultiple
+   * const requests = [request, anotherRequest];
+   * const batchResult = await Xrm.WebApi.online.executeMultiple(requests);
    */
-  export async function execute(
+  export function buildRequestObject(
     actionName: string,
     requestParameters: RequestParameter[] | { [key: string]: any },
-    boundEntity?: EntityReference,
-    operationType: number = 1
-  ): Promise<any> {
+    operationType: number,
+    boundEntity?: EntityReference
+  ) {
     const prepareParameterDefinition = (
       params: RequestParameter[] | { [key: string]: any }
     ) => {
       const parameterDefinition: { [key: string]: any } = {};
-      if (Array.isArray(params)) {
-        if (boundEntity) {
-          params.push({
+      const p = Array.isArray(params) ? [...params] : { ...params };
+
+      if (boundEntity) {
+        if (Array.isArray(p)) {
+          p.push({
             Name: "entity",
             Value: boundEntity,
             Type: "EntityReference",
           });
+        } else {
+          p["entity"] = boundEntity;
         }
-        params.forEach((p) => {
-          parameterDefinition[p.Name] = {
-            typeName: typeMap[p.Type].typeName,
-            structuralProperty: typeMap[p.Type].structuralProperty,
+      }
+
+      if (Array.isArray(p)) {
+        p.forEach((param) => {
+          parameterDefinition[param.Name] = {
+            typeName: typeMap[param.Type].typeName,
+            structuralProperty: typeMap[param.Type].structuralProperty,
           };
         });
       } else {
-        if (boundEntity) {
-          params["entity"] = boundEntity;
-        }
-        Object.keys(params).forEach((key) => {
+        Object.keys(p).forEach((key) => {
           parameterDefinition[key] = {
-            structuralProperty: getStructuralProperty(params[key]),
+            structuralProperty: getStructuralProperty(p[key]),
           };
         });
       }
+
       return parameterDefinition;
     };
 
@@ -236,10 +264,36 @@ export namespace XrmEx {
       const mergedParams = Array.isArray(params)
         ? Object.assign({}, ...params.map((p) => ({ [p.Name]: p.Value })))
         : params;
+
       return Object.assign({ getMetadata: () => metadata }, mergedParams);
     };
+
     const parameterDefinition = prepareParameterDefinition(requestParameters);
     const request = createRequest(requestParameters, parameterDefinition);
+    return request;
+  }
+
+  /**
+   * Executes a request.
+   * @param {string} actionName - The unique name of the request.
+   * @param {RequestParameter[] | object} requestParameters - An array of objects with the parameter name, type, and value.
+   * @param {EntityReference} [boundEntity] - An optional EntityReference of the bound entity.
+   * @param {number} [operationType=1] - The type of the request. 0 for actions, 1 for functions, 2 for CRUD operations.
+   * @returns {Promise<any>} - A Promise with the request response.
+   * @throws {Error} - Throws an error if the request parameter is not of a supported type or has an invalid value.
+   */
+  export async function execute(
+    actionName: string,
+    requestParameters: RequestParameter[] | { [key: string]: any },
+    boundEntity?: EntityReference,
+    operationType: number = 1
+  ): Promise<any> {
+    const request = buildRequestObject(
+      actionName,
+      requestParameters,
+      operationType,
+      boundEntity
+    );
     const result = await Xrm.WebApi.online.execute(request);
     if (result.ok) return result.json().catch(() => result);
   }

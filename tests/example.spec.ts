@@ -67,7 +67,7 @@ test.describe("Test Field Class", () => {
                 EntityNames: ["contact", "account"]
             });
         });
-        expect(response).toBeTruthy();
+        expect(response?.EntityRecordCountCollection).toBeTruthy();
     });
 });
 
