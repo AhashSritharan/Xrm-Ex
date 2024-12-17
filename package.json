@@ -22,8 +22,8 @@
   "types": "./build/index.d.ts",
   "license": "MIT",
   "engines": {
-    "node": "^18.15.0",
-    "npm": "^9.5.0"
+    "node": ">=18.15.0",
+    "npm": ">=10.5.2"
   },
   "volta": {
     "node": "18.15.0",
@@ -94,6 +94,7 @@
   },
   "overrides": {
     "semver": "~7.5.3",
-    "word-wrap": "npm:@aashutoshrathi/word-wrap"
+    "word-wrap": "npm:@aashutoshrathi/word-wrap",
+    "cross-spawn": "7.0.5"
   }
 }
