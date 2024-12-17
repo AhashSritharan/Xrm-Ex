@@ -1,3 +1,5 @@
+/// <reference types="xrm" />
+/// <reference types="xrm" />
 /**
  * Represents a parameter for a request.
  * @type {Object} RequestParameter
