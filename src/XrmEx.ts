@@ -9,17 +9,17 @@
 type RequestParameter = {
   Name: string;
   Type:
-    | "Boolean"
-    | "DateTime"
-    | "Decimal"
-    | "Entity"
-    | "EntityCollection"
-    | "EntityReference"
-    | "Float"
-    | "Integer"
-    | "Money"
-    | "Picklist"
-    | "String";
+  | "Boolean"
+  | "DateTime"
+  | "Decimal"
+  | "Entity"
+  | "EntityCollection"
+  | "EntityReference"
+  | "Float"
+  | "Integer"
+  | "Money"
+  | "Picklist"
+  | "String";
   Value: any;
 };
 /**
@@ -71,7 +71,7 @@ export namespace XrmEx {
   export async function addGlobalNotification(
     message: string,
     level: "SUCCESS" | "ERROR" | "WARNING" | "INFO",
-    showCloseButton = false
+    showCloseButton = false,
   ): Promise<string> {
     const levelMap = {
       SUCCESS: 1,
@@ -98,7 +98,7 @@ export namespace XrmEx {
    * @returns {Promise<string>} - A promise that resolves when the notification has been cleared.
    */
   export async function removeGlobalNotification(
-    uniqueId: string
+    uniqueId: string,
   ): Promise<string> {
     try {
       return await Xrm.App.clearGlobalNotification(uniqueId);
@@ -114,7 +114,7 @@ export namespace XrmEx {
    * @async
    */
   export async function getEnvironmentVariableValue(
-    environmentVariableSchemaName: string
+    environmentVariableSchemaName: string,
   ): Promise<string> {
     let response = await executeFunction("RetrieveEnvironmentVariableValue", [
       {
@@ -213,10 +213,10 @@ export namespace XrmEx {
     actionName: string,
     requestParameters: RequestParameter[] | { [key: string]: any },
     operationType: number,
-    boundEntity?: EntityReference
+    boundEntity?: EntityReference,
   ) {
     const prepareParameterDefinition = (
-      params: RequestParameter[] | { [key: string]: any }
+      params: RequestParameter[] | { [key: string]: any },
     ) => {
       const parameterDefinition: { [key: string]: any } = {};
       const p = Array.isArray(params) ? [...params] : { ...params };
@@ -253,7 +253,7 @@ export namespace XrmEx {
 
     const createRequest = (
       params: RequestParameter[] | { [key: string]: any },
-      definition: { [key: string]: any }
+      definition: { [key: string]: any },
     ) => {
       const metadata = {
         boundParameter: boundEntity ? "entity" : null,
@@ -286,13 +286,13 @@ export namespace XrmEx {
     actionName: string,
     requestParameters: RequestParameter[] | { [key: string]: any },
     boundEntity?: EntityReference,
-    operationType: number = 1
+    operationType: number = 1,
   ): Promise<any> {
     const request = buildRequestObject(
       actionName,
       requestParameters,
       operationType,
-      boundEntity
+      boundEntity,
     );
     const result = await Xrm.WebApi.online.execute(request);
     if (result.ok) return result.json().catch(() => result);
@@ -309,7 +309,7 @@ export namespace XrmEx {
   export async function executeAction(
     functionName: string,
     requestParameters: RequestParameter[] | object,
-    boundEntity?: EntityReference
+    boundEntity?: EntityReference,
   ): Promise<any> {
     return await execute(functionName, requestParameters, boundEntity, 0);
   }
@@ -325,7 +325,7 @@ export namespace XrmEx {
   export async function executeFunction(
     functionName: string,
     requestParameters: RequestParameter[] | object,
-    boundEntity?: EntityReference
+    boundEntity?: EntityReference,
   ): Promise<any> {
     return await execute(functionName, requestParameters, boundEntity, 1);
   }
@@ -341,7 +341,7 @@ export namespace XrmEx {
   export async function executeCRUD(
     functionName: string,
     requestParameters: RequestParameter[] | object,
-    boundEntity?: EntityReference
+    boundEntity?: EntityReference,
   ): Promise<any> {
     return await execute(functionName, requestParameters, boundEntity, 2);
   }
@@ -385,7 +385,7 @@ export namespace XrmEx {
    */
   export async function openAlertDialog(
     title: string,
-    text: string
+    text: string,
   ): Promise<any> {
     try {
       const rows = text.split(/\r\n|\r|\n/);
@@ -393,7 +393,7 @@ export namespace XrmEx {
       rows.forEach((row) => {
         let width = getTextWidth(
           row,
-          "1rem Segoe UI Regular, SegoeUI, Segoe UI"
+          "1rem Segoe UI Regular, SegoeUI, Segoe UI",
         );
         if (width > 940) {
           additionalRows += width / 940;
@@ -401,11 +401,11 @@ export namespace XrmEx {
       });
       const longestRow = rows.reduce(
         (acc, row) => (row.length > acc.length ? row : acc),
-        ""
+        "",
       );
       const width = Math.min(
         getTextWidth(longestRow, "1rem Segoe UI Regular, SegoeUI, Segoe UI"),
-        1000
+        1000,
       );
       const height = 109 + (rows.length + additionalRows) * 20;
       return await Xrm.Navigation.openAlertDialog(
@@ -417,7 +417,7 @@ export namespace XrmEx {
         {
           height,
           width,
-        }
+        },
       );
     } catch (error: any) {
       console.error(error.message);
@@ -458,7 +458,7 @@ export namespace XrmEx {
      *                event handler.
      */
     static addOnPreProcessStatusChange(
-      handler: Xrm.Events.ProcessStatusChangeHandler
+      handler: Xrm.Events.ProcessStatusChangeHandler,
     ) {
       Form.formContext.data.process.removeOnPreProcessStatusChange(handler);
       return Form.formContext.data.process.addOnPreProcessStatusChange(handler);
@@ -488,7 +488,7 @@ export namespace XrmEx {
      *                event handler.
      */
     static addOnProcessStatusChange(
-      handler: Xrm.Events.ProcessStatusChangeHandler
+      handler: Xrm.Events.ProcessStatusChangeHandler,
     ) {
       Form.formContext.data.process.removeOnProcessStatusChange(handler);
       return Form.formContext.data.process.addOnProcessStatusChange(handler);
@@ -527,10 +527,10 @@ export namespace XrmEx {
      *                cannot be removed using this method.
      */
     static removeOnPreProcessStatusChange(
-      handler: Xrm.Events.ProcessStatusChangeHandler
+      handler: Xrm.Events.ProcessStatusChangeHandler,
     ) {
       return Form.formContext.data.process.removeOnPreProcessStatusChange(
-        handler
+        handler,
       );
     }
     /**
@@ -547,7 +547,7 @@ export namespace XrmEx {
      *                cannot be removed using this method.
      */
     static removeOnProcessStatusChange(
-      handler: Xrm.Events.ProcessStatusChangeHandler
+      handler: Xrm.Events.ProcessStatusChangeHandler,
     ) {
       return Form.formContext.data.process.removeOnProcessStatusChange(handler);
     }
@@ -575,7 +575,7 @@ export namespace XrmEx {
     static getEnabledProcesses() {
       return asPromise<Xrm.ProcessFlow.ProcessDictionary>(
         Form.formContext.data.process.getEnabledProcesses,
-        Form.formContext.data.process
+        Form.formContext.data.process,
       );
     }
     /**
@@ -585,7 +585,7 @@ export namespace XrmEx {
     static getProcessInstances() {
       return asPromise<Xrm.ProcessFlow.GetProcessInstancesDelegate>(
         Form.formContext.data.process.getProcessInstances,
-        Form.formContext.data.process
+        Form.formContext.data.process,
       );
     }
     /**
@@ -595,7 +595,7 @@ export namespace XrmEx {
     static moveNext() {
       return asPromise<Xrm.ProcessFlow.ProcessCallbackDelegate>(
         Form.formContext.data.process.moveNext,
-        Form.formContext.data.process
+        Form.formContext.data.process,
       );
     }
     /**
@@ -605,7 +605,7 @@ export namespace XrmEx {
     static movePrevious() {
       return asPromise<Xrm.ProcessFlow.ProcessCallbackDelegate>(
         Form.formContext.data.process.movePrevious,
-        Form.formContext.data.process
+        Form.formContext.data.process,
       );
     }
     /**
@@ -617,7 +617,7 @@ export namespace XrmEx {
       return asPromise<Xrm.ProcessFlow.ProcessCallbackDelegate>(
         Form.formContext.data.process.setActiveProcess,
         Form.formContext.data.process,
-        processId
+        processId,
       );
     }
     /**
@@ -629,7 +629,7 @@ export namespace XrmEx {
       return asPromise<Xrm.ProcessFlow.SetProcessInstanceDelegate>(
         Form.formContext.data.process.setActiveProcessInstance,
         Form.formContext.data.process,
-        processInstanceId
+        processInstanceId,
       );
     }
     /**
@@ -641,7 +641,7 @@ export namespace XrmEx {
       return asPromise<Xrm.ProcessFlow.SetProcessInstanceDelegate>(
         Form.formContext.data.process.setActiveStage,
         Form.formContext.data.process,
-        stageId
+        stageId,
       );
     }
     /**
@@ -653,7 +653,7 @@ export namespace XrmEx {
       return asPromise<Xrm.ProcessFlow.SetProcessInstanceDelegate>(
         Form.formContext.data.process.setStatus,
         Form.formContext.data.process,
-        status
+        status,
       );
     }
   }
@@ -666,7 +666,7 @@ export namespace XrmEx {
      */
     static addOnChange(
       fields: Class.Field[],
-      handler: Xrm.Events.Attribute.ChangeEventHandler
+      handler: Xrm.Events.Attribute.ChangeEventHandler,
     ): void {
       fields.forEach((field) => {
         field.addOnChange(handler);
@@ -688,7 +688,7 @@ export namespace XrmEx {
      */
     static removeOnChange(
       fields: Class.Field[],
-      handler: Xrm.Events.Attribute.ChangeEventHandler
+      handler: Xrm.Events.Attribute.ChangeEventHandler,
     ): void {
       fields.forEach((field) => {
         field.removeOnChange(handler);
@@ -701,7 +701,7 @@ export namespace XrmEx {
      */
     static setRequiredLevel(
       fields: Class.Field[],
-      requirementLevel: Xrm.Attributes.RequirementLevel
+      requirementLevel: Xrm.Attributes.RequirementLevel,
     ): void {
       fields.forEach((field) => {
         field.setRequiredLevel(requirementLevel);
@@ -716,7 +716,7 @@ export namespace XrmEx {
      */
     static setSubmitMode(
       fields: Class.Field[],
-      submitMode: Xrm.SubmitMode
+      submitMode: Xrm.SubmitMode,
     ): void {
       fields.forEach((field) => {
         field.setSubmitMode(submitMode);
@@ -743,7 +743,7 @@ export namespace XrmEx {
     static setIsValid(
       fields: Class.Field[],
       isValid: boolean,
-      message?: string
+      message?: string,
     ): void {
       fields.forEach((field) => {
         field.setIsValid(isValid, message);
@@ -791,7 +791,7 @@ export namespace XrmEx {
     static setNotification(
       fields: Class.Field[],
       message: string,
-      uniqueId: string
+      uniqueId: string,
     ): void {
       fields.forEach((field) => {
         field.setNotification(message, uniqueId);
@@ -806,7 +806,7 @@ export namespace XrmEx {
       message: string,
       notificationLevel: "ERROR" | "RECOMMENDATION",
       uniqueId: string,
-      actions?: Xrm.Controls.ControlNotificationAction[]
+      actions?: Xrm.Controls.ControlNotificationAction[],
     ): void {
       fields.forEach((field) => {
         field.addNotification(message, notificationLevel, uniqueId, actions);
@@ -832,7 +832,7 @@ export namespace XrmEx {
   export class Form {
     protected static _formContext: Xrm.FormContext;
     protected static _executionContext: Xrm.Events.EventContext;
-    constructor() {}
+    constructor() { }
     /**Gets a reference to the current form context*/
     static get formContext(): Xrm.FormContext {
       return this._formContext;
@@ -849,7 +849,7 @@ export namespace XrmEx {
     static set formContext(context: Xrm.FormContext | Xrm.Events.EventContext) {
       if (!context)
         throw new Error(
-          `XrmEx.Form.setFormContext: The executionContext or formContext was not passed to the function.`
+          `XrmEx.Form.setFormContext: The executionContext or formContext was not passed to the function.`,
         );
       if ("getFormContext" in context) {
         this._executionContext = context;
@@ -857,16 +857,16 @@ export namespace XrmEx {
       } else if ("data" in context) this._formContext = context;
       else
         throw new Error(
-          `XrmEx.Form.setFormContext: The passed context is not an executionContext or formContext.`
+          `XrmEx.Form.setFormContext: The passed context is not an executionContext or formContext.`,
         );
     }
     /**Sets a reference to the current execution context*/
     static set executionContext(
-      context: Xrm.FormContext | Xrm.Events.EventContext
+      context: Xrm.FormContext | Xrm.Events.EventContext,
     ) {
       if (!context)
         throw new Error(
-          `XrmEx.Form.setExecutionContext: The executionContext or formContext was not passed to the function.`
+          `XrmEx.Form.setExecutionContext: The executionContext or formContext was not passed to the function.`,
         );
       if ("getFormContext" in context) {
         this._executionContext = context;
@@ -874,7 +874,7 @@ export namespace XrmEx {
       } else if ("data" in context) this._formContext = context;
       else
         throw new Error(
-          `XrmEx.Form.setExecutionContext: The passed context is not an executionContext or formContext.`
+          `XrmEx.Form.setExecutionContext: The passed context is not an executionContext or formContext.`,
         );
     }
     /**Returns true if form is from type create*/
@@ -908,13 +908,13 @@ export namespace XrmEx {
     static addFormNotification(
       message: string,
       level: Xrm.FormNotificationLevel,
-      uniqueId: string
+      uniqueId: string,
     ) {
       try {
         return Form.formContext.ui.setFormNotification(
           message,
           level,
-          uniqueId
+          uniqueId,
         );
       } catch (error: any) {
         throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
@@ -938,7 +938,7 @@ export namespace XrmEx {
     static addOnSave(
       handlers:
         | Xrm.Events.ContextSensitiveHandler
-        | Xrm.Events.ContextSensitiveHandler[]
+        | Xrm.Events.ContextSensitiveHandler[],
     ) {
       try {
         if (!Array.isArray(handlers)) {
@@ -964,7 +964,7 @@ export namespace XrmEx {
     static addOnPostSave(
       handlers:
         | Xrm.Events.ContextSensitiveHandler
-        | Xrm.Events.ContextSensitiveHandler[]
+        | Xrm.Events.ContextSensitiveHandler[],
     ) {
       try {
         if (!Array.isArray(handlers)) {
@@ -988,7 +988,7 @@ export namespace XrmEx {
     static addOnLoad(
       handlers:
         | Xrm.Events.ContextSensitiveHandler
-        | Xrm.Events.ContextSensitiveHandler[]
+        | Xrm.Events.ContextSensitiveHandler[],
     ) {
       try {
         if (!Array.isArray(handlers)) {
@@ -1014,7 +1014,7 @@ export namespace XrmEx {
       handlers:
         | Xrm.Events.ContextSensitiveHandler
         | Xrm.Events.ContextSensitiveHandler[],
-      execute?: boolean
+      execute?: boolean,
     ) {
       try {
         if (!Array.isArray(handlers)) {
@@ -1095,7 +1095,7 @@ export namespace XrmEx {
         return (this._attribute ??=
           Form.formContext.getAttribute(this.Name) ??
           XrmEx.throwError(
-            `The attribute '${this.Name}' was not found on the form.`
+            `The attribute '${this.Name}' was not found on the form.`,
           ));
       }
 
@@ -1128,12 +1128,12 @@ export namespace XrmEx {
           if (!message) throw new Error(`no message was provided.`);
           if (!uniqueId) throw new Error(`no uniqueId was provided.`);
           this.controls.forEach((control) =>
-            control.setNotification(message, uniqueId)
+            control.setNotification(message, uniqueId),
           );
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1148,7 +1148,7 @@ export namespace XrmEx {
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1163,7 +1163,7 @@ export namespace XrmEx {
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1173,14 +1173,14 @@ export namespace XrmEx {
        * @param requirementLevel The requirement level, as either "none", "required", or "recommended"
        */
       public setRequiredLevel(
-        requirementLevel: Xrm.Attributes.RequirementLevel
+        requirementLevel: Xrm.Attributes.RequirementLevel,
       ): this {
         try {
           this.Attribute.setRequiredLevel(requirementLevel);
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1195,7 +1195,7 @@ export namespace XrmEx {
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1207,7 +1207,7 @@ export namespace XrmEx {
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1219,7 +1219,7 @@ export namespace XrmEx {
       public addOnChange(
         handlers:
           | Xrm.Events.ContextSensitiveHandler
-          | Xrm.Events.ContextSensitiveHandler[]
+          | Xrm.Events.ContextSensitiveHandler[],
       ): this {
         try {
           if (Array.isArray(handlers)) {
@@ -1238,7 +1238,7 @@ export namespace XrmEx {
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1250,13 +1250,13 @@ export namespace XrmEx {
         message: string,
         notificationLevel: "ERROR" | "RECOMMENDATION",
         uniqueId: string,
-        actions?: Xrm.Controls.ControlNotificationAction[]
+        actions?: Xrm.Controls.ControlNotificationAction[],
       ): this {
         try {
           if (!uniqueId) throw new Error(`no uniqueId was provided.`);
           if (actions && !Array.isArray(actions))
             throw new Error(
-              `the action parameter is not an array of ControlNotificationAction`
+              `the action parameter is not an array of ControlNotificationAction`,
             );
           this.controls.forEach((control) => {
             control.addNotification({
@@ -1269,7 +1269,7 @@ export namespace XrmEx {
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1287,16 +1287,15 @@ export namespace XrmEx {
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
     }
     export class TextField
       extends Field
-      implements Xrm.Attributes.StringAttribute
-    {
-      protected declare _attribute: Xrm.Attributes.StringAttribute;
+      implements Xrm.Attributes.StringAttribute {
+      declare protected _attribute: Xrm.Attributes.StringAttribute;
       constructor(attribute: string) {
         super(attribute);
       }
@@ -1323,9 +1322,8 @@ export namespace XrmEx {
     }
     export class NumberField
       extends Field
-      implements Xrm.Attributes.NumberAttribute
-    {
-      protected declare _attribute: Xrm.Attributes.NumberAttribute;
+      implements Xrm.Attributes.NumberAttribute {
+      declare protected _attribute: Xrm.Attributes.NumberAttribute;
       constructor(attribute: string) {
         super(attribute);
       }
@@ -1361,9 +1359,8 @@ export namespace XrmEx {
     }
     export class DateField
       extends Field
-      implements Xrm.Attributes.DateAttribute
-    {
-      protected declare _attribute: Xrm.Attributes.DateAttribute;
+      implements Xrm.Attributes.DateAttribute {
+      declare protected _attribute: Xrm.Attributes.DateAttribute;
       constructor(attribute: string) {
         super(attribute);
       }
@@ -1387,9 +1384,8 @@ export namespace XrmEx {
     }
     export class BooleanField
       extends Field
-      implements Xrm.Attributes.BooleanAttribute
-    {
-      protected declare _attribute: Xrm.Attributes.BooleanAttribute;
+      implements Xrm.Attributes.BooleanAttribute {
+      declare protected _attribute: Xrm.Attributes.BooleanAttribute;
       constructor(attribute: string) {
         super(attribute);
       }
@@ -1416,9 +1412,8 @@ export namespace XrmEx {
     }
     export class MultiSelectOptionSetField<Options extends OptionValues>
       extends Field
-      implements Xrm.Attributes.MultiSelectOptionSetAttribute
-    {
-      protected declare _attribute: Xrm.Attributes.MultiSelectOptionSetAttribute;
+      implements Xrm.Attributes.MultiSelectOptionSetAttribute {
+      declare protected _attribute: Xrm.Attributes.MultiSelectOptionSetAttribute;
       Option: Options;
       constructor(attributeName: string, option?: Options) {
         super(attributeName);
@@ -1471,9 +1466,8 @@ export namespace XrmEx {
     }
     export class LookupField
       extends Field
-      implements Xrm.Attributes.LookupAttribute
-    {
-      protected declare _attribute: Xrm.Attributes.LookupAttribute;
+      implements Xrm.Attributes.LookupAttribute {
+      declare protected _attribute: Xrm.Attributes.LookupAttribute;
       protected _customFilters: any = [];
       private viewId = crypto.randomUUID();
       constructor(attribute: string) {
@@ -1523,7 +1517,7 @@ export namespace XrmEx {
         id: string,
         entityType: any,
         name: any,
-        append = false
+        append = false,
       ): this {
         try {
           if (!id) throw new Error(`no id parameter was provided.`);
@@ -1542,7 +1536,7 @@ export namespace XrmEx {
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1558,7 +1552,7 @@ export namespace XrmEx {
        */
       setLookupFromRetrieve(
         selectName: string,
-        retrievedRecord: { [x: string]: any }
+        retrievedRecord: { [x: string]: any },
       ) {
         if (!selectName.endsWith("_value")) selectName = `_${selectName}_value`;
         if (!retrievedRecord || !retrievedRecord[`${selectName}`]) {
@@ -1570,7 +1564,7 @@ export namespace XrmEx {
             id: retrievedRecord[`${selectName}`],
             entityType:
               retrievedRecord[
-                `${selectName}@Microsoft.Dynamics.CRM.lookuplogicalname`
+              `${selectName}@Microsoft.Dynamics.CRM.lookuplogicalname`
               ],
             name: retrievedRecord[
               `${selectName}@OData.Community.Display.V1.FormattedValue`
@@ -1601,12 +1595,12 @@ export namespace XrmEx {
           const record = await Xrm.WebApi.retrieveRecord(
             this.EntityType,
             this.Id,
-            options
+            options,
           );
           return record;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1622,7 +1616,7 @@ export namespace XrmEx {
        */
       addPreFilterToLookup(
         filterXml: string,
-        entityLogicalName?: string
+        entityLogicalName?: string,
       ): this {
         try {
           _addCustomFilter.controls = this.controls;
@@ -1633,7 +1627,7 @@ export namespace XrmEx {
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
 
@@ -1662,12 +1656,12 @@ export namespace XrmEx {
       async addPreFilterToLookupAdvanced(
         entityLogicalName: string,
         primaryAttributeIdName: string,
-        fetchXml: string
+        fetchXml: string,
       ): Promise<void> {
         try {
           const result = await Xrm.WebApi.online.retrieveMultipleRecords(
             entityLogicalName,
-            "?fetchXml=" + fetchXml
+            "?fetchXml=" + fetchXml,
           );
           const data = result.entities;
           let filteredEntities = "";
@@ -1684,7 +1678,7 @@ export namespace XrmEx {
           this._customFilters.push(_addCustomFilter);
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
         function _addCustomFilter() {
@@ -1714,13 +1708,13 @@ export namespace XrmEx {
               "Filtered View",
               fetchXml,
               layoutXml,
-              true
+              true,
             );
           });
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1784,12 +1778,12 @@ export namespace XrmEx {
               this.controls.forEach((control) => {
                 control.removePreSearch(customFilter);
               });
-            }
+            },
           );
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1799,9 +1793,8 @@ export namespace XrmEx {
     };
     export class OptionsetField<Options extends OptionValues>
       extends Field
-      implements Xrm.Attributes.OptionSetAttribute
-    {
-      protected declare _attribute: Xrm.Attributes.OptionSetAttribute;
+      implements Xrm.Attributes.OptionSetAttribute {
+      declare protected _attribute: Xrm.Attributes.OptionSetAttribute;
       protected _control!: Xrm.Controls.OptionSetControl;
       Option: Options;
       constructor(attributeName: string, option?: Options) {
@@ -1874,7 +1867,7 @@ export namespace XrmEx {
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1897,7 +1890,7 @@ export namespace XrmEx {
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1910,7 +1903,7 @@ export namespace XrmEx {
           return this;
         } catch (error: any) {
           throw new Error(
-            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`,
           );
         }
       }
@@ -1926,7 +1919,7 @@ export namespace XrmEx {
         return (this._section ??=
           this.parentTab.sections.get(this.Name) ??
           XrmEx.throwError(
-            `The section '${this.Name}' was not found on the form.`
+            `The section '${this.Name}' was not found on the form.`,
           ));
       }
       getName(): string {
@@ -1970,7 +1963,7 @@ export namespace XrmEx {
         return (this._tab ??=
           Form.formContext.ui.tabs.get(this.Name) ??
           XrmEx.throwError(
-            `The tab '${this.Name}' was not found on the form.`
+            `The tab '${this.Name}' was not found on the form.`,
           ));
       }
       addTabStateChange(handler: Xrm.Events.ContextSensitiveHandler): void {
