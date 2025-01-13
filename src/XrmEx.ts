@@ -221,18 +221,6 @@ export namespace XrmEx {
       const parameterDefinition: { [key: string]: any } = {};
       const p = Array.isArray(params) ? [...params] : { ...params };
 
-      if (boundEntity) {
-        if (Array.isArray(p)) {
-          p.push({
-            Name: "entity",
-            Value: boundEntity,
-            Type: "EntityReference",
-          });
-        } else {
-          p["entity"] = boundEntity;
-        }
-      }
-
       if (Array.isArray(p)) {
         p.forEach((param) => {
           parameterDefinition[param.Name] = {
@@ -267,6 +255,17 @@ export namespace XrmEx {
 
       return Object.assign({ getMetadata: () => metadata }, mergedParams);
     };
+    if (boundEntity) {
+      if (Array.isArray(requestParameters)) {
+        requestParameters.push({
+          Name: "entity",
+          Value: boundEntity,
+          Type: "EntityReference",
+        });
+      } else {
+        requestParameters["entity"] = boundEntity;
+      }
+    }
 
     const parameterDefinition = prepareParameterDefinition(requestParameters);
     const request = createRequest(requestParameters, parameterDefinition);
