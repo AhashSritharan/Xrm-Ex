@@ -57,6 +57,7 @@ export declare namespace XrmEx {
      */
     function getEnvironmentVariableValue(environmentVariableSchemaName: string): Promise<string>;
     function getStructuralProperty(value: any): number;
+    function getTypeName(value: any): string;
     /**
      * Builds a request object for use with Xrm.WebApi.online.execute or executeMultiple.
      *

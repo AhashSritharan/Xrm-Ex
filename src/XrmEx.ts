@@ -177,6 +177,15 @@ export namespace XrmEx {
     if (Array.isArray(value)) return 4;
     return 5;
   }
+  export function getTypeName(value: any): string {
+    const type = typeof value;
+    if (type === "string") return "Edm.String";
+    if (type === "number") return "Edm.Int32"; // Default to Int32 for numbers
+    if (type === "boolean") return "Edm.Boolean";
+    if (value instanceof Date) return "Edm.DateTimeOffset";
+    if (Array.isArray(value)) return "Collection(mscrm.crmbaseentity)";
+    return "mscrm.crmbaseentity"; // Default for objects and unknown types
+  }
 
   /**
    * Builds a request object for use with Xrm.WebApi.online.execute or executeMultiple.
@@ -232,6 +241,7 @@ export namespace XrmEx {
         Object.keys(p).forEach((key) => {
           parameterDefinition[key] = {
             structuralProperty: getStructuralProperty(p[key]),
+            typeName: getTypeName(p[key]),
           };
         });
       }
