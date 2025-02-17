@@ -33,7 +33,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "npm run clean && npm run type:dts && npm run releasebuild && npm run format && npm run copy && npm run postbuild && npm run zip && npm run testbuild",
+    "build": "npm run clean && npm run type:dts && npm run releasebuild && npm run format && npm run copy && npm run postbuild && npm run zip && npm run testbuild && npm run lint:check",
     "releasebuild": "npm run replace -- \"export namespace XrmEx\" \"namespace XrmEx\" \"./src/XrmEx.ts\" && tsc --project tsconfig.build.json",
     "testbuild": "npm run replace -- \"namespace XrmEx\" \"export namespace XrmEx\" \"./src/XrmEx.ts\" && tsc --project tsconfig.build2.json",
     "clean": "rimraf build/src coverage nyc_output",
