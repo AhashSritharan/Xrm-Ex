@@ -9,17 +9,17 @@
 type RequestParameter = {
   Name: string;
   Type:
-    | "Boolean"
-    | "DateTime"
-    | "Decimal"
-    | "Entity"
-    | "EntityCollection"
-    | "EntityReference"
-    | "Float"
-    | "Integer"
-    | "Money"
-    | "Picklist"
-    | "String";
+  | "Boolean"
+  | "DateTime"
+  | "Decimal"
+  | "Entity"
+  | "EntityCollection"
+  | "EntityReference"
+  | "Float"
+  | "Integer"
+  | "Money"
+  | "Picklist"
+  | "String";
   Value: any;
 };
 /**
@@ -125,6 +125,9 @@ export namespace XrmEx {
     ]);
     return Object.hasOwn(response, "Value") ? response.Value : response;
   }
+  function isGuid(value: string): boolean {
+    return /^\{?[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}\}?$/.test(value)
+  }
   /**
    * A map of CRM data types to their corresponding type names, structural properties, and JavaScript types.
    * @type {Object.<string, { typeName: string, structuralProperty: number, jsType: string }>}
@@ -179,7 +182,14 @@ export namespace XrmEx {
   }
   export function getTypeName(value: any): string {
     const type = typeof value;
-    if (type === "string") return "Edm.String";
+    if (type === "string") {
+      if (
+        isGuid(value)
+      ) {
+        return "mscrm.crmbaseentity";
+      }
+      return "Edm.String";
+    }
     if (type === "number") return "Edm.Int32"; // Default to Int32 for numbers
     if (type === "boolean") return "Edm.Boolean";
     if (value instanceof Date) return "Edm.DateTimeOffset";
@@ -841,7 +851,7 @@ export namespace XrmEx {
   export class Form {
     protected static _formContext: Xrm.FormContext;
     protected static _executionContext: Xrm.Events.EventContext;
-    constructor() {}
+    constructor() { }
     /**Gets a reference to the current form context*/
     static get formContext(): Xrm.FormContext {
       return this._formContext;
@@ -1303,8 +1313,7 @@ export namespace XrmEx {
     }
     export class TextField
       extends Field
-      implements Xrm.Attributes.StringAttribute
-    {
+      implements Xrm.Attributes.StringAttribute {
       protected declare _attribute: Xrm.Attributes.StringAttribute;
       constructor(attribute: string) {
         super(attribute);
@@ -1332,8 +1341,7 @@ export namespace XrmEx {
     }
     export class NumberField
       extends Field
-      implements Xrm.Attributes.NumberAttribute
-    {
+      implements Xrm.Attributes.NumberAttribute {
       protected declare _attribute: Xrm.Attributes.NumberAttribute;
       constructor(attribute: string) {
         super(attribute);
@@ -1370,8 +1378,7 @@ export namespace XrmEx {
     }
     export class DateField
       extends Field
-      implements Xrm.Attributes.DateAttribute
-    {
+      implements Xrm.Attributes.DateAttribute {
       protected declare _attribute: Xrm.Attributes.DateAttribute;
       constructor(attribute: string) {
         super(attribute);
@@ -1396,8 +1403,7 @@ export namespace XrmEx {
     }
     export class BooleanField
       extends Field
-      implements Xrm.Attributes.BooleanAttribute
-    {
+      implements Xrm.Attributes.BooleanAttribute {
       protected declare _attribute: Xrm.Attributes.BooleanAttribute;
       constructor(attribute: string) {
         super(attribute);
@@ -1425,8 +1431,7 @@ export namespace XrmEx {
     }
     export class MultiSelectOptionSetField<Options extends OptionValues>
       extends Field
-      implements Xrm.Attributes.MultiSelectOptionSetAttribute
-    {
+      implements Xrm.Attributes.MultiSelectOptionSetAttribute {
       protected declare _attribute: Xrm.Attributes.MultiSelectOptionSetAttribute;
       Option: Options;
       constructor(attributeName: string, option?: Options) {
@@ -1480,8 +1485,7 @@ export namespace XrmEx {
     }
     export class LookupField
       extends Field
-      implements Xrm.Attributes.LookupAttribute
-    {
+      implements Xrm.Attributes.LookupAttribute {
       protected declare _attribute: Xrm.Attributes.LookupAttribute;
       protected _customFilters: any = [];
       private viewId = crypto.randomUUID();
@@ -1579,7 +1583,7 @@ export namespace XrmEx {
             id: retrievedRecord[`${selectName}`],
             entityType:
               retrievedRecord[
-                `${selectName}@Microsoft.Dynamics.CRM.lookuplogicalname`
+              `${selectName}@Microsoft.Dynamics.CRM.lookuplogicalname`
               ],
             name: retrievedRecord[
               `${selectName}@OData.Community.Display.V1.FormattedValue`
@@ -1808,8 +1812,7 @@ export namespace XrmEx {
     };
     export class OptionsetField<Options extends OptionValues>
       extends Field
-      implements Xrm.Attributes.OptionSetAttribute
-    {
+      implements Xrm.Attributes.OptionSetAttribute {
       protected declare _attribute: Xrm.Attributes.OptionSetAttribute;
       protected _control!: Xrm.Controls.OptionSetControl;
       Option: Options;
