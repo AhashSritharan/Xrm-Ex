@@ -1054,6 +1054,66 @@ export namespace XrmEx {
         throw new Error(`XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`);
       }
     }
+
+    static async cloneRecord() {
+      var entityFormOptions = {};
+      var formParameters = {};
+      var entityName = this.formContext.data.entity.getEntityName();
+      entityFormOptions["entityName"] = entityName;
+      this.formContext.data.entity.attributes.forEach((c) => {
+        var attributeType = c.getAttributeType();
+        var attributeName = c.getName();
+        var attributeValue = c.getValue();
+        if (
+          !attributeValue ||
+          attributeName === "createdon" ||
+          attributeName === "modifiedon" ||
+          attributeName === "createdby" ||
+          attributeName === "modifiedby" ||
+          attributeName === "processid" ||
+          attributeName === "stageid" ||
+          attributeName === "ownerid" ||
+          attributeName.startsWith("transactioncurrency")
+        )
+          return;
+        if (
+          attributeType === "lookup" &&
+          !(c as Xrm.Attributes.LookupAttribute).getIsPartyList() &&
+          attributeValue.length > 0
+        ) {
+          formParameters[attributeName] = attributeValue[0].id;
+          formParameters[attributeName + "name"] = attributeValue[0].name;
+          if (
+            attributeName === "customerid" ||
+            attributeName === "parentcustomerid" ||
+            (c.getAttributeType &&
+              c.getAttributeType() === "lookup" &&
+              typeof (c as any).getLookupTypes === "function" &&
+              Array.isArray((c as any).getLookupTypes()) &&
+              (c as any).getLookupTypes().length > 1)
+          ) {
+            formParameters[attributeName + "type"] =
+              attributeValue[0].entityType;
+          }
+        } else if (attributeType === "datetime") {
+          formParameters[attributeName] = new Date(
+            attributeValue
+          ).toISOString();
+        } else {
+          formParameters[attributeName] = attributeValue;
+        }
+      });
+      try {
+        var result = await Xrm.Navigation.openForm(
+          entityFormOptions,
+          formParameters
+        );
+        console.log(result);
+      } catch (error) {
+        console.error(error.message);
+        throw new Error(`XrmEx.${getFunctionName()}:\n${error.message}`);
+      }
+    }
   }
 
   export namespace Class {

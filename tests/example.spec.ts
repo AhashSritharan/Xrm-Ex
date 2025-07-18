@@ -10,7 +10,11 @@ const __dirname = path.dirname(__filename);
 
 test.beforeEach(async ({ page }) => {
     test.setTimeout(60000);
-    await page.addInitScript({ path: "build/src/XrmEx.js" });
+    // Read and wrap XrmEx.js to ensure XrmEx is assigned to window.XrmEx
+    const xrmExScriptPath = path.join(__dirname, "../build/src/XrmEx.js");
+    const xrmExScript = fs.readFileSync(xrmExScriptPath, { encoding: "utf-8" });
+    const wrappedScript = `(() => {\n${xrmExScript}\nif (typeof XrmEx !== 'undefined') window.XrmEx = XrmEx;\n})();`;
+    await page.addInitScript(wrappedScript);
     let env: CRMConfig = process.env.ENV_VAR_JSON
         ? JSON.parse(process.env.ENV_VAR_JSON)
         : loadJson();

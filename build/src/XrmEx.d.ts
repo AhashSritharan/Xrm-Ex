@@ -438,6 +438,7 @@ declare namespace XrmEx {
          * @param handler The function reference.
          */
         static addOnChange(fields: Class.Field[], handlers: Xrm.Events.ContextSensitiveHandler | Xrm.Events.ContextSensitiveHandler[], execute?: boolean): void;
+        static cloneRecord(): Promise<void>;
     }
     namespace Class {
         /**
