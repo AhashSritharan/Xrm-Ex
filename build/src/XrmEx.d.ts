@@ -35,6 +35,12 @@ declare namespace XrmEx {
      */
     function getFunctionName(): string;
     /**
+     * Retrieves the error message from an error object.
+     * @param error - The error object to retrieve the message from.
+     * @returns The error message.
+     */
+    function getErrorMessage(error: any): string;
+    /**
      * Displays a notification for an app with the given message and level, and lets you specify whether to show a close button.
      * @param {string} message - The message to display in the notification.
      * @param {'SUCCESS' | 'ERROR' | 'WARNING' | 'INFO'} level - The level of the notification. Can be 'SUCCESS', 'ERROR', 'WARNING', or 'INFO'.
@@ -152,6 +158,11 @@ declare namespace XrmEx {
      * @returns {Promise<any>} - A Promise with the dialog response.
      */
     function openAlertDialog(title: string, text: string): Promise<any>;
+    /**
+     * Opens an error dialog with the specified error information.
+     * @param error The error object containing details about the error.
+     */
+    function openErrorDialog(error: any): Promise<void>;
     class Process {
         static get data(): Xrm.ProcessFlow.ProcessManager;
         static get ui(): Xrm.Controls.ProcessControl;

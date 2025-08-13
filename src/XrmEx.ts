@@ -62,6 +62,41 @@ export namespace XrmEx {
     }
   }
   /**
+   * Retrieves the error message from an error object.
+   * @param error - The error object to retrieve the message from.
+   * @returns The error message.
+   */
+  export function getErrorMessage(error: any): string {
+    let msg = error,
+      seen = new Set(),
+      depth = 0;
+    const validJSON = (t: string) => {
+      try {
+        JSON.parse(t);
+        return true;
+      } catch {
+        return false;
+      }
+    };
+    while (msg && depth++ < 20 && !seen.has(msg)) {
+      seen.add(msg);
+      if (msg.raw) {
+        msg = msg.raw;
+        continue;
+      }
+      if (msg.message) {
+        msg = msg.message;
+        continue;
+      }
+      if (typeof msg === "string" && validJSON(msg)) {
+        msg = JSON.parse(msg);
+        continue;
+      }
+      break;
+    }
+    return msg;
+  }
+  /**
    * Displays a notification for an app with the given message and level, and lets you specify whether to show a close button.
    * @param {string} message - The message to display in the notification.
    * @param {'SUCCESS' | 'ERROR' | 'WARNING' | 'INFO'} level - The level of the notification. Can be 'SUCCESS', 'ERROR', 'WARNING', or 'INFO'.
@@ -453,6 +488,23 @@ export namespace XrmEx {
       context.font = font;
       const metrics = context.measureText(text);
       return metrics.width;
+    }
+  }
+
+  /**
+   * Opens an error dialog with the specified error information.
+   * @param error The error object containing details about the error.
+   */
+  export async function openErrorDialog(error: any): Promise<void> {
+    try {
+      return await Xrm.Navigation.openErrorDialog({
+        message: getErrorMessage(error),
+        details: JSON.stringify(error, null, 4),
+        errorCode: error?.errorCode,
+      });
+    } catch (error: any) {
+      console.error(error.message);
+      throw new Error(`XrmEx.${getFunctionName()}:\n${error.message}`);
     }
   }
 
