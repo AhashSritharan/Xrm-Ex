@@ -119,7 +119,7 @@ YourNamespace.Contact = YourNamespace.Contact || {};
             await XrmEx.openAlertDialog("Success", "Xrm works.");
         } catch (error) {
             console.error(error);
-            await XrmEx.openAlertDialog("Error", `Error in ${XrmEx.getFunctionName()}\n` + error.message);
+            await XrmEx.openErrorDialog(error);
         }
     };
     /**
