@@ -1597,15 +1597,20 @@ export namespace XrmEx {
         } else XrmEx.throwError(`Field Value '${value}' is not an Array`);
       }
     }
-    export class LookupField
+    type EmbeddedFields = {
+      [key: string]: Field;
+    };
+    export class LookupField<Fields extends EmbeddedFields = {}>
       extends Field
       implements Xrm.Attributes.LookupAttribute
     {
       protected declare _attribute: Xrm.Attributes.LookupAttribute;
       protected _customFilters: any = [];
       private viewId = crypto.randomUUID();
-      constructor(attribute: string) {
+      public Fields: Fields;
+      constructor(attribute: string, fields?: Fields) {
         super(attribute);
+        this.Fields = fields ?? ({} as Fields);
       }
       getIsPartyList(): boolean {
         return this.Attribute.getIsPartyList();
@@ -1639,6 +1644,51 @@ export namespace XrmEx {
       }
       set Value(value: Xrm.LookupValue[]) {
         this.Attribute.setValue(value);
+      }
+      /**
+       * Gets the embedded form data entity context
+       * @returns The entity context of the embedded form or null if not loaded
+       */
+      public get Data():
+        | ({
+            attributes: Xrm.Collection.ItemCollection<Xrm.Attributes.Attribute>;
+          } & { [K in keyof Fields]: Fields[K] })
+        | null {
+        try {
+          // Find the first loaded control
+          let control: any = null;
+          this.controls.forEach((c) => {
+            if ((c as any)?.isLoaded && !control) {
+              control = c;
+            }
+          });
+
+          if (!control || !control.isLoaded()) return null;
+
+          const entityData = control.data.entity;
+
+          // Create a proxy to access fields directly
+          const fieldsProxy = new Proxy(entityData, {
+            get: (target, prop: string) => {
+              if (prop === "attributes") {
+                return target.attributes;
+              }
+              if (this.Fields[prop]) {
+                const field = this.Fields[prop];
+                // Set the field's attribute from the embedded form
+                (field as any)._attribute = target.attributes.get(field.Name);
+                return field;
+              }
+              return target[prop];
+            },
+          });
+
+          return fieldsProxy;
+        } catch (error: any) {
+          throw new Error(
+            `XrmEx.${XrmEx.getFunctionName()}:\n${error.message}`
+          );
+        }
       }
       /**
        * Sets the value of a lookup

@@ -585,11 +585,15 @@ declare namespace XrmEx {
             get Value(): number[];
             set Value(value: (keyof Options)[] | number[]);
         }
-        export class LookupField extends Field implements Xrm.Attributes.LookupAttribute {
+        type EmbeddedFields = {
+            [key: string]: Field;
+        };
+        export class LookupField<Fields extends EmbeddedFields = {}> extends Field implements Xrm.Attributes.LookupAttribute {
             protected _attribute: Xrm.Attributes.LookupAttribute;
             protected _customFilters: any;
             private viewId;
-            constructor(attribute: string);
+            Fields: Fields;
+            constructor(attribute: string, fields?: Fields);
             getIsPartyList(): boolean;
             get Attribute(): Xrm.Attributes.LookupAttribute;
             get controls(): Xrm.Collection.ItemCollection<Xrm.Controls.LookupControl>;
@@ -601,6 +605,15 @@ declare namespace XrmEx {
             get FormattedValue(): string;
             get Value(): Xrm.LookupValue[];
             set Value(value: Xrm.LookupValue[]);
+            /**
+             * Gets the embedded form data entity context
+             * @returns The entity context of the embedded form or null if not loaded
+             */
+            get Data(): ({
+                attributes: Xrm.Collection.ItemCollection<Xrm.Attributes.Attribute>;
+            } & {
+                [K in keyof Fields]: Fields[K];
+            }) | null;
             /**
              * Sets the value of a lookup
              * @param id Guid of the record
