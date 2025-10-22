@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@aashutoshrathi/word-wrap": "^1.2.6",
-    "@playwright/test": "^1.37.0",
+    "@playwright/test": "^1.56.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^10.0.1",
     "@semantic-release/github": "^9.0.3",
